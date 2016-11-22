@@ -1,7 +1,7 @@
 # Личный проект «Пинк» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Alexey Kavasin](https://up.htmlacademy.ru/adaptive/9/user/59151).
-* Наставник: `Неизвестно`.
+* Наставник: [Евгений Карпов](https://up.htmlacademy.ru/adaptive/9/user/70583).
 
 ---
 
