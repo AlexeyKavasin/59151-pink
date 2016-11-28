@@ -9,14 +9,19 @@
   <body>
     <header class="inner-header">
       <div class="logo">
-        <img src="http://placehold.it/85x35" alt="pink" width="85" height="35">
+        <a href="index.html" class="logo__link">
+          <img src="http://placehold.it/85x35" alt="pink" width="85" height="35">
+        </a>
       </div>
+      <a href="#" class="hamburger-menu">
+        <span class="hamburger-menu__btn">X</span>
+      </a>
       <nav class="main-menu">
         <ul class="main-menu-list">
-          <li class="main-menu-list__item">Главная</li>
-          <li class="main-menu-list__item">Фотографии</li>
-          <li class="main-menu-list__item">Конкурс</li>
-          <li class="main-menu-list__item">HTML Academy</li>
+          <li class="main-menu-list__item"><a class="main-menu-list__link" href="#main">Главная</a></li>
+          <li class="main-menu-list__item"><a class="main-menu-list__link" href="#photos">Фотографии</a></li>
+          <li class="main-menu-list__item"><a class="main-menu-list__link" href="#form">Конкурс</a></li>
+          <li class="main-menu-list__item"><a class="main-menu-list__link" href="https://htmlacademy.ru/">HTML Academy</a></li>
         </ul>
       </nav>
     </header>
@@ -29,7 +34,7 @@
 
       <section class="contest-form-section">
         <div class="contest-form-section__info">
-          <span class="contest-form-section__text">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! Пожалуйста, заполните форму ниже:</span>
+          <p class="contest-form-section__text">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! Пожалуйста, заполните форму ниже:</p>
         </div>
         <form class="contest-form" action="https://echo.htmlacademy.ru" method="post">
 
@@ -43,18 +48,18 @@
           </fieldset>
 
           <fieldset class="contest-form__actions">
-            <label for="action-1">Сделал селфи с акулой</label>
             <input type="checkbox" class="contest-form__checkbox" id="action-1" name="action" value="shark selfie" checked>
-            <label for="action-2">Обгорел на пляже</label>
+            <label for="action-1">Сделал селфи с акулой</label>
             <input type="checkbox" class="contest-form__checkbox" id="action-2" name="action" value="burnt" checked>
-            <label for="action-3">Видел Чака Норриса</label>
+            <label for="action-2">Обгорел на пляже</label>
             <input type="checkbox" class="contest-form__checkbox" id="action-3" name="action" value="met chuck norris">
-            <label for="action-4">Накупил сувениров</label>
+            <label for="action-3">Видел Чака Норриса</label>
             <input type="checkbox" class="contest-form__checkbox" id="action-4" name="action" value="bought souvenirs">
-            <label for="action-5">Удержал башню</label>
+            <label for="action-4">Накупил сувениров</label>
             <input type="checkbox" class="contest-form__checkbox" id="action-5" name="action" value="tower defence" checked>
-            <label for="action-6">Разгромил отель</label>
+            <label for="action-5">Удержал башню</label>
             <input type="checkbox" class="contest-form__checkbox" id="action-6" name="action" value="hotel destroy">
+            <label for="action-6">Разгромил отель</label>
           </fieldset>
 
           <fieldset class="contest-from__contacts">
@@ -65,12 +70,12 @@
           </fieldset>
 
           <fieldset class="contest-form__app-choose">
-            <label for="pink-ios">Pink для iOS</label>
             <input type="radio" class="contest-form__radio" id="pink-ios" name="app" value="pink on ios" checked>
-            <label for="pink-android">Pink на Android</label>
+            <label for="pink-ios">Pink для iOS</label>
             <input type="radio" class="contest-form__radio" id="pink-android" name="app" value="pink on android">
-            <label for="pink-windows">Windows Phone</label>
+            <label for="pink-android">Pink на Android</label>
             <input type="radio" class="contest-form__radio" id="pink-windows" name="app" value="pink on windows">
+            <label for="pink-windows">Windows Phone</label>
           </fieldset>
 
           <fieldset class="contest-form__comment">
@@ -81,22 +86,24 @@
           <button type="submit" class="contest-form__submit">Отправить форму</button>
 
         </form>
-        <div class="contest-form-section__notes">* - Обязательные поля</div>
+        <div class="contest-form-section__notes">
+          <span class="contest-form-section__colored-note">*</span> - Обязательные поля
+        </div>
       </section>
 
     </main>
 
     <footer class="inner-footer">
       <div class="inner-footer-logo">
-        <img src="http://placehold.it/85x35" alt="pink" width="150" height="45">
+        <a href="index.html" class="inner-footer-logo__link">
+          <img src="http://placehold.it/85x35" alt="pink" width="150" height="45">
+        </a>
       </div>
-      <div class="inner-footer-social-block">
-        <ul class="inner-footer-social-list">
-          <li class="inner-footer-social-list__item"><a href="www.twitter.com">Твиттер</a></li>
-          <li class="inner-footer-social-list__item"><a href="www.facebook.com">Фейсбук</a></li>
-          <li class="inner-footer-social-list__item"><a href="www.youtube.com">Ютуб</a></li>
-        </ul>
-      </div>
+      <ul class="social footer__social">
+        <li class="social__item"><a href="www.twitter.com">Твиттер</a></li>
+        <li class="social__item"><a href="www.facebook.com">Фейсбук</a></li>
+        <li class="social__item"><a href="www.youtube.com">Ютуб</a></li>
+      </ul>
       <div class="inner-footer-copyright">
         <span class="inner-footer-copyright__text">Разработано</span>
         <img src="http://placehold.it/30x35" alt="htmlacademy" width="30" height="35">
@@ -104,23 +111,23 @@
     </footer>
 
 <!-- Pop-ups -->
-    <div class="pop-up-success">
-      <div class="pop-up-success__header">
-        <h3 class="pop-up-success__heading">Ваша заявка отправлена</h3>
-        <p class="pop-up-sucess__text">Спасибо за ваше участие, ваша заявка уже поступила к нам. В ближайшее время мы рассмотрим ее и оповестим вас.</p>
+    <div class="pop-up">
+      <div class="pop-up__header pop-up__header--success">
+        <h3 class="pop-up__heading pop-up__heading--success">Ваша заявка отправлена</h3>
+        <p class="pop-up__text pop-up__text--success">Спасибо за ваше участие, ваша заявка уже поступила к нам. В ближайшее время мы рассмотрим ее и оповестим вас.</p>
       </div>
-      <div class="pop-up-success__footer">
-        <button type="button" class="pop-up-success__btn">Закрыть окно</button>
+      <div class="pop-up__footer pop-up__footer--success">
+        <button type="button" class="pop-up__btn pop-up__btn--success">Закрыть окно</button>
       </div>
     </div>
 
-    <div class="pop-up-failure">
-      <div class="pop-up-failure__header">
-        <h3 class="pop-up-failure__heading">Что-то пошло не так!</h3>
-        <p class="pop-up-failure__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+    <div class="pop-up">
+      <div class="pop-up__header pop-up__header--failure">
+        <h3 class="pop-up__heading pop-up__heading--failure">Что-то пошло не так!</h3>
+        <p class="pop-up__text pop-up__text--failure">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
       </div>
-      <div class="pop-up-failure__footer">
-        <button type="button" class="pop-up-failure__btn">Ок</button>
+      <div class="pop-up__footer pop-up__footer--failure">
+        <button type="button" class="pop-up__btn pop-up__btn--failure">Ок</button>
       </div>
     </div>
 

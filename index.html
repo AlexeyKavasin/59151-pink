@@ -9,14 +9,19 @@
   <body>
     <header class="main-header">
       <div class="logo">
-        <img src="http://placehold.it/85x35" alt="pink" width="85" height="35">
+        <a href="index.html" class="logo__link">
+          <img src="http://placehold.it/85x35" alt="pink" width="85" height="35">
+        </a>
       </div>
+      <a href="#" class="hamburger-menu">
+        <span class="hamburger-menu__btn">X</span>
+      </a>
       <nav class="main-menu">
         <ul class="main-menu-list">
-          <li class="main-menu-list__item">Главная</li>
-          <li class="main-menu-list__item">Фотографии</li>
-          <li class="main-menu-list__item">Конкурс</li>
-          <li class="main-menu-list__item">HTML Academy</li>
+          <li class="main-menu-list__item"><a class="main-menu-list__link" href="#main">Главная</a></li>
+          <li class="main-menu-list__item"><a class="main-menu-list__link" href="#photos">Фотографии</a></li>
+          <li class="main-menu-list__item"><a class="main-menu-list__link" href="#form">Конкурс</a></li>
+          <li class="main-menu-list__item"><a class="main-menu-list__link" href="https://htmlacademy.ru/">HTML Academy</a></li>
         </ul>
       </nav>
     </header>
@@ -27,34 +32,41 @@
         <img src="http://placehold.it/320x400" alt="background">
         <div class="index-welcome-section__info">
           <a href="https://www.apple.com/itunes/" class="index-welcome-section__btn">Скачать приложение</a>
-          <div class="apps-info">
-            <ul class="apps-icons-list">
-              <li class="apps-icons-list__item"><a href="https://www.apple.com/itunes/" class="app-icons-list_link">Itunes</a></li>
-              <li class="apps-icons-list__item"><a href="https://play.google.com/store/apps" class="app-icons-list_link">Android</a></li>
-              <li class="apps-icons-list__item"><a href="https://www.microsoft.com/en-in/store/apps/windows-phone" class="app-icons-list_link">Windows</a></li>
-            </ul>
-            <span class="apps-info__text">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</span>
-          </div>
+          <ul class="apps-list">
+            <li class="apps-list__item"><a href="https://www.apple.com/itunes/" class="app-list_link">Itunes</a></li>
+            <li class="apps-list__item"><a href="https://play.google.com/store/apps" class="app-list_link">Android</a></li>
+            <li class="apps-list__item"><a href="https://www.microsoft.com/en-in/store/apps/windows-phone" class="app-list_link">Windows</a></li>
+          </ul>
+          <span class="apps-text">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</span>
         </div>
       </section>
 
-      <section class="advantages-section">
-        <header class="advantages-section__header">
-          <h2 class="advantages-section__heading">Устали от серости мегаполиса?<br>Нам есть что вам предложить!</h2>
+      <section class="benefits-section">
+        <header class="benefits-section__header">
+          <p class="benefits-section__heading">Устали от серости мегаполиса?</p>
+          <p class="benefits-section__heading">Нам есть что вам предложить!</p>
         </header>
-        <div class="advantages-items">
-          <article class="advantages-item">
-            <h3 class="advantages-item__heading">Поднимает настроение</h3>
-            <p class="advantages-item__text">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+        <div class="benefits-items">
+          <article class="benefits-item">
+            <h3 class="benefits-item__heading">Поднимает настроение</h3>
+            <p class="benefits-item__text">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
           </article>
-          <article class="advantages-item">
-            <h3 class="advantages-item__heading">Меняет мир вокруг</h3>
-            <p class="advantages-item__text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+          <article class="benefits-item">
+            <h3 class="benefits-item__heading">Меняет мир вокруг</h3>
+            <p class="benefits-item__text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
           </article>
-          <article class="advantages-item">
-            <h3 class="advantages-item__heading">Заводит новых друзей</h3>
-            <p class="advantages-item__text">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
+          <article class="benefits-item">
+            <h3 class="benefits-item__heading">Заводит новых друзей</h3>
+            <p class="benefits-item__text">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
           </article>
+        </div>
+        <input type="radio" id="review-1" name="review-switch" checked>
+        <input type="radio" id="review-2" name="review-switch">
+        <input type="radio" id="review-3" name="review-switch">
+        <div class="reviews-slider__controls">
+          <label for="review-1"></label>
+          <label for="review-2"></label>
+          <label for="review-3"></label>
         </div>
         <div class="reviews-slider">
           <div class="reviews-slide">
@@ -69,83 +81,42 @@
             <h3 class="reviews-slide__heading">Николай Петров</h3>
             <p class="reviews-slide__text">«Это приложение перевернуло мой мир и позволило по-новому взгляуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
           </div>
-          <input type="radio" id="review-1" name="review-switch" checked>
-          <input type="radio" id="review-2" name="review-switch">
-          <input type="radio" id="review-3" name="review-switch">
-          <div class="reviews-slider__controls">
-            <label for="review-1"></label>
-            <label for="review-2"></label>
-            <label for="review-3"></label>
-          </div>
         </div>
       </section>
 
       <section class="prices-section">
+        <input type="radio" id="price-1" name="price-switch" checked>
+        <input type="radio" id="price-2" name="price-switch">
+        <input type="radio" id="price-3" name="price-switch">
+        <div class="prices-slider__controls">
+          <label for="price-1"></label>
+          <label for="price-2"></label>
+          <label for="price-3"></label>
+        </div>
         <div class="prices-slider">
           <div class="prices-slide">
-            <table class="price-plan">
-              <tr>
-                <th colspan="2" class="price-plan__header">База<br>1,99 USD</th>
-              </tr>
-              <tr>
-                <td class="price-plan__feature">Розовый фильтр</td>
-                <td class="price-plan__feature">V</td>
-              </tr>
-              <tr>
-                <td class="price-plan__feature">Смайлики</td>
-                <td class="price-plan__feature">X</td>
-              </tr>
-              <tr>
-                <td class="price-plan__feature">Комментарии</td>
-                <td class="price-plan__feature">X</td>
-              </tr>
-            </table>
+            <div class="price-item">
+              <div class="price-item__header">База<br>1,99 USD</div>
+              <div class="price-item__feature price-item__feature--included">Розовый фильтр</div>
+              <div class="price-item__feature">Смайлики</div>
+              <div class="price-item__feature">Комментарии</div>
+            </div>
           </div>
           <div class="prices-slide">
-            <table class="price-plan">
-              <tr>
-                <th colspan="2" class="price-plan__header price-plan__header--hit">Стандарт<br>3,99 USD</th>
-              </tr>
-              <tr>
-                <td class="price-plan__feature">Розовый фильтр</td>
-                <td class="price-plan__feature">V</td>
-              </tr>
-              <tr>
-                <td class="price-plan__feature">Смайлики</td>
-                <td class="price-plan__feature">V</td>
-              </tr>
-              <tr>
-                <td class="price-plan__feature">Комментарии</td>
-                <td class="price-plan__feature">X</td>
-              </tr>
-            </table>
+            <div class="price-item">
+              <div class="price-item__header">Стандарт<br>3,99 USD</div>
+              <div class="price-item__feature price-item__feature--included">Розовый фильтр</div>
+              <div class="price-item__feature price-item__feature--included">Смайлики</div>
+              <div class="price-item__feature">Комментарии</div>
+            </div>
           </div>
           <div class="prices-slide">
-            <table class="price-plan">
-              <tr>
-                <th colspan="2" class="price-plan__header">Анлим<br>9,99 USD</th>
-              </tr>
-              <tr>
-                <td class="price-plan__feature">Розовый фильтр</td>
-                <td class="price-plan__feature">V</td>
-              </tr>
-              <tr>
-                <td class="price-plan__feature">Смайлики</td>
-                <td class="price-plan__feature">V</td>
-              </tr>
-              <tr>
-                <td class="price-plan__feature">Комментарии</td>
-                <td class="price-plan__feature">V</td>
-              </tr>
-            </table>
-          </div>
-          <input type="radio" id="price-1" name="price-switch" checked>
-          <input type="radio" id="price-2" name="price-switch">
-          <input type="radio" id="price-3" name="price-switch">
-          <div class="prices-slider__controls">
-            <label for="price-1"></label>
-            <label for="price-2"></label>
-            <label for="price-3"></label>
+            <div class="price-item">
+              <div class="price-item__header">Анлим<br>9,99 USD</div>
+              <div class="price-item__feature price-item__feature--included">Розовый фильтр</div>
+              <div class="price-item__feature price-item__feature--included">Смайлики</div>
+              <div class="price-item__feature price-item__feature--included">Комментарии</div>
+            </div>
           </div>
         </div>
       </section>
@@ -156,12 +127,12 @@
       <div class="contacts">
         <h2 class="contacts__heading">Остались вопросы?<br>Свяжитесь с нами!</h2>
         <div class="contacts__info">
-          <h3 class="contacts__cta">Звоните:</h3> <!-- cta => calls to action -->
-          <span class="contacts__phone">+7 (812) 555-66-66</span>
-          <h3 class="contacts__cta">Пишите:</h3>
-          <span class="contacts__mail">mail@htmlacademy.ru</span>
-          <h3 class="contacts__cta">Приезжайте в гости:</h3>
-          <span class="contacts__address">ул. Большая Конюшенная, 19/8</span>
+          <strong class="contacts__info-title">Звоните:</strong>
+          <span class="contacts__info-text">+7 (812) 555-66-66</span>
+          <strong class="contacts__info-title">Пишите:</strong>
+          <span class="contacts__info-text">mail@htmlacademy.ru</span>
+          <strong class="contacts__info-title">Приезжайте в гости:</strong>
+          <span class="contacts__info-text">ул. Большая Конюшенная, 19/8</span>
         </div>
       </div>
     </footer>
