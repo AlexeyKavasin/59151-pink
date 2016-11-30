@@ -9,31 +9,31 @@
   <body>
     <header class="inner-header">
       <div class="logo">
-        <a href="index.html" class="logo__link">
+        <span class="logo__link">
           <img src="http://placehold.it/85x35" alt="pink" width="85" height="35">
-        </a>
+        </span>
       </div>
       <a href="#" class="hamburger-menu">
         <span class="hamburger-menu__btn">X</span>
       </a>
       <nav class="main-menu">
         <ul class="main-menu-list">
-          <li class="main-menu-list__item"><a class="main-menu-list__link" href="#main">Главная</a></li>
-          <li class="main-menu-list__item"><a class="main-menu-list__link" href="#photos">Фотографии</a></li>
-          <li class="main-menu-list__item"><a class="main-menu-list__link" href="#form">Конкурс</a></li>
-          <li class="main-menu-list__item"><a class="main-menu-list__link" href="https://htmlacademy.ru/">HTML Academy</a></li>
+          <li><a class="main-menu-list__link" href="#main">Главная</a></li>
+          <li><a class="main-menu-list__link" href="#photos">Фотографии</a></li>
+          <li><a class="main-menu-list__link" href="#form">Конкурс</a></li>
+          <li><a class="main-menu-list__link" href="https://htmlacademy.ru/">HTML Academy</a></li>
         </ul>
       </nav>
     </header>
 
-    <main class="photo-page-content">
+    <main class="page-content">
       <section class="photo-welcome-section">
         <h1 class="photo-welcome-section__heading">Фотографии пользователей</h1>
       </section>
 
       <section class="photos-section">
-        <div class="introduction">
-          <p class="introduction__text">Взгляните на фотографии, которые выкладывают пользователи!<br> Видите, как не хватает ваших?</p>
+        <div class="content-block">
+          <p class="content-block__text">Взгляните на фотографии, которые выкладывают пользователи!<br> Видите, как не хватает ваших?</p>
         </div>
 
         <div class="photo-item photo-item--full-width">
@@ -149,15 +149,15 @@
           </div>
         </div>
 
-        <div class="afterword">
-          <p class="afterword__text">Затмите их всех!<br> Выкладывайте все, что накопилось в телефоне!</p>
+        <div class="content-block">
+          <p class="content-block__text">Затмите их всех!<br> Выкладывайте все, что накопилось в телефоне!</p>
         </div>
       </section>
 
       <section class="photo-upload-section">
         <form action="https://echo.htmlacademy.ru" class="upload-form" method="post">
           <fieldset class="upload-form__effects">
-            <img class="upload-form__uploaded-img" src="http://placehold.it/280x375" alt="загруженное фото">
+            <img class="upload-form__img" src="http://placehold.it/280x375" alt="загруженное фото">
             <input type="radio" id="effect-1" name="effect-switch" checked>
             <input type="radio" id="effect-2" name="effect-switch">
             <input type="radio" id="effect-3" name="effect-switch">

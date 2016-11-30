@@ -4,42 +4,44 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.css"> <!-- normalize временно для удобства -->
+    <link rel="stylesheet" href="css/style.css">
     <title>HTML Academy: Пинк - Главная страница</title>
   </head>
   <body>
     <header class="main-header">
       <div class="logo">
-        <a href="index.html" class="logo__link">
+        <span class="logo__link">
           <img src="http://placehold.it/85x35" alt="pink" width="85" height="35">
-        </a>
+        </span>
       </div>
       <a href="#" class="hamburger-menu">
         <span class="hamburger-menu__btn">X</span>
       </a>
       <nav class="main-menu">
         <ul class="main-menu-list">
-          <li class="main-menu-list__item"><a class="main-menu-list__link" href="#main">Главная</a></li>
-          <li class="main-menu-list__item"><a class="main-menu-list__link" href="#photos">Фотографии</a></li>
-          <li class="main-menu-list__item"><a class="main-menu-list__link" href="#form">Конкурс</a></li>
-          <li class="main-menu-list__item"><a class="main-menu-list__link" href="https://htmlacademy.ru/">HTML Academy</a></li>
+          <li><a class="main-menu-list__link" href="#main">Главная</a></li>
+          <li><a class="main-menu-list__link" href="#photos">Фотографии</a></li>
+          <li><a class="main-menu-list__link" href="#form">Конкурс</a></li>
+          <li><a class="main-menu-list__link" href="https://htmlacademy.ru/">HTML Academy</a></li>
         </ul>
       </nav>
     </header>
 
-    <main class="index-page-content">
+    <main class="page-content">
 
       <section class="index-welcome-section">
         <img src="http://placehold.it/320x400" alt="background">
-        <div class="index-welcome-section__info">
-          <a href="https://www.apple.com/itunes/" class="index-welcome-section__btn">Скачать приложение</a>
-          <ul class="apps-list">
-            <li class="apps-list__item"><a href="https://www.apple.com/itunes/" class="app-list_link">Itunes</a></li>
-            <li class="apps-list__item"><a href="https://play.google.com/store/apps" class="app-list_link">Android</a></li>
-            <li class="apps-list__item"><a href="https://www.microsoft.com/en-in/store/apps/windows-phone" class="app-list_link">Windows</a></li>
-          </ul>
-          <span class="apps-text">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</span>
-        </div>
       </section>
+
+      <div class="app-info">
+        <a href="https://www.apple.com/itunes/" class="app-info__btn">Скачать приложение</a>
+        <ul class="apps-list">
+          <li class="apps-list__item"><a href="https://www.apple.com/itunes/" class="app-list_link">Itunes</a></li>
+          <li class="apps-list__item"><a href="https://play.google.com/store/apps" class="app-list_link">Android</a></li>
+          <li class="apps-list__item"><a href="https://www.microsoft.com/en-in/store/apps/windows-phone" class="app-list_link">Windows</a></li>
+        </ul>
+        <span class="apps-text">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</span>
+      </div>
 
       <section class="benefits-section">
         <header class="benefits-section__header">
@@ -60,6 +62,9 @@
             <p class="benefits-item__text">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
           </article>
         </div>
+      </section>
+
+      <section class="reviews-section">
         <input type="radio" id="review-1" name="review-switch" checked>
         <input type="radio" id="review-2" name="review-switch">
         <input type="radio" id="review-3" name="review-switch">
@@ -127,12 +132,18 @@
       <div class="contacts">
         <h2 class="contacts__heading">Остались вопросы?<br>Свяжитесь с нами!</h2>
         <div class="contacts__info">
-          <strong class="contacts__info-title">Звоните:</strong>
-          <span class="contacts__info-text">+7 (812) 555-66-66</span>
-          <strong class="contacts__info-title">Пишите:</strong>
-          <span class="contacts__info-text">mail@htmlacademy.ru</span>
-          <strong class="contacts__info-title">Приезжайте в гости:</strong>
-          <span class="contacts__info-text">ул. Большая Конюшенная, 19/8</span>
+          <div class="contacts-tel">
+            <strong class="contacts__info-title">Звоните:</strong>
+            <span class="contacts__info-text">+7 (812) 555-66-66</span>
+          </div>
+          <div class="contacts-mail">
+            <strong class="contacts__info-title">Пишите:</strong>
+            <span class="contacts__info-text">mail@htmlacademy.ru</span>
+          </div>
+          <div class="contacts-address">
+            <strong class="contacts__info-title">Приезжайте в гости:</strong>
+            <span class="contacts__info-text">ул. Большая Конюшенная, 19/8</span>
+          </div>
         </div>
       </div>
     </footer>
