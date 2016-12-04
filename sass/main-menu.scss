@@ -1,0 +1,20 @@
+.main-menu {
+  border-top: 1px solid $base-black;
+}
+
+.main-menu__items {
+  margin: 0;
+  padding: 0;
+}
+
+.main-menu__item-link {
+  display: block;
+  padding: 25px;
+  border-top: 1px solid #485461;
+  border-bottom: 1px solid #000000;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: $base-white;
+}
+

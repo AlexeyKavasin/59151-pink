@@ -1,0 +1,40 @@
+// Общие
+
+@import 'normalize';
+@import 'typography';
+@import 'mixins';
+
+@import 'header';
+@import 'main-menu';
+@import 'hamburger-menu';
+@import 'logo';
+@import 'page-content';
+@import 'welcome-section';
+@import 'slider';
+@import 'forms';
+@import 'footer';
+
+// Главная
+
+@import 'apps';
+@import 'benefits';
+@import 'reviews';
+@import 'prices';
+@import 'map';
+@import 'contacts';
+
+// Внутренние страницы
+
+@import 'photos';
+@import 'photo-item';
+@import 'like';
+@import 'upload-form';
+@import 'contest-section';
+@import 'contest-form';
+@import 'social';
+@import 'pop-up';
+
+* {
+  box-sizing: border-box;
+}
+

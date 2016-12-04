@@ -1,0 +1,13 @@
+.like__icon,
+.like__counter {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.like__icon {
+  width: 13px;
+  height: 13px;
+  margin-right: 20px;
+  background: url('../img/icon-heart.svg');
+  background-repeat: no-repeat;
+}

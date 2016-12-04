@@ -3,51 +3,51 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.css"> <!-- normalize временно для удобства -->
+    <link rel="stylesheet" href="css/style.css">
     <title>HTML Academy: Пинк - Конкурс</title>
   </head>
   <body>
-    <header class="inner-header">
-      <div class="logo">
-        <span class="logo__link">
-          <img src="http://placehold.it/85x35" alt="pink" width="85" height="35">
-        </span>
+    <header class="header inner-header">
+      <div class="header__top">
+        <div class="logo">
+          <img src="img/logo-pink-white-mobile.svg" alt="pink" width="85" height="24">
+        </div>
+        <a href="#" class="hamburger-menu">
+          <span class="hamburger-menu__btn"></span>
+        </a>
       </div>
-      <a href="#" class="hamburger-menu">
-        <span class="hamburger-menu__btn">X</span>
-      </a>
       <nav class="main-menu">
-        <ul class="main-menu-list">
-          <li><a class="main-menu-list__link" href="#main">Главная</a></li>
-          <li><a class="main-menu-list__link" href="#photos">Фотографии</a></li>
-          <li><a class="main-menu-list__link" href="#form">Конкурс</a></li>
-          <li><a class="main-menu-list__link" href="https://htmlacademy.ru/">HTML Academy</a></li>
+        <ul class="main-menu__items">
+          <li><a class="main-menu__item-link" href="index.html">Главная</a></li>
+          <li><a class="main-menu__item-link" href="photo.html">Фотографии</a></li>
+          <li><a class="main-menu__item-link" href="form.html">Конкурс</a></li>
+          <li><a class="main-menu__item-link" href="https://htmlacademy.ru/">HTML Academy</a></li>
         </ul>
       </nav>
     </header>
 
     <main class="page-content">
 
-      <section class="form-welcome-section">
-        <h1 class="form-welcome-section__heading">Конкурс на самое безбашенное путешествие с Пинк</h1>
+      <section class="welcome-section welcome-section-form">
+        <h1 class="welcome-section__heading">Конкурс на самое безбашенное путешествие с Пинк</h1>
       </section>
 
-      <section class="contest-form-section">
-        <div class="contest-form-block">
-          <p class="contest-form-block__text">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! Пожалуйста, заполните форму ниже:</p>
+      <section class="contest-section">
+        <div class="contest-section__block">
+          <p class="contest-section__block-txt">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! Пожалуйста, заполните форму ниже:</p>
         </div>
         <form class="contest-form" action="https://echo.htmlacademy.ru" method="post">
 
           <fieldset class="contest-form__main-info">
-            <div class="fields-wrapper">
+            <div class="contest-form__fields-wrapper">
               <label for="surname">Фамилия</label>
               <input type="text" class="form__text-field" id="surname" name="surname" placeholder="Укажите фамилию *" required>
             </div>
-            <div class="fields-wrapper">
+            <div class="contest-form__fields-wrapper">
               <label for="name">Имя</label>
               <input type="text" class="form__text-field" id="name" name="name" placeholder="Введите ваше имя *" required>
             </div>
-            <div class="fields-wrapper">
+            <div class="contest-form__fields-wrapper">
               <label for="patronymic">Отчество</label>
               <input type="text" class="form__text-field" id="patronymic" name="patronymic" placeholder="Ну и отчество тоже">
             </div>
@@ -69,11 +69,11 @@
           </fieldset>
 
           <fieldset class="contest-from__contacts">
-            <div class="fields-wrapper">
+            <div class="contest-form__fields-wrapper">
               <label for="telephone">Номер телефона</label>
               <input type="text" class="form__text-field" id="telephone" name="telephone" placeholder="Номер, пожалуйста">
             </div>
-            <div class="fields-wrapper">
+            <div class="contest-form__fields-wrapper">
               <label for="email">Адресок почты</label>
               <input type="text" class="form__text-field" id="email" name="email" placeholder="Введите почту *" required>
             </div>
@@ -96,27 +96,33 @@
           <button type="submit" class="form__submit">Отправить форму</button>
 
         </form>
-        <div class="contest-form-block">
-          <span class="contest-form-block__text">*</span> - Обязательные поля
+        <div class="contest-section__block">
+          <span class="contest-section__block-txt">*</span> - Обязательные поля
         </div>
       </section>
 
     </main>
 
-    <footer class="inner-footer">
-      <div class="inner-footer-logo">
+    <footer class="footer inner-footer">
+      <div class="inner-footer__logo">
         <a href="index.html" class="inner-footer-logo__link">
-          <img src="http://placehold.it/85x35" alt="pink" width="150" height="45">
+          <img src="img/logo-pink-blue-mobile.svg" alt="pink" width="150" height="45">
         </a>
       </div>
-      <ul class="social footer__social">
-        <li class="social__item"><a href="www.twitter.com">Твиттер</a></li>
-        <li class="social__item"><a href="www.facebook.com">Фейсбук</a></li>
-        <li class="social__item"><a href="www.youtube.com">Ютуб</a></li>
+      <ul class="social inner-footer__social">
+        <li class="social__item">
+          <a class="social__link social__link--tw" href="www.twitter.com"></a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--fb" href="www.facebook.com"></a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--you" href="www.youtube.com"></a>
+        </li>
       </ul>
-      <div class="inner-footer-copyright">
-        <span class="inner-footer-copyright__text">Разработано</span>
-        <img src="http://placehold.it/30x35" alt="htmlacademy" width="30" height="35">
+      <div class="inner-footer__copyright">
+        <span class="inner-footer__copyright-txt">Разработано</span>
+        <img class="inner-footer__copyright-img" src="img/htmlacademy.svg" alt="htmlacademy" width="30" height="35">
       </div>
     </footer>
 

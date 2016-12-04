@@ -1,0 +1,41 @@
+@font-face {
+  font-family: 'Open Sans';
+  src:  url('../fonts/opensans.woff2') format('woff2'),
+        url('../fonts/opensans.woff') format('woff'),
+        url('../fonts/opensansbold.woff2') format('woff2'),
+        url('../fonts/opensansbold.woff') format('woff'),
+        url('../fonts/opensanslight.woff2') format('woff2'),
+        url('../fonts/opensanslight.woff') format('woff');
+}
+
+// Base Font
+
+$base-font: 'Open Sans';
+$base-font-size: 18px;
+$base-p-size: 14px;
+$base-h-size: 24px;
+$base-line-height: 24px;
+$big-line-height: 30px;
+$max-line-height: 32px;
+
+// Font weight
+
+$light: 100;
+$regular: 400;
+$bold: 600;
+
+// Font colors
+
+$base-white: #ffffff;
+$base-black: #000000;
+$base-dark-blue: #283645;
+$base-pink: #d22856;
+$base-gray: #f2f2f2;
+
+body {
+  font-family: $base-font, 'Helvetica', Arial, sans-serif;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  color: $base-dark-blue;
+  background: $base-white;
+}
