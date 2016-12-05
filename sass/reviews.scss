@@ -1,0 +1,10 @@
+.reviews {
+  padding: 40px 20px;
+  position: relative;
+}
+
+#review-1:checked ~ .reviews__slider .slider__item:nth-child(1),
+#review-2:checked ~ .reviews__slider .slider__item:nth-child(2),
+#review-3:checked ~ .reviews__slider .slider__item:nth-child(3) {
+    display: block;
+}

@@ -1,0 +1,18 @@
+.slider__item {
+  display: none;
+}
+
+.slider__heading {
+  margin: 0;
+  margin-bottom: 30px;
+  color: $base-black;
+  font-weight: $bold;
+  line-height: $big-line-height;
+  text-align: center;
+}
+
+.slider__text {
+  font-size: $base-p-size;
+  line-height: $big-line-height;
+  text-align: center;
+}
