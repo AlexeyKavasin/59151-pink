@@ -1,23 +1,20 @@
 .inner-footer {
   padding: 40px;
-}
-
-.inner-footer__logo {
-  width: 150px;
-  margin: 0 auto;
-}
-
-.inner-footer__copyright {
-  width: 130px;
-  margin: 0 auto;
-}
-
-.inner-footer__copyright-txt,
-.inner-footer__copyright-img {
-  display: inline-block;
-  vertical-align: middle;
-}
-
-.inner-footer__copyright-txt {
-  font-size: $base-p-size;
+  &__logo {
+    width: 150px;
+    margin: 0 auto;
+  }
+  &__copyright {
+    width: 130px;
+    margin: 0 auto;
+  }
+  &__copyright-txt {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: $base-p-size;
+  }
+  &__copyright-img {
+    display: inline-block;
+    vertical-align: middle;
+  }
 }

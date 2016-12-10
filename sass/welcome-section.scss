@@ -1,32 +1,30 @@
 .welcome-section {
   width: 100%;
-  padding: 200px 75px;
+  padding: 200px 40px;
   position: relative;
-  background: url('../img/bg-back-mobile@1x.jpg');
+  background: url('#{$img-path}/bg-back-mobile@1x.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50%;
-}
-
-.welcome-section-index::before {
-  content: '';
-  display: block;
-  width: 260px;
-  margin-left: -200px;
-  height: 285px;
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  background: url('../img/iphone-hand-mobile@1x.png');
-  background-repeat: no-repeat;
-  background-size: 100%;
-}
-
-.welcome-section__heading {
-  margin: 0;
-  font-size: $base-h-size;
-  line-height: $max-line-height;
-  font-weight: $light;
-  text-align: center;
-  color: $base-white;
+  &__heading {
+    margin: 0;
+    font-size: $base-h-size;
+    line-height: $max-line-height;
+    font-weight: $light;
+    text-align: center;
+    color: $base-white;
+  }
+  &-index::before {
+    content: '';
+    display: block;
+    width: 260px;
+    margin-left: -200px;
+    height: 285px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    background: url('#{$img-path}/iphone-hand-mobile@1x.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
 }

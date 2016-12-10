@@ -1,7 +1,6 @@
 .header {
   background: $base-dark-blue;
-}
-
-.header__top {
-  @include clearfix;
+  &__top {
+    @include clearfix;
+  }
 }

@@ -1,11 +1,12 @@
-.photos__content-block {
-  padding: 50px;
-  font-size: $base-p-size;
-  line-height: $big-line-height;
-  text-align: center;
-}
-
-.photos__upload-section {
-  padding: 20px;
-  background: $base-gray;
+.photos {
+  &__content-block {
+    padding: 50px;
+    font-size: $base-p-size;
+    line-height: $big-line-height;
+    text-align: center;
+  }
+  &__upload-section {
+    padding: 20px;
+    background: $base-gray;
+  }
 }

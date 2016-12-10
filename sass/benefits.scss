@@ -1,57 +1,52 @@
-.benefits__header {
-  padding: 40px;
-}
-
-.benefits__heading {
-  margin: 0 auto;
-  padding-bottom: 20px;
-  font-size: $base-h-size;
-  line-height: $max-line-height;
-  text-align: center;
-  &:last-child {
-    padding-bottom: 0;
+.benefits {
+  &__header {
+    padding: 40px;
   }
-}
-
-.benefits__items {
-  padding: 40px;
-  text-align: center;
-  background: $base-gray;
-  position: relative;
-  overflow: hidden;
-
-  &::after {
-    display: block;
-    margin-left: -80px;
-    content: '';
-    position: absolute;
-    width: 160px;
-    height: 320px;
-    bottom: -45px;
-    left: 50%;
-    background: url('../img/iphone-screen-mobile@1x.png');
-    background-repeat: no-repeat;
-    background-size: 100%;
+  &__heading {
+    margin: 0 auto;
+    padding-bottom: 20px;
+    font-size: $base-h-size;
+    line-height: $max-line-height;
+    text-align: center;
+    &:last-child {
+      padding-bottom: 0;
+    }
   }
-}
-
-.benefits__item {
-  margin-bottom: 40px;
-
-  &:last-child {
-    margin-bottom: 0;
-    padding-bottom: 270px;
+  &__items {
+    padding: 40px;
+    text-align: center;
+    background: $base-gray;
+    position: relative;
+    overflow: hidden;
+    &::after {
+      display: block;
+      margin-left: -80px;
+      content: '';
+      position: absolute;
+      width: 160px;
+      height: 320px;
+      bottom: -45px;
+      left: 50%;
+      background: url('#{$img-path}/iphone-screen-mobile@1x.png');
+      background-repeat: no-repeat;
+      background-size: 100%;
+    }
   }
-}
-
-.benefits__item-heading {
-  margin: 0;
-  margin-bottom: 20px;
-  font-weight: $bold;
-  color: $base-black;
-}
-
-.benefits__item-text {
-  margin: 0;
-  font-size: $base-p-size;
+  &__item {
+    margin-bottom: 40px;
+    &:last-child {
+      margin-bottom: 0;
+      padding-bottom: 270px;
+    }
+  }
+  &__item-heading {
+    margin: 0;
+    margin-bottom: 20px;
+    font-weight: $bold;
+    color: $base-black;
+  }
+  &__item-text {
+    margin: 0;
+    font-size: $base-p-size;
+  }
 }

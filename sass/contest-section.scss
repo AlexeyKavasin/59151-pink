@@ -1,0 +1,20 @@
+.contest {
+  padding-top: 40px;
+  &__block {
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 20px;
+    padding-bottom: 40px;
+  }
+  &__block-txt {
+    margin: 0;
+    font-size: $base-p-size;
+    line-height: $big-line-height;
+    &--required {
+      text-transform: uppercase;
+    }
+    &--colored {
+      color: $base-pink;
+    }
+  }
+}

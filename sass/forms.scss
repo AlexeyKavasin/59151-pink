@@ -3,3 +3,41 @@ fieldset {
   padding: 0;
   border: none;
 }
+
+label {
+  display: block;
+  padding-left: 20px;
+  padding-bottom: 10px;
+  font-size: $base-p-size;
+  color: $base-pink;
+  text-transform: uppercase;
+}
+
+.form {
+  &__textarea,
+  &__text-field {
+    width: 100%;
+    padding: 20px;
+    border: 2px solid #e5e5e5;
+    &::placeholder {
+      color: $base-dark-blue;
+      line-height: $big-line-height;
+    }
+  }
+  &__textarea {
+    min-height: 200px;
+    resize: none;
+  }
+  &__radio-label,
+  &__checkbox-label {
+    padding-bottom: 0;
+    padding-left: 30px;
+    text-transform: initial;
+    font-size: $base-font-size;
+    color: $base-dark-blue;
+  }
+  &__submit {
+    cursor: pointer;
+    border: none;
+  }
+}
