@@ -1,25 +1,108 @@
+label {
+  display: block;
+  padding-left: 20px;
+  padding-bottom: 10px;
+  font-size: $base-p-size;
+  color: $base-pink;
+  text-transform: uppercase;
+  @include tablet {
+    padding-left: 0;
+    padding-right: 20px;
+  }
+}
+
 .form {
-  label {
-    display: block;
-    padding-left: 20px;
-    padding-bottom: 10px;
-    font-size: $base-p-size;
-    color: $base-pink;
-    text-transform: uppercase;
+  @include tablet {
+    padding: 80px 40px;
+    padding-bottom: 0;
   }
   &__fieldset {
-    max-width: 320px;
     margin: 0;
     padding: 40px 20px;
+    position: relative;
     border: none;
-    &--colored {
+    &:last-child {
+      margin-bottom: 0;
+      @include tablet {
+        margin-bottom: 60px;
+      }
+    }
+    @include tablet {
+      padding: 50px 60px;
+      margin-bottom: 80px;
+      border: 2px solid #e5e5e5;
+      border-radius: 5px;
+      &--main,
+      &--submit {
+        padding: 0;
+        border: none;
+      }
+    }
+    &--actions,
+    &--app, {
       background: $base-gray;
+      @include tablet {
+        background: $base-white;
+      }
+      @include desktop {
+        background: $base-white;
+      }
+    }
+    &--main {
+      @include tablet {
+        order: 1;
+      }
+    }
+    &--app {
+      @include tablet {
+        order: 2;
+      }
+    }
+    &--contacts {
+      @include tablet {
+        order: 3;
+      }
+    }
+    &--actions {
+      @include tablet {
+        order: 4;
+      }
+    }
+    &--comment {
+      @include tablet {
+        order: 5;
+      }
+    }
+    &--submit {
+      @include tablet {
+        order: 6;
+      }
     }
   }
   &__fields-wrapper {
     margin-bottom: 20px;
+    @include tablet {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 50px;
+    }
     &:last-child {
       margin-bottom: 0;
+    }
+    &--contacts {
+      @include tablet {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: flex-start;
+      }
+      & label {
+        @include tablet {
+          padding: 0;
+          padding-top: 10px;
+          padding-left: 20px;
+        }
+      }
     }
   }
   &__textarea,
@@ -49,6 +132,9 @@
     font-size: $base-font-size;
     color: $base-dark-blue;
     position: relative;
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
   &__radio + label::before,
   &__checkbox + label::before {
@@ -62,6 +148,7 @@
     margin-top: -20px;
     border: 2px solid #e5e5e5;
     background: $base-white;
+    cursor: pointer;
   }
   &__radio + label::before {
     border-radius: 50%;

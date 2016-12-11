@@ -1,12 +1,23 @@
 .inner-footer {
   padding: 40px;
+  @include tablet {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
   &__logo {
     width: 150px;
     margin: 0 auto;
+    @include tablet {
+      margin: 0;
+    }
   }
   &__copyright {
     width: 130px;
     margin: 0 auto;
+    @include tablet {
+      margin: 0;
+    }
   }
   &__copyright-txt {
     display: inline-block;

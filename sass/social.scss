@@ -4,6 +4,9 @@
   padding: 0;
   list-style: none;
   font-size: 0;
+  @include tablet {
+    margin: 0;
+  }
   &__item {
     display: inline-block;
     vertical-align: bottom;
