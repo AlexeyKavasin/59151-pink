@@ -26,7 +26,7 @@
       </nav>
     </header>
 
-    <main class="page-content">
+    <main>
       <section class="welcome-section welcome-section-photo">
         <h1 class="welcome-section__heading">Фотографии пользователей</h1>
       </section>
@@ -155,8 +155,8 @@
       </section>
 
       <section class="photos__upload-section">
-        <form action="https://echo.htmlacademy.ru" class="upload-form" method="post">
-          <fieldset class="upload-form__effects">
+        <form action="https://echo.htmlacademy.ru" class="form upload-form" method="post">
+          <fieldset class="form__fieldset upload-form__fieldset">
             <img class="upload-form__img" src="img/photo-7-mobile@1x.jpg" alt="загруженное фото">
             <input type="radio" id="effect-1" name="effect-switch" checked>
             <input type="radio" id="effect-2" name="effect-switch">
@@ -166,9 +166,11 @@
               <label class="upload-form__fill" for="effect-2"></label>
               <label class="upload-form__contrast" for="effect-3"></label>
             </div>
-            <input type="range" class="upload-form__effects-strength" min="0" max="100" step="10" value="50">
+            <div class="upload-form__range-wrapper">
+              <input type="range" class="upload-form__range" min="0" max="100" step="10" value="50">
+            </div>
           </fieldset>
-          <fieldset class="upload-form__submit">
+          <fieldset class="form__fieldset upload-form__fieldset">
             <button type="submit" class="upload-form__submit-btn">Запостить</button>
             <button type="button" class="upload-form__cancel-btn">Отмена</button>
           </fieldset>
