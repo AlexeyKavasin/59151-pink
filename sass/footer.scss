@@ -5,10 +5,19 @@
     justify-content: space-between;
     align-items: center;
   }
+  @include desktop {
+    padding: 40px 130px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
   &__logo {
     width: 150px;
     margin: 0 auto;
     @include tablet {
+      margin: 0;
+    }
+    @include desktop {
       margin: 0;
     }
   }
@@ -16,6 +25,9 @@
     width: 130px;
     margin: 0 auto;
     @include tablet {
+      margin: 0;
+    }
+    @include desktop {
       margin: 0;
     }
   }

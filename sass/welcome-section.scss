@@ -9,6 +9,9 @@
     @include tablet {
       padding: 200px 110px;
     }
+    @include desktop {
+      padding: 200px 230px;
+    }
   &__heading {
     margin: 0;
     font-size: $base-h-size;
@@ -17,6 +20,11 @@
     text-align: center;
     color: $base-white;
     @include tablet {
+      font-size: 50px;
+      line-height: 60px;
+      font-weight: $light;
+    }
+    @include desktop {
       font-size: 50px;
       line-height: 60px;
       font-weight: $light;
