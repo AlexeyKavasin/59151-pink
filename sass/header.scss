@@ -1,6 +1,21 @@
 .header {
   background: $base-dark-blue;
-  &__top {
-    @include clearfix;
+  @include desktop {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 2;
+    background: $base-black;
+    @include opacity(0.8);
+  }
+  &__wrapper {
+    @include desktop {
+      width: 940px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
   }
 }

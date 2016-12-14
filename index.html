@@ -8,38 +8,43 @@
   </head>
   <body>
     <header class="header main-header">
-      <div class="header__top">
+      <div class="header__wrapper">
         <div class="logo">
-          <img src="img/logo-pink-white-mobile.svg" alt="pink" width="85" height="24">
+          <img src="img/logo-pink-white-mobile.svg" alt="pink" width="85" height="25">
         </div>
         <a href="#" class="hamburger-menu">
           <span class="hamburger-menu__btn"></span>
         </a>
+        <nav class="main-menu">
+          <ul class="main-menu__items">
+            <li><a class="main-menu__item-link" href="index.html">Главная</a></li>
+            <li><a class="main-menu__item-link" href="photo.html">Фотографии</a></li>
+            <li><a class="main-menu__item-link" href="form.html">Конкурс</a></li>
+            <li><a class="main-menu__item-link" href="https://htmlacademy.ru/">HTML Academy</a></li>
+          </ul>
+        </nav>
       </div>
-      <nav class="main-menu">
-        <ul class="main-menu__items">
-          <li><a class="main-menu__item-link" href="index.html">Главная</a></li>
-          <li><a class="main-menu__item-link" href="photo.html">Фотографии</a></li>
-          <li><a class="main-menu__item-link" href="form.html">Конкурс</a></li>
-          <li><a class="main-menu__item-link" href="https://htmlacademy.ru/">HTML Academy</a></li>
-        </ul>
-      </nav>
     </header>
 
     <main>
+<!--     TODO
+    apps переместить в велком
+    разметить текст в велком секшн
+    убрать радио баттоны в секции с ренджом, сделать привязку к лейблам
+-->
 
       <section class="welcome-section welcome-section-index">
+        <div class="apps">
+          <h1 class="apps__heading">Взгляните на жизнь иначе!</h1>
+          <a href="https://www.apple.com/itunes/" class="apps__btn">Скачать приложение</a>
+          <ul class="apps__items">
+            <li class="apps__item"><a href="https://www.apple.com/itunes/" class="apps__item-link apps__item-link--ios"></a></li>
+            <li class="apps__item"><a href="https://play.google.com/store/apps" class="apps__item-link apps__item-link--andr"></a></li>
+            <li class="apps__item"><a href="https://www.microsoft.com/en-in/store/apps/windows-phone" class="apps__item-link apps__item-link--win"></a></li>
+          </ul>
+          <span class="apps__text">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</span>
+        </div>
       </section>
-
-      <div class="apps">
-        <a href="https://www.apple.com/itunes/" class="apps__btn">Скачать приложение</a>
-        <ul class="apps__items">
-          <li class="apps__item"><a href="https://www.apple.com/itunes/" class="apps__item-link apps__item-link--ios"></a></li>
-          <li class="apps__item"><a href="https://play.google.com/store/apps" class="apps__item-link apps__item-link--andr"></a></li>
-          <li class="apps__item"><a href="https://www.microsoft.com/en-in/store/apps/windows-phone" class="apps__item-link apps__item-link--win"></a></li>
-        </ul>
-        <span class="apps__text">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</span>
-      </div>
 
       <section class="benefits">
         <header class="benefits__header">

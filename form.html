@@ -8,22 +8,22 @@
   </head>
   <body>
     <header class="header inner-header">
-      <div class="header__top">
+      <div class="header__wrapper">
         <div class="logo">
-          <img src="img/logo-pink-white-mobile.svg" alt="pink" width="85" height="24">
+          <img src="img/logo-pink-white-mobile.svg" alt="pink" width="85" height="25">
         </div>
         <a href="#" class="hamburger-menu">
           <span class="hamburger-menu__btn"></span>
         </a>
+        <nav class="main-menu">
+          <ul class="main-menu__items">
+            <li><a class="main-menu__item-link" href="index.html">Главная</a></li>
+            <li><a class="main-menu__item-link" href="photo.html">Фотографии</a></li>
+            <li><a class="main-menu__item-link" href="form.html">Конкурс</a></li>
+            <li><a class="main-menu__item-link" href="https://htmlacademy.ru/">HTML Academy</a></li>
+          </ul>
+        </nav>
       </div>
-      <nav class="main-menu">
-        <ul class="main-menu__items">
-          <li><a class="main-menu__item-link" href="index.html">Главная</a></li>
-          <li><a class="main-menu__item-link" href="photo.html">Фотографии</a></li>
-          <li><a class="main-menu__item-link" href="form.html">Конкурс</a></li>
-          <li><a class="main-menu__item-link" href="https://htmlacademy.ru/">HTML Academy</a></li>
-        </ul>
-      </nav>
     </header>
 
     <main>
@@ -38,7 +38,7 @@
         </div>
         <form class="form contest-form" action="https://echo.htmlacademy.ru" method="post">
 
-          <fieldset class="form__fieldset form__fieldset--main">
+          <div class="form__fieldset form__fieldset--main">
             <div class="form__fields-wrapper form__fields-wrapper">
               <label for="surname">Фамилия:</label>
               <input type="text" class="form__text-field" id="surname" name="surname" placeholder="Укажите фамилию *" required>
@@ -51,9 +51,9 @@
               <label for="patronymic">Отчество:</label>
               <input type="text" class="form__text-field" id="patronymic" name="patronymic" placeholder="Ну и отчество тоже">
             </div>
-          </fieldset>
+          </div>
 
-          <fieldset class="form__fieldset form__fieldset--actions">
+          <div class="form__fieldset form__fieldset--actions">
             <h4 class="contest-form__subheading">Ваши безбашенные достижения в путешествии</h4>
               <input type="checkbox" class="form__checkbox" id="action-1" name="action" value="shark selfie" checked>
               <label for="action-1">Сделал селфи с акулой</label>
@@ -67,9 +67,9 @@
               <label for="action-5">Удержал башню</label>
               <input type="checkbox" class="form__checkbox" id="action-6" name="action" value="hotel destroy">
               <label for="action-6">Разгромил отель</label>
-          </fieldset>
+          </div>
 
-          <fieldset class="form__fieldset form__fieldset--contacts">
+          <div class="form__fieldset form__fieldset--contacts">
             <div class="form__fields-wrapper form__fields-wrapper--contact">
               <label for="telephone">Номер телефона:</label>
               <input type="text" class="form__text-field" id="telephone" name="telephone" placeholder="Номер, пожалуйста">
@@ -78,9 +78,9 @@
               <label for="email">Адресок почты:</label>
               <input type="text" class="form__text-field" id="email" name="email" placeholder="Введите почту *" required>
             </div>
-          </fieldset>
+          </div>
 
-          <fieldset class="form__fieldset form__fieldset--app">
+          <div class="form__fieldset form__fieldset--app">
             <h4 class="contest-form__subheading">С каким приложением путешествовали?</h4>
             <input type="radio" class="form__radio" id="pink-ios" name="app" value="pink on ios" checked>
             <label for="pink-ios">Pink для iOS</label>
@@ -88,12 +88,12 @@
             <label for="pink-android">Pink на Android</label>
             <input type="radio" class="form__radio" id="pink-windows" name="app" value="pink on windows">
             <label for="pink-windows">Windows Phone</label>
-          </fieldset>
+          </div>
 
-          <fieldset class="form__fieldset form__fieldset--comment">
+          <div class="form__fieldset form__fieldset--comment">
             <label for="comment" class="contest-form__comment-subheading">Опишите свои эмоции</label>
             <textarea class="form__textarea" id="comment" name="comment" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
-          </fieldset>
+          </div>
           <div class="form__fieldset form__fieldset--submit">
             <button type="submit" class="form__submit contest-form__submit">Отправить форму</button>
           </div>

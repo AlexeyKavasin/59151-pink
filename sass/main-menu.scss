@@ -1,8 +1,21 @@
 .main-menu {
-  border-top: 1px solid $base-black;
+  padding-top: 75px;
+  & li {
+    list-style: none;
+  }
+  @include desktop {
+    padding-top: 0;
+  }
   &__items {
     margin: 0;
     padding: 0;
+    border-top: 1px solid $base-black;
+    @include desktop {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border: none;
+    }
   }
   &__item-link {
     display: block;
@@ -13,5 +26,8 @@
     text-decoration: none;
     text-transform: uppercase;
     color: $base-white;
+    @include desktop {
+      border: none;
+    }
   }
 }

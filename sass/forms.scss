@@ -9,20 +9,18 @@ label {
     padding-left: 0;
     padding-right: 20px;
   }
-  @include desktop {
-    padding-left: 0;
-    padding-right: 20px;
-  }
 }
 
 .form {
+  padding: 0;
   @include tablet {
-    padding: 80px 40px;
-    padding-bottom: 0;
+    padding-top: 80px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
   @include desktop {
-    padding: 80px 130px;
-    padding-bottom: 0;
+    padding-left: 130px;
+    padding-right: 130px;
   }
   &__fieldset {
     margin: 0;
@@ -34,22 +32,8 @@ label {
       @include tablet {
         margin-bottom: 60px;
       }
-      @include desktop {
-        margin-bottom: 60px;
-      }
     }
     @include tablet {
-      padding: 50px 60px;
-      margin-bottom: 80px;
-      border: 2px solid #e5e5e5;
-      border-radius: 5px;
-      &--main,
-      &--submit {
-        padding: 0;
-        border: none;
-      }
-    }
-    @include desktop {
       padding: 50px 60px;
       margin-bottom: 80px;
       border: 2px solid #e5e5e5;
@@ -66,16 +50,12 @@ label {
       @include tablet {
         background: $base-white;
       }
-      @include desktop {
-        background: $base-white;
-      }
     }
     &--main {
       @include tablet {
         order: 1;
       }
       @include desktop {
-        order: 1;
         width: 45%;
       }
     }
@@ -84,7 +64,6 @@ label {
         order: 2;
       }
       @include desktop {
-        order: 2;
         width: 45%;
       }
     }
@@ -93,10 +72,10 @@ label {
         order: 3;
       }
       @include desktop {
-        order: 3;
         width: 100%;
         display: flex;
         flex-direction: row;
+        justify-content: space-between;
       }
     }
     &--actions {
@@ -104,8 +83,12 @@ label {
         order: 4;
       }
       @include desktop {
-        order: 4;
         width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
       }
     }
     &--comment {
@@ -113,7 +96,6 @@ label {
         order: 5;
       }
       @include desktop {
-        order: 5;
         width: 100%;
       }
     }
@@ -122,27 +104,23 @@ label {
         order: 6;
       }
       @include desktop {
-        order: 6;
         width: 100%;
       }
     }
   }
   &__fields-wrapper {
     margin-bottom: 20px;
+    &:last-child {
+      margin-bottom: 0;
+    }
     @include tablet {
       display: flex;
       justify-content: space-between;
       align-items: center;
       margin-bottom: 50px;
-    }
-    @include desktop {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 50px;
-    }
-    &:last-child {
-      margin-bottom: 0;
+      &:last-child {
+        margin-bottom: 50px;
+      }
     }
     &--contact {
       @include tablet {
@@ -151,18 +129,11 @@ label {
         align-items: flex-start;
       }
       @include desktop {
-        display: flex;
-        flex-direction: column-reverse;
-        align-items: flex-start;
-        width: 40%;
+        align-items: flex-end;
+        width: 44%;
       }
       & label {
         @include tablet {
-          padding: 0;
-          padding-top: 10px;
-          padding-left: 20px;
-        }
-        @include desktop {
           padding: 0;
           padding-top: 10px;
           padding-left: 20px;
@@ -190,6 +161,7 @@ label {
   }
   &__radio + label,
   &__checkbox + label {
+    width: 280px;
     padding-bottom: 0;
     padding-left: 60px;
     margin-bottom: 40px;
@@ -199,6 +171,11 @@ label {
     position: relative;
     &:last-child {
       margin-bottom: 0;
+      @include tablet {
+        &:last-child {
+          margin-bottom: 40px
+        }
+      }
     }
   }
   &__radio + label::before,

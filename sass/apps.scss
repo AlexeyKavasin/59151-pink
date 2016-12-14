@@ -1,22 +1,46 @@
 .apps {
+  width: 100%;
+  min-height: 300px;
   padding: 25px 20px;
   padding-bottom: 40px;
   background: #1d2631;
   color: $base-white;
-
+  @include tablet {
+    padding: 0;
+    position: absolute;
+    width: 300px;
+    bottom: 110px;
+    left: 40px;
+    background: transparent;
+  }
+  &__heading {
+    display: none;
+    max-width: 200px;
+    margin: 0 auto;
+    padding-bottom: 40px;
+    font-size: 40px;
+    line-height: 50px;
+    font-weight: $light;
+    text-align: center;
+    @include tablet {
+      display: block;
+    }
+  }
   &__btn{
     display: block;
     max-width: 280px;
     margin: 0 auto;
     padding: 20px 35px;
     font-weight: $bold;
-    line-height: $big-line-height;
+    line-height: $base-line-height;
     text-align: center;
     text-decoration: none;
     color: $base-white;
     border: 3px solid $base-white;
     border-radius: 50px;
-    box-sizing: initial;
+    @include tablet {
+      max-width: 300px;
+    }
   }
   &__items {
     max-width: 280px;
@@ -26,6 +50,9 @@
     justify-content: space-between;
     align-items: baseline;
     list-style: none;
+    @include tablet {
+      justify-content: space-around;
+    }
   }
   &__item-link {
     display: block;
