@@ -13,6 +13,9 @@
     left: 40px;
     background: transparent;
   }
+  @include desktop {
+    left: 130px;
+  }
   &__heading {
     display: none;
     max-width: 200px;
@@ -38,8 +41,10 @@
     color: $base-white;
     border: 3px solid $base-white;
     border-radius: 50px;
+    box-sizing: initial;
     @include tablet {
       max-width: 300px;
+      box-sizing: border-box;
     }
   }
   &__items {

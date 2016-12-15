@@ -1,6 +1,17 @@
 .contacts {
   padding: 40px;
   text-align: center;
+  &__items {
+    @include tablet {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: center;
+    }
+    @include desktop {
+      justify-content: center;
+    }
+  }
   &__heading {
     margin: 0;
     margin-bottom: 40px;
@@ -10,6 +21,22 @@
   }
   &__item {
     margin-bottom: 25px;
+    @include tablet {
+      width: 50%;
+      margin-bottom: 50px
+    }
+    @include desktop {
+      width: 33%;
+      &--phone {
+        order: 1;
+      }
+      &--address {
+        order: 2;
+      }
+      &--mail {
+        order: 3;
+      }
+    }
   }
   &__item-title {
     display: block;

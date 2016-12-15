@@ -28,9 +28,8 @@
 
     <main>
 <!--     TODO
-    apps переместить в велком
-    разметить текст в велком секшн
     убрать радио баттоны в секции с ренджом, сделать привязку к лейблам
+    подумать над секцией benefits
 -->
 
       <section class="welcome-section welcome-section-index">
@@ -65,29 +64,51 @@
             <p class="benefits__item-text">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
           </article>
         </div>
+        <div class="benefits__full-width">
+          <article class="benefits__full-width-item">
+            <h3 class="benefits__item-heading">Эффект на 24 часа!</h3>
+            <p class="benefits__item-text">Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
+            <a href="#" class="benefits__item-link">Узнать больше об исследовании</a>
+          </article>
+        </div>
       </section>
 
       <section class="slider reviews">
-        <input type="radio" class="slider__input" id="review-1" name="review-switch" checked>
-        <input type="radio" class="slider__input" id="review-2" name="review-switch">
-        <input type="radio" class="slider__input" id="review-3" name="review-switch">
-        <div class="slider__controls">
-          <label for="review-1"></label>
-          <label for="review-2"></label>
-          <label for="review-3"></label>
-        </div>
-        <div class="slider__items reviews__slider">
-          <div class="slider__item">
-            <h3 class="slider__heading">Николай Петров</h3>
-            <p class="slider__text">«Это приложение перевернуло мой мир и позволило по-новому взгляуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+        <div class="reviews__wrapper">
+          <input type="radio" class="slider__input" id="review-1" name="review-switch" checked>
+          <input type="radio" class="slider__input" id="review-2" name="review-switch">
+          <input type="radio" class="slider__input" id="review-3" name="review-switch">
+          <div class="slider__controls">
+            <label for="review-1"></label>
+            <label for="review-2"></label>
+            <label for="review-3"></label>
           </div>
-          <div class="slider__item">
-            <h3 class="slider__heading">Иван Иванов</h3>
-            <p class="slider__text">«Это приложение перевернуло мой мир и позволило по-новому взгляуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+          <div class="slider__arrows reviews__arrows">
+            <div class="slider__arrow-left reviews__left"><</div>
+            <div class="slider__arrow-right reviews__right">></div>
           </div>
-          <div class="slider__item">
-            <h3 class="slider__heading">Петр Николаев</h3>
-            <p class="slider__text">«Это приложение перевернуло мой мир и позволило по-новому взгляуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+          <div class="slider__items reviews__slider">
+            <div class="slider__item">
+              <div class="reviews__item">
+                <h3 class="slider__heading reviews__heading">Николай Петров</h3>
+                <span class="slider__text-note reviews__text-note">25 лет, водитель трамвая</span>
+                <p class="slider__text reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взгляуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+              </div>
+            </div>
+            <div class="slider__item">
+              <div class="reviews__item">
+                <h3 class="slider__heading reviews__heading">Иван Иванов</h3>
+                <span class="slider__text-note reviews__text-note">25 лет, водитель трамвая</span>
+                <p class="slider__text reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взгляуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+              </div>
+            </div>
+            <div class="slider__item">
+              <div class="reviews__item">
+                <h3 class="slider__heading reviews__heading">Петр Сидоров</h3>
+                <span class="slider__text-note reviews__text-note">25 лет, водитель трамвая</span>
+                <p class="slider__text reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взгляуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -103,13 +124,20 @@
         </div>
         <div class="slider__items prices__slider">
           <div class="slider__item">
+            <div class="prices__item prices__item--tablet">
+              <div class="prices__item-feature prices__item-feature--tablet">Розовый фильтр</div>
+              <div class="prices__item-feature prices__item-feature--tablet">Смайлики</div>
+              <div class="prices__item-feature prices__item-feature--tablet">Комментарии</div>
+            </div>
+          </div>
+          <div class="slider__item">
             <div class="prices__item">
               <div class="prices__item-header">База<br>
                 <span class="prices__item-usd">1,99 USD</span>
               </div>
-              <div class="prices__item-feature prices__item-feature--included">Розовый фильтр</div>
-              <div class="prices__item-feature">Смайлики</div>
-              <div class="prices__item-feature">Комментарии</div>
+              <div class="prices__item-feature prices__item-feature--included"><span class="prices__feature-title">Розовый фильтр</span></div>
+              <div class="prices__item-feature"><span class="prices__feature-title">Смайлики</span></div>
+              <div class="prices__item-feature"><span class="prices__feature-title">Комментарии</span></div>
             </div>
           </div>
           <div class="slider__item">
@@ -117,9 +145,9 @@
               <div class="prices__item-header prices__item-header--hit">Стандарт<br>
                 <span class="prices__item-usd">3,99 USD</span>
               </div>
-              <div class="prices__item-feature prices__item-feature--included">Розовый фильтр</div>
-              <div class="prices__item-feature prices__item-feature--included">Смайлики</div>
-              <div class="prices__item-feature">Комментарии</div>
+              <div class="prices__item-feature prices__item-feature--included"><span class="prices__feature-title">Розовый фильтр</span></div>
+              <div class="prices__item-feature prices__item-feature--included"><span class="prices__feature-title">Смайлики</span></div>
+              <div class="prices__item-feature"><span class="prices__feature-title">Комментарии</span></div>
             </div>
           </div>
           <div class="slider__item">
@@ -127,9 +155,9 @@
               <div class="prices__item-header">Анлим<br>
                 <span class="prices__item-usd">9,99 USD</span>
               </div>
-              <div class="prices__item-feature prices__item-feature--included">Розовый фильтр</div>
-              <div class="prices__item-feature prices__item-feature--included">Смайлики</div>
-              <div class="prices__item-feature prices__item-feature--included">Комментарии</div>
+              <div class="prices__item-feature prices__item-feature--included"><span class="prices__feature-title">Розовый фильтр</span></div>
+              <div class="prices__item-feature prices__item-feature--included"><span class="prices__feature-title">Смайлики</span></div>
+              <div class="prices__item-feature prices__item-feature--included"><span class="prices__feature-title">Комментарии</span></div>
             </div>
           </div>
         </div>
@@ -140,21 +168,43 @@
       <div class="contacts">
         <h2 class="contacts__heading">Остались вопросы?<br>Свяжитесь с нами!</h2>
         <div class="contacts__items">
-          <div class="contacts__item">
+          <div class="contacts__item contacts__item--phone">
             <span class="contacts__item-title">Звоните:</span>
             <span class="contacts__item-text">+7 (812) 555-66-66</span>
           </div>
-          <div class="contacts__item">
+          <div class="contacts__item contacts__item--mail">
             <span class="contacts__item-title">Пишите:</span>
             <span class="contacts__item-text">mail@htmlacademy.ru</span>
           </div>
-          <div class="contacts__item">
+          <div class="contacts__item contacts__item--address">
             <span class="contacts__item-title">Приезжайте в гости:</span>
             <span class="contacts__item-text">ул. Большая Конюшенная, 19/8</span>
           </div>
         </div>
       </div>
       <div class="map"></div>
+      <div class="footer__wrapper">
+        <div class="footer-logo main-footer__logo">
+          <a href="index.html" class="main-footer-logo__link">
+            <img src="img/logo-pink-blue-mobile.svg" alt="pink" width="150" height="45">
+          </a>
+        </div>
+        <ul class="social footer__social main-footer__social">
+          <li class="social__item">
+            <a class="social__link social__link--tw" href="www.twitter.com"></a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--fb" href="www.facebook.com"></a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--you" href="www.youtube.com"></a>
+          </li>
+        </ul>
+        <div class="footer__copyright main-footer__copyright">
+          <span class="footer__copyright-txt main-footer__copyright-txt">Разработано</span>
+          <img class="footer__copyright-img main-footer__copyright-img" src="img/htmlacademy.svg" alt="htmlacademy" width="30" height="35">
+        </div>
+      </div>
     </footer>
   </body>
 </html>

@@ -1,9 +1,34 @@
 .prices {
   background: $base-gray;
   padding: 40px 0;
+  &__slider {
+    @include tablet {
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+    }
+    & .slider__item {
+      @include tablet {
+        display: block;
+      }
+    }
+  }
   &__item {
     margin: 0 auto;
     max-width: 280px;
+    @include tablet {
+      margin: 0;
+      min-width: 150px;
+    }
+    @include desktop {
+      min-width: 235px;
+    }
+    &--tablet {
+      display: none;
+      @include tablet {
+        display: block;
+      }
+    }
   }
   &__item-header {
     position: relative;
@@ -13,6 +38,9 @@
     background: $base-dark-blue;
     text-align: center;
     text-transform: uppercase;
+    @include tablet {
+      border-right: 2px solid $base-gray;
+    }
     &--hit::after {
       display: block;
       content: '';
@@ -27,13 +55,23 @@
   &__item-usd {
     font-weight: $light;
   }
-  &__item-feature {
+  &__item-feature,
+  &__item-feature--tablet {
+    height: 60px;
     position: relative;
     padding: 20px;
-    padding-right: 50px;
+    line-height: $base-line-height;
     border-bottom: 2px solid $base-gray;
     text-transform: uppercase;
     background: $base-white;
+    @include tablet {
+      height: 45px;
+      line-height: 0;
+      border-right: 2px solid $base-gray;
+    }
+  }
+  &__item-feature {
+    &--included::after,
     &::after {
       display: block;
       content: '';
@@ -46,20 +84,35 @@
       background: url('#{$img-path}/icon-no.svg');
       background-repeat: no-repeat;
       background-size: 100%;
+      background-position: 50%;
+      @include tablet {
+        right: 50%;
+        margin-right: -15px;
+      }
     }
     &--included::after {
-      width: 35px;
-      height: 25px;
-      margin-top: -12px;
-      right: 10px;
       background: url('#{$img-path}/icon-yes.svg');
       background-repeat: no-repeat;
+      background-size: 100%;
+      background-position: 50%;
+    }
+    &--tablet {
+      text-transform: initial;
+      font-size: $base-p-size;
+    }
+    &--tablet::after {
+      display: none;
+    }
+  }
+  &__feature-title {
+    @include tablet {
+      display: none;
     }
   }
 }
 
-#price-1:checked ~ .prices__slider .slider__item:nth-child(1),
-#price-2:checked ~ .prices__slider .slider__item:nth-child(2),
-#price-3:checked ~ .prices__slider .slider__item:nth-child(3) {
+#price-1:checked ~ .prices__slider .slider__item:nth-child(2),
+#price-2:checked ~ .prices__slider .slider__item:nth-child(3),
+#price-3:checked ~ .prices__slider .slider__item:nth-child(4) {
     display: block;
 }

@@ -18,6 +18,13 @@
     background: $base-gray;
     position: relative;
     overflow: hidden;
+    @include tablet {
+      min-height: 490px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-end;
+    }
     &::after {
       display: block;
       margin-left: -80px;
@@ -30,6 +37,13 @@
       background: url('#{$img-path}/iphone-screen-mobile@1x.png');
       background-repeat: no-repeat;
       background-size: 100%;
+      @include tablet {
+        width: 265px;
+        height: 470px;
+        margin: 0;
+        left: 40px;
+        bottom: -25px;
+      }
     }
   }
   &__item {
@@ -37,6 +51,12 @@
     &:last-child {
       margin-bottom: 0;
       padding-bottom: 270px;
+      @include tablet {
+        padding-bottom: 0;
+      }
+    }
+    @include tablet {
+      width: 50%;
     }
   }
   &__item-heading {
@@ -48,5 +68,21 @@
   &__item-text {
     margin: 0;
     font-size: $base-p-size;
+  }
+  &__full-width {
+    display: none;
+    padding: 100px 40px;
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-end;
+    }
+    &-item {
+      max-width: 310px;
+      @include desktop {
+        max-width: 540px;
+      }
+    }
   }
 }
