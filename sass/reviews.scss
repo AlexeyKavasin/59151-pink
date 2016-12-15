@@ -49,9 +49,23 @@
   }
   &__arrows {
     display: none;
+    position: absolute;
+    top: 50%;
+    margin-top: -20px;
     @include desktop {
       display: block;
     }
+  }
+  &__arrow-right,
+  &__arrow-left {
+    position: absolute;
+    top: 0;
+  }
+  &__arrow-right {
+    right: 0;
+  }
+  &__arrow-left {
+    left: 0;
   }
 }
 

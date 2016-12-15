@@ -7,12 +7,16 @@
   background-size: auto;
   background-position: 50% 0;
   @include tablet {
-    min-height: 730px;
     background-size: cover;
+  }
+  &-index {
+    @include tablet {
+      min-height: 730px;
+    }
   }
   &__heading {
     margin: 0 auto;
-    padding: 0 100px;
+    padding: 0 70px;
     font-size: $base-h-size;
     line-height: $max-line-height;
     font-weight: $light;
@@ -41,5 +45,9 @@
       height: 515px;
       bottom: 0;
     }
+  }
+  &-form,
+  &-photo {
+    padding: 150px 0;
   }
 }

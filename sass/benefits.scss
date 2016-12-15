@@ -25,6 +25,14 @@
       justify-content: flex-start;
       align-items: flex-end;
     }
+    @include desktop {
+      padding-top: 400px;
+      padding-right: 130px;
+      padding-left: 130px;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: stretch;
+    }
     &::after {
       display: block;
       margin-left: -80px;
@@ -44,6 +52,9 @@
         left: 40px;
         bottom: -25px;
       }
+      @include desktop {
+        display: none;
+      }
     }
   }
   &__item {
@@ -54,9 +65,30 @@
       @include tablet {
         padding-bottom: 0;
       }
+      @include desktop {
+        margin-bottom: 40px;
+      }
     }
     @include tablet {
       width: 50%;
+    }
+    @include desktop {
+      width: auto;
+      max-width: 240px;
+      position: relative;
+      &::before {
+        display: block;
+        width: 180px;
+        height: 305px;
+        content: '';
+        position: absolute;
+        left: 50%;
+        margin-left: -90px;
+        bottom: 230px;
+        background: url('#{$img-path}/iphone-screen-mobile@1x.png');
+        background-repeat: no-repeat;
+        background-size: 100%;
+      }
     }
   }
   &__item-heading {
@@ -64,6 +96,11 @@
     margin-bottom: 20px;
     font-weight: $bold;
     color: $base-black;
+    @include desktop {
+      font-size: 30px;
+      font-weight: $regular;
+      line-height: $big-line-height;
+    }
   }
   &__item-text {
     margin: 0;
@@ -78,8 +115,15 @@
       justify-content: center;
       align-items: flex-end;
     }
+    @include desktop {
+      padding-top: 0;
+      padding-right: 130px;
+      padding-bottom: 60px;
+      padding-left: 130px;
+      background: $base-gray;
+    }
     &-item {
-      max-width: 310px;
+      max-width: 300px;
       @include desktop {
         max-width: 540px;
       }

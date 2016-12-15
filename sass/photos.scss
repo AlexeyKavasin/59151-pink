@@ -1,9 +1,18 @@
 .photos {
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+  }
   &__content-block {
     padding: 50px;
     font-size: $base-p-size;
     line-height: $big-line-height;
     text-align: center;
+    @include tablet {
+      width: 100%;
+    }
   }
   &__upload-section {
     padding: 20px;
