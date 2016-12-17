@@ -3,12 +3,12 @@
 @import 'normalize';
 @import 'typography';
 @import 'mixins';
+@import 'variables';
 
 @import 'header';
 @import 'main-menu';
 @import 'hamburger-menu';
 @import 'logo';
-@import 'page-content';
 @import 'welcome-section';
 @import 'slider';
 @import 'forms';
@@ -28,6 +28,7 @@
 @import 'photos';
 @import 'photo-item';
 @import 'like';
+@import 'upload';
 @import 'upload-form';
 @import 'contest-section';
 @import 'contest-form';
@@ -36,4 +37,13 @@
 
 * {
   box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+body {
+  min-width: $mobile-width;
 }

@@ -8,121 +8,125 @@
   </head>
   <body>
     <header class="header inner-header">
-      <div class="header__top">
+      <div class="header__wrapper">
         <div class="logo">
-          <img src="img/logo-pink-white-mobile.svg" alt="pink" width="85" height="24">
+          <img src="img/logo-pink-white-mobile.svg" alt="pink" width="85" height="25">
         </div>
         <a href="#" class="hamburger-menu">
           <span class="hamburger-menu__btn"></span>
         </a>
+        <nav class="main-menu">
+          <ul class="main-menu__items">
+            <li><a class="main-menu__item-link" href="index.html">Главная</a></li>
+            <li><a class="main-menu__item-link" href="photo.html">Фотографии</a></li>
+            <li><a class="main-menu__item-link" href="form.html">Конкурс</a></li>
+            <li><a class="main-menu__item-link" href="https://htmlacademy.ru/">HTML Academy</a></li>
+          </ul>
+        </nav>
       </div>
-      <nav class="main-menu">
-        <ul class="main-menu__items">
-          <li><a class="main-menu__item-link" href="index.html">Главная</a></li>
-          <li><a class="main-menu__item-link" href="photo.html">Фотографии</a></li>
-          <li><a class="main-menu__item-link" href="form.html">Конкурс</a></li>
-          <li><a class="main-menu__item-link" href="https://htmlacademy.ru/">HTML Academy</a></li>
-        </ul>
-      </nav>
     </header>
 
-    <main class="page-content">
+    <main>
 
       <section class="welcome-section welcome-section-form">
         <h1 class="welcome-section__heading">Конкурс на самое безбашенное путешествие с Пинк</h1>
       </section>
 
-      <section class="contest-section">
-        <div class="contest-section__block">
-          <p class="contest-section__block-txt">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! Пожалуйста, заполните форму ниже:</p>
+      <section class="contest">
+        <div class="contest__block">
+          <p class="contest__block-txt">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! Пожалуйста заполните форму ниже:</p>
         </div>
-        <form class="contest-form" action="https://echo.htmlacademy.ru" method="post">
+        <form class="form contest-form" action="https://echo.htmlacademy.ru" method="post">
 
-          <fieldset class="contest-form__main-info">
-            <div class="contest-form__fields-wrapper">
-              <label for="surname">Фамилия</label>
+          <div class="form__fieldset form__fieldset--main">
+            <div class="form__fields-wrapper form__fields-wrapper">
+              <label for="surname">Фамилия:</label>
               <input type="text" class="form__text-field" id="surname" name="surname" placeholder="Укажите фамилию *" required>
             </div>
-            <div class="contest-form__fields-wrapper">
-              <label for="name">Имя</label>
+            <div class="form__fields-wrapper">
+              <label for="name">Имя:</label>
               <input type="text" class="form__text-field" id="name" name="name" placeholder="Введите ваше имя *" required>
             </div>
-            <div class="contest-form__fields-wrapper">
-              <label for="patronymic">Отчество</label>
+            <div class="form__fields-wrapper">
+              <label for="patronymic">Отчество:</label>
               <input type="text" class="form__text-field" id="patronymic" name="patronymic" placeholder="Ну и отчество тоже">
             </div>
-          </fieldset>
+          </div>
 
-          <fieldset class="contest-form__actions">
-            <input type="checkbox" class="form__checkbox" id="action-1" name="action" value="shark selfie" checked>
-            <label for="action-1">Сделал селфи с акулой</label>
-            <input type="checkbox" class="form__checkbox" id="action-2" name="action" value="burnt" checked>
-            <label for="action-2">Обгорел на пляже</label>
-            <input type="checkbox" class="form__checkbox" id="action-3" name="action" value="met chuck norris">
-            <label for="action-3">Видел Чака Норриса</label>
-            <input type="checkbox" class="form__checkbox" id="action-4" name="action" value="bought souvenirs">
-            <label for="action-4">Накупил сувениров</label>
-            <input type="checkbox" class="form__checkbox" id="action-5" name="action" value="tower defence" checked>
-            <label for="action-5">Удержал башню</label>
-            <input type="checkbox" class="form__checkbox" id="action-6" name="action" value="hotel destroy">
-            <label for="action-6">Разгромил отель</label>
-          </fieldset>
+          <div class="form__fieldset form__fieldset--actions">
+            <h4 class="contest-form__subheading">Ваши безбашенные достижения в путешествии</h4>
+              <input type="checkbox" class="form__checkbox" id="action-1" name="action" value="shark selfie" checked>
+              <label for="action-1">Сделал селфи с акулой</label>
+              <input type="checkbox" class="form__checkbox" id="action-2" name="action" value="burnt" checked>
+              <label for="action-2">Обгорел на пляже</label>
+              <input type="checkbox" class="form__checkbox" id="action-3" name="action" value="met chuck norris">
+              <label for="action-3">Видел Чака Норриса</label>
+              <input type="checkbox" class="form__checkbox" id="action-4" name="action" value="bought souvenirs">
+              <label for="action-4">Накупил сувениров</label>
+              <input type="checkbox" class="form__checkbox" id="action-5" name="action" value="tower defence" checked>
+              <label for="action-5">Удержал башню</label>
+              <input type="checkbox" class="form__checkbox" id="action-6" name="action" value="hotel destroy">
+              <label for="action-6">Разгромил отель</label>
+          </div>
 
-          <fieldset class="contest-from__contacts">
-            <div class="contest-form__fields-wrapper">
-              <label for="telephone">Номер телефона</label>
+          <div class="form__fieldset form__fieldset--contacts">
+            <div class="form__fields-wrapper form__fields-wrapper--contact">
+              <label for="telephone">Номер телефона:</label>
               <input type="text" class="form__text-field" id="telephone" name="telephone" placeholder="Номер, пожалуйста">
             </div>
-            <div class="contest-form__fields-wrapper">
-              <label for="email">Адресок почты</label>
+            <div class="form__fields-wrapper form__fields-wrapper--contact">
+              <label for="email">Адресок почты:</label>
               <input type="text" class="form__text-field" id="email" name="email" placeholder="Введите почту *" required>
             </div>
-          </fieldset>
+          </div>
 
-          <fieldset class="contest-form__app-choose">
+          <div class="form__fieldset form__fieldset--app">
+            <h4 class="contest-form__subheading">С каким приложением путешествовали?</h4>
             <input type="radio" class="form__radio" id="pink-ios" name="app" value="pink on ios" checked>
             <label for="pink-ios">Pink для iOS</label>
             <input type="radio" class="form__radio" id="pink-android" name="app" value="pink on android">
             <label for="pink-android">Pink на Android</label>
             <input type="radio" class="form__radio" id="pink-windows" name="app" value="pink on windows">
             <label for="pink-windows">Windows Phone</label>
-          </fieldset>
+          </div>
 
-          <fieldset class="contest-form__comment">
-            <label for="comment">Опишите свои эмоции</label>
-            <textarea class="form__txtarea" id="comment" name="comment" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
-          </fieldset>
-
-          <button type="submit" class="form__submit">Отправить форму</button>
-
+          <div class="form__fieldset form__fieldset--comment">
+            <label for="comment" class="contest-form__comment-subheading">Опишите свои эмоции</label>
+            <textarea class="form__textarea" id="comment" name="comment" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+          </div>
+          <div class="form__fieldset form__fieldset--submit">
+            <button type="submit" class="form__submit contest-form__submit">Отправить форму</button>
+          </div>
         </form>
-        <div class="contest-section__block">
-          <span class="contest-section__block-txt">*</span> - Обязательные поля
+        <div class="contest__block contest__block--note">
+          <span class="contest__block-txt contest__block-txt--required"><sup class="contest__block-txt--colored">*</sup> — обязательные поля</span>
         </div>
       </section>
 
     </main>
 
-    <footer class="footer inner-footer">
-      <div class="inner-footer__logo">
-        <a href="index.html" class="inner-footer-logo__link">
-          <img src="img/logo-pink-blue-mobile.svg" alt="pink" width="150" height="45">
-        </a>
-      </div>
-      <ul class="social inner-footer__social">
-        <li class="social__item">
-          <a class="social__link social__link--tw" href="www.twitter.com"></a>
-        </li>
-        <li class="social__item">
-          <a class="social__link social__link--fb" href="www.facebook.com"></a>
-        </li>
-        <li class="social__item">
-          <a class="social__link social__link--you" href="www.youtube.com"></a>
-        </li>
-      </ul>
-      <div class="inner-footer__copyright">
-        <span class="inner-footer__copyright-txt">Разработано</span>
-        <img class="inner-footer__copyright-img" src="img/htmlacademy.svg" alt="htmlacademy" width="30" height="35">
+    <footer class="footer footer-inner">
+      <div class="footer__wrapper footer__wrapper-inner">
+        <div class="footer-logo footer__logo-inner">
+          <a href="index.html" class="footer-logo__link-inner">
+            <img src="img/logo-pink-blue-mobile.svg" alt="pink" width="150" height="45">
+          </a>
+        </div>
+        <ul class="social footer__social footer__social-inner">
+          <li class="social__item">
+            <a class="social__link social__link--tw" href="www.twitter.com"></a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--fb" href="www.facebook.com"></a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--you" href="www.youtube.com"></a>
+          </li>
+        </ul>
+        <div class="footer__copyright footer__copyright-inner">
+          <span class="footer__copyright-txt footer__copyright-txt-inner">Разработано</span>
+          <img class="footer__copyright-img footer__copyright-img-inner" src="img/htmlacademy.svg" alt="htmlacademy" width="30" height="35">
+        </div>
       </div>
     </footer>
 

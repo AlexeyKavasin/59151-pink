@@ -1,57 +1,132 @@
-.benefits__header {
-  padding: 40px;
-}
-
-.benefits__heading {
-  margin: 0 auto;
-  padding-bottom: 20px;
-  font-size: $base-h-size;
-  line-height: $max-line-height;
-  text-align: center;
-  &:last-child {
-    padding-bottom: 0;
+.benefits {
+  &__header {
+    padding: 40px;
   }
-}
-
-.benefits__items {
-  padding: 40px;
-  text-align: center;
-  background: $base-gray;
-  position: relative;
-  overflow: hidden;
-
-  &::after {
-    display: block;
-    margin-left: -80px;
-    content: '';
-    position: absolute;
-    width: 160px;
-    height: 320px;
-    bottom: -45px;
-    left: 50%;
-    background: url('../img/iphone-screen-mobile@1x.png');
-    background-repeat: no-repeat;
-    background-size: 100%;
+  &__heading {
+    margin: 0 auto;
+    padding-bottom: 20px;
+    font-size: $base-h-size;
+    line-height: $max-line-height;
+    text-align: center;
+    &:last-child {
+      padding-bottom: 0;
+    }
   }
-}
-
-.benefits__item {
-  margin-bottom: 40px;
-
-  &:last-child {
-    margin-bottom: 0;
-    padding-bottom: 270px;
+  &__items {
+    padding: 40px;
+    text-align: center;
+    background: $base-gray;
+    position: relative;
+    overflow: hidden;
+    @include tablet {
+      min-height: 490px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-end;
+    }
+    @include desktop {
+      padding-top: 400px;
+      padding-right: 130px;
+      padding-left: 130px;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: stretch;
+    }
+    &::after {
+      display: block;
+      margin-left: -80px;
+      content: '';
+      position: absolute;
+      width: 160px;
+      height: 320px;
+      bottom: -45px;
+      left: 50%;
+      background: url('#{$img-path}/iphone-screen-mobile@1x.png');
+      background-repeat: no-repeat;
+      background-size: 100%;
+      @include tablet {
+        width: 265px;
+        height: 470px;
+        margin: 0;
+        left: 40px;
+        bottom: -25px;
+      }
+      @include desktop {
+        display: none;
+      }
+    }
   }
-}
-
-.benefits__item-heading {
-  margin: 0;
-  margin-bottom: 20px;
-  font-weight: $bold;
-  color: $base-black;
-}
-
-.benefits__item-text {
-  margin: 0;
-  font-size: $base-p-size;
+  &__item {
+    margin-bottom: 40px;
+    &:last-child {
+      margin-bottom: 0;
+      padding-bottom: 270px;
+      @include tablet {
+        padding-bottom: 0;
+      }
+      @include desktop {
+        margin-bottom: 40px;
+      }
+    }
+    @include tablet {
+      width: 50%;
+    }
+    @include desktop {
+      width: auto;
+      max-width: 240px;
+      position: relative;
+      &::before {
+        display: block;
+        width: 180px;
+        height: 305px;
+        content: '';
+        position: absolute;
+        left: 50%;
+        margin-left: -90px;
+        bottom: 230px;
+        background: url('#{$img-path}/iphone-screen-mobile@1x.png');
+        background-repeat: no-repeat;
+        background-size: 100%;
+      }
+    }
+  }
+  &__item-heading {
+    margin: 0;
+    margin-bottom: 20px;
+    font-weight: $bold;
+    color: $base-black;
+    @include desktop {
+      font-size: 30px;
+      font-weight: $regular;
+      line-height: $big-line-height;
+    }
+  }
+  &__item-text {
+    margin: 0;
+    font-size: $base-p-size;
+  }
+  &__full-width {
+    display: none;
+    padding: 100px 40px;
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-end;
+    }
+    @include desktop {
+      padding-top: 0;
+      padding-right: 130px;
+      padding-bottom: 60px;
+      padding-left: 130px;
+      background: $base-gray;
+    }
+    &-item {
+      max-width: 300px;
+      @include desktop {
+        max-width: 540px;
+      }
+    }
+  }
 }

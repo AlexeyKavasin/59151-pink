@@ -1,5 +1,8 @@
 .logo {
-  padding: 25px 20px;
+  padding: 25px;
   float: left;
   line-height: 0;
+  @include desktop {
+    float: none;
+  }
 }

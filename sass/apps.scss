@@ -1,65 +1,94 @@
 .apps {
+  width: 100%;
+  min-height: 300px;
   padding: 25px 20px;
   padding-bottom: 40px;
   background: #1d2631;
   color: $base-white;
-}
-
-.apps__btn {
-  display: block;
-  max-width: 280px;
-  margin: 0 auto;
-  padding: 20px 35px;
-  font-weight: $bold;
-  line-height: $big-line-height;
-  text-align: center;
-  text-decoration: none;
-  color: $base-white;
-  border: 3px solid $base-white;
-  border-radius: 50px;
-  box-sizing: initial;
-}
-
-.apps__items {
-  max-width: 280px;
-  margin: 25px auto;
-  padding: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  list-style: none;
-}
-
-.apps__item-link {
-  display: block;
-  width: 50px;
-  height: 50px;
-
-  &--ios {
-    height: 61px;
-    background: url('../img/logo-apple.svg');
-    background-repeat: no-repeat;
-    background-size: 100%;
+  @include tablet {
+    padding: 0;
+    position: absolute;
+    width: 300px;
+    bottom: 110px;
+    left: 40px;
+    background: transparent;
   }
-
-  &--andr {
-    height: 55px;
-    background: url('../img/logo-android.svg');
-    background-repeat: no-repeat;
-    background-size: 100%;
+  @include desktop {
+    left: 130px;
   }
-
-  &--win {
-    height: 47px;
-    background: url('../img/logo-microsoft.svg');
-    background-repeat: no-repeat;
-    background-size: 100%;
+  &__heading {
+    display: none;
+    max-width: 200px;
+    margin: 0 auto;
+    padding-bottom: 40px;
+    font-size: 40px;
+    line-height: 50px;
+    font-weight: $light;
+    text-align: center;
+    @include tablet {
+      display: block;
+    }
   }
-}
+  &__btn{
+    display: block;
+    max-width: 280px;
+    margin: 0 auto;
+    padding: 20px 35px;
+    font-weight: $bold;
+    line-height: $base-line-height;
+    text-align: center;
+    text-decoration: none;
+    color: $base-white;
+    border: 3px solid $base-white;
+    border-radius: 50px;
+    box-sizing: initial;
+    @include tablet {
+      max-width: 300px;
+      box-sizing: border-box;
+    }
+  }
+  &__items {
+    max-width: 280px;
+    margin: 25px auto;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    list-style: none;
+    @include tablet {
+      justify-content: space-around;
+    }
+  }
+  &__item-link {
+    display: block;
+    width: 50px;
+    height: 50px;
 
-.apps__text {
-  display: block;
-  margin: 0 auto;
-  font-size: $base-p-size;
-  text-align: center;
+    &--ios {
+      height: 61px;
+      background: url('#{$img-path}/logo-apple.svg');
+      background-repeat: no-repeat;
+      background-size: 100%;
+    }
+
+    &--andr {
+      height: 55px;
+      background: url('#{$img-path}/logo-android.svg');
+      background-repeat: no-repeat;
+      background-size: 100%;
+    }
+
+    &--win {
+      height: 47px;
+      background: url('#{$img-path}/logo-microsoft.svg');
+      background-repeat: no-repeat;
+      background-size: 100%;
+    }
+  }
+  &__text {
+    display: block;
+    margin: 0 auto;
+    font-size: $base-p-size;
+    text-align: center;
+  }
 }

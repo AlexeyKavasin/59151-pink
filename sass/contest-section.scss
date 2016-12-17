@@ -1,0 +1,45 @@
+.contest {
+  padding-top: 40px;
+  position: relative;
+  &__block {
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 20px;
+    padding-bottom: 40px;
+    @include tablet {
+      padding: 0 100px;
+    }
+    @include desktop {
+      padding: 0 220px;
+    }
+    &--note {
+      @include tablet {
+        padding: 0;
+        position: absolute;
+        right: 40px;
+        bottom: 50px;
+      }
+      @include desktop {
+        right: 130px;
+      }
+    }
+  }
+  &__block-txt {
+    margin: 0;
+    font-size: $base-p-size;
+    line-height: $big-line-height;
+    @include tablet {
+      font-size: $base-font-size;
+      line-height: $big-line-height;
+    }
+    &--required {
+      text-transform: uppercase;
+      @include tablet {
+        font-size: $base-p-size;
+      }
+    }
+    &--colored {
+      color: $base-pink;
+    }
+  }
+}

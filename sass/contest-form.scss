@@ -1,0 +1,60 @@
+.contest-form {
+  margin-bottom: 40px;
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-bottom: 0;
+    }
+    @include desktop {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: space-between;
+    }
+    &__comment-subheading,
+    &__subheading {
+      margin: 0 auto;
+      margin-bottom: 40px;
+      padding: 0;
+      font-size: $base-p-size;
+      line-height: 18px;
+      font-weight: $regular;
+      text-align: center;
+      color: $base-pink;
+      text-transform: uppercase;
+      @include tablet {
+        max-width: 430px;
+        padding: 0 20px;
+        background: $base-white;
+        position: absolute;
+        top: -10px;
+        right: 0;
+        left: 0;
+        text-align: center;
+      }
+      @include desktop {
+        max-width: 360px;
+      }
+    }
+    &__comment-subheading {
+      margin-bottom: 20px;
+      @include tablet {
+        max-width: 260px;
+        margin-bottom: 40px;
+      }
+    }
+    &__submit {
+      display: block;
+      min-width: 280px;
+      margin: 0 auto;
+      padding: 25px 40px;
+      background: #2aab6d;
+      color: #fff;
+      text-transform: uppercase;
+      border-radius: 3px;
+      @include tablet {
+        margin: 0;
+      }
+    }
+}

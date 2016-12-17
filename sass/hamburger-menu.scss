@@ -1,12 +1,15 @@
 .hamburger-menu {
   display: block;
-  padding: 25px 20px;
+  padding: 25px;
   float: right;
-}
-
-.hamburger-menu__btn {
-  display: block;
-  width: 24px;
-  height: 24px;
-  background: url('../img/icon-menu-cross.svg');
+  @include desktop {
+    display: none;
+    float: none;
+  }
+  &__btn {
+    display: block;
+    width: 24px;
+    height: 24px;
+    background: url('#{$img-path}/icon-menu-cross.svg');
+  }
 }
