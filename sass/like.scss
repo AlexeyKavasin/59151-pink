@@ -1,4 +1,16 @@
 .like {
+  @include tablet {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &--full-width {
+    @include tablet {
+      order: 2;
+      width: 130px;
+    }
+  }
   &__icon {
     display: inline-block;
     vertical-align: middle;
@@ -7,6 +19,9 @@
     margin-right: 20px;
     background: url('#{$img-path}/icon-heart.svg');
     background-repeat: no-repeat;
+    @include tablet {
+      margin-right: 0;
+    }
   }
   &__counter {
     display: inline-block;

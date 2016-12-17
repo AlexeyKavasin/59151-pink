@@ -7,12 +7,10 @@
       margin-bottom: 0;
     }
     @include desktop {
-      display: flex;
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: space-between;
       align-items: space-between;
-      margin-bottom: 0;
     }
     &__comment-subheading,
     &__subheading {
@@ -37,22 +35,11 @@
       }
       @include desktop {
         max-width: 360px;
-        padding: 0 20px;
-        background: $base-white;
-        position: absolute;
-        top: -10px;
-        right: 0;
-        left: 0;
-        text-align: center;
       }
     }
     &__comment-subheading {
       margin-bottom: 20px;
       @include tablet {
-        max-width: 260px;
-        margin-bottom: 40px;
-      }
-      @include desktop {
         max-width: 260px;
         margin-bottom: 40px;
       }
@@ -67,9 +54,6 @@
       text-transform: uppercase;
       border-radius: 3px;
       @include tablet {
-        margin: 0;
-      }
-      @include desktop {
         margin: 0;
       }
     }

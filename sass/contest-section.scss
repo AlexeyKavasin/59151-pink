@@ -20,10 +20,7 @@
         bottom: 50px;
       }
       @include desktop {
-        padding: 0;
-        position: absolute;
         right: 130px;
-        bottom: 50px;
       }
     }
   }
@@ -35,16 +32,9 @@
       font-size: $base-font-size;
       line-height: $big-line-height;
     }
-    @include desktop {
-      font-size: $base-font-size;
-      line-height: $big-line-height;
-    }
     &--required {
       text-transform: uppercase;
       @include tablet {
-        font-size: $base-p-size;
-      }
-      @include desktop {
         font-size: $base-p-size;
       }
     }
