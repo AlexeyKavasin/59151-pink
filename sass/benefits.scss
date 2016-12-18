@@ -20,40 +20,50 @@
     overflow: hidden;
     @include tablet {
       min-height: 490px;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: flex-end;
     }
     @include desktop {
       padding-top: 400px;
       padding-right: 130px;
       padding-left: 130px;
-      flex-direction: row;
-      justify-content: space-around;
-      align-items: stretch;
     }
-    &::after {
-      display: block;
-      margin-left: -80px;
-      content: '';
-      position: absolute;
-      width: 160px;
-      height: 320px;
-      bottom: -45px;
-      left: 50%;
-      background: url('#{$img-path}/iphone-screen-mobile@1x.png');
-      background-repeat: no-repeat;
-      background-size: 100%;
+    &-wrapper {
+      margin: 0 auto;
+      position: relative;
       @include tablet {
-        width: 265px;
-        height: 470px;
-        margin: 0;
-        left: 40px;
-        bottom: -25px;
+        max-width: 620px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-end;
       }
       @include desktop {
-        display: none;
+        max-width: 940px;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: stretch;
+      }
+      &::after {
+        display: block;
+        margin-left: -80px;
+        content: '';
+        position: absolute;
+        width: 160px;
+        height: 320px;
+        bottom: -100px;
+        left: 50%;
+        background: url('#{$img-path}/iphone-screen-mobile@1x.png');
+        background-repeat: no-repeat;
+        background-size: 100%;
+        @include tablet {
+          width: 265px;
+          height: 470px;
+          margin: 0;
+          left: 0;
+          bottom: -50px;
+        }
+        @include desktop {
+          display: none;
+        }
       }
     }
   }
@@ -122,11 +132,36 @@
       padding-left: 130px;
       background: $base-gray;
     }
+    &-wrapper {
+      width: 100%;
+      margin: 0 auto;
+      padding-left: 320px;
+      @include tablet {
+        max-width: 620px;
+      }
+      @include desktop {
+        max-width: 940px;
+        padding-left: 350px;
+      }
+    }
     &-item {
       max-width: 300px;
       @include desktop {
         max-width: 540px;
       }
+    }
+    &-heading {
+      font-size: $base-h-size;
+      line-height: 36px;
+      font-weight: $regular;
+      & br {
+        @include desktop {
+          display: none;
+        }
+      }
+    }
+    &-text {
+      font-size: $base-p-size;
     }
   }
 }

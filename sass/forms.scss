@@ -1,3 +1,10 @@
+input[type="text"],
+textarea {
+  font-family: $base-font, 'Helvetica', Arial, sans-serif;
+  line-height: $big-line-height;
+  color: $base-dark-blue;
+}
+
 label {
   display: block;
   padding-left: 20px;
@@ -15,12 +22,6 @@ label {
   padding: 0;
   @include tablet {
     padding-top: 80px;
-    padding-left: 40px;
-    padding-right: 40px;
-  }
-  @include desktop {
-    padding-left: 130px;
-    padding-right: 130px;
   }
   &__fieldset {
     margin: 0;

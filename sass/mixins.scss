@@ -21,8 +21,8 @@
   }
 }
 
-@mixin mobile-only {
-  @media (min-width: #{$mobile-width}) and (max-width: #{$tablet-width - 1px}) {
+@mixin less-tablet {
+  @media (max-width: #{$tablet-width - 1px}) {
     @content;
   }
 }

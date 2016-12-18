@@ -1,4 +1,6 @@
 .like {
+  padding: 20px;
+  font-size: $base-p-size;
   @include tablet {
     display: flex;
     flex-direction: row-reverse;
@@ -6,6 +8,7 @@
     align-items: center;
   }
   &--full-width {
+    padding: 0;
     @include tablet {
       order: 2;
       width: 130px;
