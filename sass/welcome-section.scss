@@ -7,11 +7,22 @@
   background-size: auto;
   background-position: 50% 0;
   @include tablet {
+    padding: 0;
     background-size: cover;
   }
   &-index {
     @include tablet {
-      min-height: 730px;
+      min-height: 620px;
+    }
+  }
+  &__wrapper {
+    margin: 0 auto;
+    position: relative;
+    @include tablet {
+      max-width: 620px;
+    }
+    @include desktop {
+      max-width: 940px;
     }
   }
   &__heading {

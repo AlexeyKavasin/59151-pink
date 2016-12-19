@@ -1,6 +1,18 @@
 .contest {
   padding-top: 40px;
   position: relative;
+  &__wrapper {
+    width: 100%;
+    position: relative;
+    @include tablet {
+      margin: 0 auto;
+      width: 620px;
+    }
+    @include desktop {
+      width: 940px;
+    }
+
+  }
   &__block {
     margin: 0 auto;
     text-align: center;
@@ -16,11 +28,8 @@
       @include tablet {
         padding: 0;
         position: absolute;
-        right: 40px;
+        right: 0;
         bottom: 50px;
-      }
-      @include desktop {
-        right: 130px;
       }
     }
   }

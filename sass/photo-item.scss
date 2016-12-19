@@ -3,6 +3,7 @@
   margin: 0 auto;
   margin-bottom: 20px;
   position: relative;
+  background: $base-gray;
   @include tablet {
     width: 300px;
     margin: 10px 0;
@@ -11,10 +12,12 @@
   }
   &--full-width {
     width: 100%;
+    background: $base-white;
     @include tablet {
       max-width: 100%;
     }
     & .photo-item__description--full-width {
+      background: $base-gray;
       @include tablet {
         margin: 0 auto;
         max-width: 620px;
@@ -35,7 +38,11 @@
         order: 3;
         width: 100%;
         margin-top: 20px;
-        margin-bottom: 0;
+        margin-bottom: 20px;
+        @include tablet {
+          margin-top: 10px;
+          margin-bottom: 0;
+        }
       }
     }
   }
@@ -69,14 +76,12 @@
     margin: 0 auto;
     padding: 20px;
     font-size: $base-p-size;
-    background: $base-gray;
     @include tablet {
       max-width: 100%;
       margin: 0;
       flex-grow: 1;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
     }
   }
   &__username {

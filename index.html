@@ -8,9 +8,11 @@
   </head>
   <body>
     <header class="header main-header">
-      <div class="header__wrapper">
+      <div class="wrapper header__wrapper">
         <div class="logo">
-          <img src="img/logo-pink-white-mobile.svg" alt="pink" width="85" height="25">
+          <a href="index.html">
+            <img src="img/logo-pink-white-mobile.svg" alt="pink" width="85" height="25">
+          </a>
         </div>
         <a href="#" class="hamburger-menu">
           <span class="hamburger-menu__btn"></span>
@@ -28,15 +30,17 @@
 
     <main>
       <section class="welcome-section welcome-section-index">
-        <div class="apps">
-          <h1 class="apps__heading">Взгляните на жизнь иначе!</h1>
-          <a href="https://www.apple.com/itunes/" class="apps__btn">Скачать приложение</a>
-          <ul class="apps__items">
-            <li class="apps__item"><a href="https://www.apple.com/itunes/" class="apps__item-link apps__item-link--ios"></a></li>
-            <li class="apps__item"><a href="https://play.google.com/store/apps" class="apps__item-link apps__item-link--andr"></a></li>
-            <li class="apps__item"><a href="https://www.microsoft.com/en-in/store/apps/windows-phone" class="apps__item-link apps__item-link--win"></a></li>
-          </ul>
-          <span class="apps__text">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</span>
+        <div class="welcome-section__wrapper">
+          <div class="apps">
+            <h1 class="apps__heading">Взгляните на жизнь иначе!</h1>
+            <a href="https://www.apple.com/itunes/" class="apps__btn">Скачать приложение</a>
+            <ul class="apps__items">
+              <li class="apps__item"><a href="https://www.apple.com/itunes/" class="apps__item-link apps__item-link--ios"></a></li>
+              <li class="apps__item"><a href="https://play.google.com/store/apps" class="apps__item-link apps__item-link--andr"></a></li>
+              <li class="apps__item"><a href="https://www.microsoft.com/en-in/store/apps/windows-phone" class="apps__item-link apps__item-link--win"></a></li>
+            </ul>
+            <span class="apps__text">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</span>
+          </div>
         </div>
       </section>
 
@@ -46,25 +50,29 @@
           <p class="benefits__heading">Нам есть, что вам предложить!</p>
         </header>
         <div class="benefits__items">
-          <article class="benefits__item">
-            <h3 class="benefits__item-heading">Поднимает настроение</h3>
-            <p class="benefits__item-text">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
-          </article>
-          <article class="benefits__item">
-            <h3 class="benefits__item-heading">Меняет мир вокруг</h3>
-            <p class="benefits__item-text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
-          </article>
-          <article class="benefits__item">
-            <h3 class="benefits__item-heading">Заводит новых друзей</h3>
-            <p class="benefits__item-text">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
-          </article>
+          <div class="benefits__items-wrapper">
+            <article class="benefits__item">
+              <h3 class="benefits__item-heading">Поднимает настроение</h3>
+              <p class="benefits__item-text">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+            </article>
+            <article class="benefits__item">
+              <h3 class="benefits__item-heading">Меняет мир вокруг</h3>
+              <p class="benefits__item-text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+            </article>
+            <article class="benefits__item">
+              <h3 class="benefits__item-heading">Заводит новых друзей</h3>
+              <p class="benefits__item-text">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
+            </article>
+          </div>
         </div>
         <div class="benefits__full-width">
-          <article class="benefits__full-width-item">
-            <h3 class="benefits__full-width-heading">Эффект на 24 часа!</h3>
-            <p class="benefits__full-width-text">Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
-            <a href="#" class="benefits__full-width-link">Узнать больше об исследовании</a>
-          </article>
+          <div class="benefits__full-width-wrapper">
+            <article class="benefits__full-width-item">
+              <h3 class="benefits__full-width-heading">Эффект<br> на 24 часа!</h3>
+              <p class="benefits__full-width-text">Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
+              <a href="#" class="benefits__full-width-link">Узнать больше об исследовании</a>
+            </article>
+          </div>
         </div>
       </section>
 
@@ -161,19 +169,21 @@
 
     <footer class="footer main-footer">
       <div class="contacts">
-        <h2 class="contacts__heading">Остались вопросы?<br>Свяжитесь с нами!</h2>
-        <div class="contacts__items">
-          <div class="contacts__item contacts__item--phone">
-            <span class="contacts__item-title">Звоните:</span>
-            <span class="contacts__item-text">+7 (812) 555-66-66</span>
-          </div>
-          <div class="contacts__item contacts__item--mail">
-            <span class="contacts__item-title">Пишите:</span>
-            <span class="contacts__item-text">mail@htmlacademy.ru</span>
-          </div>
-          <div class="contacts__item contacts__item--address">
-            <span class="contacts__item-title">Приезжайте в гости:</span>
-            <span class="contacts__item-text">ул. Большая Конюшенная, 19/8</span>
+        <div class="contacts__wrapper">
+          <h2 class="contacts__heading">Остались вопросы?<br>Свяжитесь с нами!</h2>
+          <div class="contacts__items">
+            <div class="contacts__item contacts__item--phone">
+              <span class="contacts__item-title">Звоните:</span>
+              <span class="contacts__item-text">+7 (812) 555-66-66</span>
+            </div>
+            <div class="contacts__item contacts__item--mail">
+              <span class="contacts__item-title">Пишите:</span>
+              <span class="contacts__item-text">mail@htmlacademy.ru</span>
+            </div>
+            <div class="contacts__item contacts__item--address">
+              <span class="contacts__item-title">Приезжайте в гости:</span>
+              <span class="contacts__item-text">ул. Большая Конюшенная, 19/8</span>
+            </div>
           </div>
         </div>
       </div>

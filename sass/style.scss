@@ -2,8 +2,9 @@
 
 @import 'normalize';
 @import 'typography';
-@import 'mixins';
 @import 'variables';
+@import 'mixins';
+@import 'common';
 
 @import 'header';
 @import 'main-menu';
@@ -34,16 +35,3 @@
 @import 'contest-form';
 @import 'social';
 @import 'pop-up';
-
-* {
-  box-sizing: border-box;
-}
-
-img {
-  width: 100%;
-  height: auto;
-}
-
-body {
-  min-width: $mobile-width;
-}

@@ -1,13 +1,31 @@
 .upload {
   padding-top: 20px;
-    background: $base-gray;
+  background: $base-gray;
+  @include tablet {
+    padding: 50px 40px;
+  }
+  @include desktop {
+    width: 940px;
+    margin: 0 auto;
+    padding-right: 60px;
+    padding-left: 60px;
+  }
+  & [type="radio"] {
+    display: none;
+  }
+  &-form__range {
+    display: none;
     @include tablet {
-      padding: 50px 40px;
+      display: block;
     }
-    @include desktop {
-      width: 940px;
-      margin: 0 auto;
-      padding-right: 60px;
-      padding-left: 60px;
-    }
+  }
+  .crop-check:checked ~ .upload-form__range-wrapper .upload-form__range--crop {
+    display: block;
+  }
+  .fill-check:checked ~ .upload-form__range-wrapper .upload-form__range--fill {
+    display: block;
+  }
+  .contrast-check:checked ~ .upload-form__range-wrapper .upload-form__range--contrast {
+    display: block;
+  }
 }

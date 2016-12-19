@@ -10,7 +10,9 @@
     <header class="header inner-header">
       <div class="header__wrapper">
         <div class="logo">
-          <img src="img/logo-pink-white-mobile.svg" alt="pink" width="85" height="25">
+          <a href="index.html">
+            <img src="img/logo-pink-white-mobile.svg" alt="pink" width="85" height="25">
+          </a>
         </div>
         <a href="#" class="hamburger-menu">
           <span class="hamburger-menu__btn"></span>
@@ -28,7 +30,9 @@
 
     <main>
       <section class="welcome-section welcome-section-photo">
-        <h1 class="welcome-section__heading">Фотографии пользователей</h1>
+        <div class="welcome-section__wrapper">
+          <h1 class="welcome-section__heading">Фотографии пользователей</h1>
+        </div>
       </section>
 
       <section class="photos">
@@ -62,10 +66,10 @@
                 <span class="photo-item__time">(5 часов назад)</span>
               </div>
               <div class="photo-item__quote">Вчера он на луну летал, сегодня в руки к нам попал.</div>
-              <div class="like">
-                <div class="like__icon"></div>
-                <div class="like__counter">Нравится: 356</div>
-              </div>
+            </div>
+            <div class="like">
+              <div class="like__icon"></div>
+              <div class="like__counter">Нравится: 356</div>
             </div>
           </div>
 
@@ -78,10 +82,10 @@
                 <span class="photo-item__time">(12 часов назад)</span>
               </div>
               <div class="photo-item__quote">Соседи будут рады!</div>
-              <div class="like">
-                <div class="like__icon"></div>
-                <div class="like__counter">Нравится: 666</div>
-              </div>
+            </div>
+            <div class="like">
+              <div class="like__icon"></div>
+              <div class="like__counter">Нравится: 666</div>
             </div>
           </div>
 
@@ -94,10 +98,10 @@
                 <span class="photo-item__time">(20 часов назад)</span>
               </div>
               <div class="photo-item__quote">Здесь могла быть ваша цитата о высоком и вечном</div>
-              <div class="like">
-                <div class="like__icon"></div>
-                <div class="like__counter">Нравится: 215</div>
-              </div>
+            </div>
+            <div class="like">
+              <div class="like__icon"></div>
+              <div class="like__counter">Нравится: 215</div>
             </div>
           </div>
 
@@ -110,10 +114,10 @@
                 <span class="photo-item__time">(25 часов назад)</span>
               </div>
               <div class="photo-item__quote">Самая кубанская в мире!</div>
-              <div class="like">
-                <div class="like__icon"></div>
-                <div class="like__counter">Нравится: 4</div>
-              </div>
+            </div>
+            <div class="like">
+              <div class="like__icon"></div>
+              <div class="like__counter">Нравится: 4</div>
             </div>
           </div>
 
@@ -126,10 +130,10 @@
                 <span class="photo-item__time">(40 часов назад)</span>
               </div>
               <div class="photo-item__quote">Где снег-то?</div>
-              <div class="like">
-                <div class="like__icon"></div>
-                <div class="like__counter">Нравится: 150</div>
-              </div>
+            </div>
+            <div class="like">
+              <div class="like__icon"></div>
+              <div class="like__counter">Нравится: 150</div>
             </div>
           </div>
 
@@ -142,10 +146,10 @@
                 <span class="photo-item__time">(45 часов назад)</span>
               </div>
               <div class="photo-item__quote">Всем GM и взаимные лайки!</div>
-              <div class="like">
-                <div class="like__icon"></div>
-                <div class="like__counter">Нравится: 215</div>
-              </div>
+            </div>
+            <div class="like">
+              <div class="like__icon"></div>
+              <div class="like__counter">Нравится: 215</div>
             </div>
           </div>
         </div>
@@ -162,12 +166,27 @@
           </div>
           <div class="form__fieldset upload-form__fieldset upload-form__fieldset--controls">
             <div class="upload-form__controls-wrapper">
-              <label class="upload-form__crop" for="crop-range"></label>
-              <input type="range" class="upload-form__range upload-form__range--crop" id="crop-range" min="0" max="100" step="10" value="50">
-              <label class="upload-form__fill" for="fill-range"></label>
-              <input type="range" class="upload-form__range upload-form__range--fill mobile-disabled" id="fill-range" min="0" max="100" step="10" value="50">
-              <label class="upload-form__contrast" for="contrast-range"></label>
-              <input type="range" class="upload-form__range upload-form__range--contrast mobile-disabled" id="contrast-range" min="0" max="100" step="10" value="50">
+              <div class="upload-form__control-row">
+                <input type="radio" class="crop-check" id="crop-check" name="filter" checked>
+                <label class="upload-form__crop" for="crop-check"></label>
+                <div class="upload-form__range-wrapper">
+                  <input type="range" class="upload-form__range upload-form__range--crop" id="crop-range" min="0" max="100" step="10" value="40">
+                </div>
+              </div>
+              <div class="upload-form__control-row">
+                <input type="radio" class="fill-check" id="fill-check" name="filter">
+                <label class="upload-form__fill" for="fill-check"></label>
+                <div class="upload-form__range-wrapper">
+                  <input type="range" class="upload-form__range upload-form__range--fill" id="fill-range" min="0" max="100" step="10" value="50">
+                </div>
+              </div>
+              <div class="upload-form__control-row">
+                <input type="radio" class="contrast-check" id="contrast-check" name="filter">
+                <label class="upload-form__contrast" for="contrast-check"></label>
+                <div class="upload-form__range-wrapper">
+                  <input type="range" class="upload-form__range upload-form__range--contrast" id="contrast-range" min="0" max="100" step="10" value="60">
+                </div>
+              </div>
             </div>
             <div class="form__fieldset upload-form__fieldset upload-form__fieldset--btns">
               <button type="submit" class="upload-form__submit-btn">Запостить</button>

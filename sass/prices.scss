@@ -1,32 +1,33 @@
 .prices {
   background: $base-gray;
   padding: 40px 0;
+  overflow: hidden;
   &__slider {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
     @include tablet {
-      display: flex;
-      justify-content: center;
-      align-items: flex-end;
+      max-width: 620px;
+      margin: 0 auto;
     }
     & .slider__item {
+      display: block;
+      flex-shrink: 0;
+      width: 100%;
+      max-width: 280px;
+      border-right: 1px solid $base-gray;
       @include tablet {
-        display: block;
+        max-width: 155px;
       }
-    }
-  }
-  &__item {
-    margin: 0 auto;
-    max-width: 280px;
-    @include tablet {
-      margin: 0;
-      min-width: 150px;
-    }
-    @include desktop {
-      min-width: 235px;
-    }
-    &--tablet {
-      display: none;
-      @include tablet {
-        display: block;
+      @include desktop {
+        max-width: 235px;
+      }
+      &:first-child {
+        display: none;
+        @include tablet {
+          display: block;
+        }
       }
     }
   }
@@ -57,17 +58,17 @@
   }
   &__item-feature,
   &__item-feature--tablet {
-    height: 60px;
+    min-height: 60px;
     position: relative;
-    padding: 20px;
+    padding: 18px;
     line-height: $base-line-height;
     border-bottom: 2px solid $base-gray;
     text-transform: uppercase;
     background: $base-white;
     @include tablet {
       height: 45px;
-      line-height: 0;
-      border-right: 2px solid $base-gray;
+      line-height: $big-line-height;
+      border-right: 1px solid $base-gray;
     }
   }
   &__item-feature {
