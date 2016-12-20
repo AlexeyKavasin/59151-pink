@@ -2,7 +2,33 @@
   padding: 25px;
   float: left;
   line-height: 0;
+  & svg {
+    display: none;
+    &:hover {
+      fill: $base-pink;
+    }
+    @include desktop {
+      display: block;
+    }
+  }
+  & picture {
+    @include desktop {
+      display: none;
+    }
+  }
+  @include tablet {
+    padding-top: 27px;
+    padding-left: 40px;
+    padding-bottom: 40px;
+  }
   @include desktop {
     float: none;
+  }
+  & img {
+    width: 85px;
+    height: auto;
+    @include tablet {
+      width: 148px;
+    }
   }
 }

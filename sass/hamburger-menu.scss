@@ -1,7 +1,10 @@
 .hamburger-menu {
-  display: block;
   padding: 25px;
   float: right;
+  @include tablet {
+    padding: 40px;
+    padding-top: 45px;
+  }
   @include desktop {
     display: none;
     float: none;

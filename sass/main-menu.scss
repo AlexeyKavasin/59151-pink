@@ -1,5 +1,8 @@
 .main-menu {
   padding-top: 75px;
+  @include tablet {
+    padding-top: 109px;
+  }
   & li {
     list-style: none;
   }

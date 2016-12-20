@@ -11,7 +11,11 @@
       <div class="header__wrapper">
         <div class="logo">
           <a href="index.html">
-            <img src="img/logo-pink-white-mobile.svg" alt="pink" width="85" height="25">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/logo-pink-white-desktop.svg">
+              <source media="(min-width: 700px)" srcset="img/logo-pink-white-tablet.svg">
+              <img src="img/logo-pink-white-mobile.svg" alt="pink">
+            </picture>
           </a>
         </div>
         <a href="#" class="hamburger-menu">

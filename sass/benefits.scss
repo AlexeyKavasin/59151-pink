@@ -1,6 +1,7 @@
 .benefits {
   &__header {
     padding: 40px;
+    position: relative;
   }
   &__heading {
     margin: 0 auto;
@@ -10,6 +11,18 @@
     text-align: center;
     &:last-child {
       padding-bottom: 0;
+    }
+  }
+  & svg {
+    width: 100%;
+    position: absolute;
+    right: 0;
+    bottom: -100px;
+    left: 0;
+    z-index: 2;
+    & polygon {
+      width: 100%;
+      fill: #ffffff;
     }
   }
   &__items {
@@ -98,6 +111,7 @@
         background: url('#{$img-path}/iphone-screen-mobile@1x.png');
         background-repeat: no-repeat;
         background-size: 100%;
+        z-index: 3;
       }
     }
   }
