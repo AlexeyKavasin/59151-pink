@@ -22,20 +22,25 @@
     height: 50px;
     border: 3px solid $base-gray;
     border-radius: 50%;
+    &:hover {
+      border: 3px solid $base-dark-blue;
+    }
+    &:active {
+      border: 3px solid $base-gray;
+      opacity: 0.7;
+    }
     &--tw {
       background: url('#{$img-path}/icon-twitter.svg');
       background-repeat: no-repeat;
       background-size: 50%;
       background-position: 50% 50%;
     }
-
     &--fb {
       background: url('#{$img-path}/icon-facebook.svg');
       background-repeat: no-repeat;
       background-size: 25%;
       background-position: 50% 50%;
     }
-
     &--you {
       background: url('#{$img-path}/icon-youtube.svg');
       background-repeat: no-repeat;

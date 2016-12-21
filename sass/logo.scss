@@ -4,7 +4,7 @@
   line-height: 0;
   & svg {
     display: none;
-    &:hover {
+    &:hover path {
       fill: $base-pink;
     }
     @include desktop {

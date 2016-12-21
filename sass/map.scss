@@ -1,6 +1,17 @@
 .map {
   min-height: 220px;
-  background: url('../img/bg-map-mobile@1x.png');
+  background-size: cover;
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-image: url('../img/bg-map-mobile@1x.jpg');
+  @include retina('../img/bg-map-mobile@2x.jpg', cover);
+  @include tablet {
+    min-height: 400px;
+  background-image: url('../img/bg-map-tablet@1x.jpg');
+    @include retina('../img/bg-map-tablet@2x.jpg', cover);
+  }
+  @include desktop {
+    min-height: 500px;
+  background-image: url('../img/bg-map-desktop@1x.jpg');
+    @include retina('../img/bg-map-desktop@2x.jpg', cover);
+  }
 }
