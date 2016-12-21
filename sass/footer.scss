@@ -34,8 +34,13 @@
     max-width: 130px;
     margin: 0 auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
+    text-decoration: none;
+    color: $base-dark-blue;
+    &:hover path {
+      fill: $base-dark-blue;
+    }
     @include tablet {
       margin: 0;
     }
@@ -46,9 +51,10 @@
   }
   &__copyright-txt {
     display: block;
+    margin-right: 20px;
     font-size: $base-p-size;
   }
-  &__copyright-img {
+  &__copyright-svg {
     max-width: 28px;
   }
 }

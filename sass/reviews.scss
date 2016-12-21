@@ -22,6 +22,8 @@
     padding-left: 40px;
   }
   @include desktop {
+    padding-top: 130px;
+    padding-bottom: 0;
     padding-right: 130px;
     padding-left: 130px;
   }
@@ -37,12 +39,28 @@
     }
   }
   &__item {
+    position: relative;
     @include tablet {
       max-width: 620px;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
+    }
+    &::before {
+      display: none;
+      content: '';
+      width: 80px;
+      height: 65px;
+      position: absolute;
+      top: -80px;
+      left: 50%;
+      margin-left: -40px;
+      background-image: url('#{$img-path}/icon-quotes.svg');
+      background-repeat: no-repeat;
+      @include desktop {
+        display: block;
+      }
     }
   }
   &__text {
@@ -67,7 +85,7 @@
     display: none;
     position: absolute;
     top: 50%;
-    margin-top: -20px;
+    margin-top: -60px;
     @include desktop {
       display: block;
     }
@@ -76,12 +94,23 @@
   &__arrow-left {
     position: absolute;
     top: 0;
+    opacity: .5;
+    cursor: pointer;
+    &:hover {
+      opacity: 1;
+    }
   }
   &__arrow-right {
     right: 0;
+    background: url('#{$img-path}/icon-review-arrow-right.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
   }
   &__arrow-left {
     left: 0;
+    background: url('#{$img-path}/icon-review-arrow-left.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
   }
 }
 
