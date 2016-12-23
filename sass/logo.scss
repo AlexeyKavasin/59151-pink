@@ -6,6 +6,7 @@
     display: none;
     &:hover path {
       fill: $base-pink;
+      @include base-transition(fill);
     }
     @include desktop {
       display: block;

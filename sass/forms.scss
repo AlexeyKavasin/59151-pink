@@ -3,6 +3,7 @@ textarea {
   font-family: $base-font, 'Helvetica', Arial, sans-serif;
   line-height: $big-line-height;
   color: $base-dark-blue;
+  outline: none;
 }
 
 label {
@@ -147,9 +148,17 @@ label {
     width: 100%;
     padding: 20px;
     border: 2px solid #e5e5e5;
+    border-radius: 3px;
+    @include base-transition(border);
     &::placeholder {
       color: $base-dark-blue;
       line-height: $big-line-height;
+    }
+    &:hover {
+      border: 2px solid $base-dark-blue;
+    }
+    &:focus {
+      border: 2px solid $base-pink;
     }
   }
   &__textarea {
@@ -159,6 +168,12 @@ label {
   &__radio,
   &__checkbox {
     display: none;
+    & + label:hover::before {
+      border: 2px solid $base-dark-blue;
+    }
+    & + label:active::before {
+      border: 2px solid $base-pink;
+    }
   }
   &__radio + label,
   &__checkbox + label {
@@ -170,6 +185,8 @@ label {
     font-size: $base-font-size;
     color: $base-dark-blue;
     position: relative;
+    cursor: pointer;
+    @include base-transition(border);
     &:last-child {
       margin-bottom: 0;
       @include tablet {
@@ -190,8 +207,10 @@ label {
     left: 0;
     margin-top: -20px;
     border: 2px solid #e5e5e5;
+    border-radius: 3px;
     background: $base-white;
     cursor: pointer;
+    @include base-transition(border);
   }
   &__radio + label::before {
     border-radius: 50%;

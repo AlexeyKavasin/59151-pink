@@ -82,5 +82,17 @@
     font-size: $base-h-size;
     font-weight: $light;
     color: $base-pink;
+    &--mail {
+      cursor: pointer;
+      @include base-transition(all);
+      &:hover {
+        color: $base-dark-blue;
+        text-decoration: underline;
+      }
+      &:active {
+        text-decoration: none;
+        opacity: .3;
+      }
+    }
   }
 }

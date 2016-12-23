@@ -43,8 +43,14 @@
       width: 6px;
       height: 6px;
       border-radius: 50%;
-      background: #b8bbc0;
+      background: #bec2c7;
       cursor: pointer;
+      &:hover {
+        background: #7e868f;
+      }
+      &:active {
+        background: #e9ebec;
+      }
     }
     @include desktop {
       display: none;

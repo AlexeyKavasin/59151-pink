@@ -264,19 +264,13 @@
     margin: 0 auto;
     margin-bottom: 15px;
     padding: 20px 80px;
-    border: 3px solid #dddfe0;
+    font-weight: $bold;
     border-radius: 50px;
     background: $base-gray;
-    font-weight: $bold;
-    color: #dddfe0;
-    @include base-transition(fill);
+    outline: none;
+    @include base-transition(all);
     cursor: pointer;
     text-align: center;
-    &:hover {
-      border: 3px solid $base-pink;
-      color: #dddfe0;
-      color: $base-pink;
-    }
     @include tablet {
       margin: 0;
       margin-bottom: 20px;
@@ -293,5 +287,26 @@
   }
   &__cancel-btn {
     margin-bottom: 0;
+    border: 3px solid #dddfe0;
+    color: #e3e4e4;
+    &:hover {
+      border: 3px solid #b5b9be;
+      color: #b5b9be;
+    }
+    &:active {
+      background: #b5b9be;
+      color: #cdd0d3;
+    }
+  }
+  &__submit-btn {
+    border: 3px solid $base-pink;
+    color: $base-pink;
+    &:hover {
+      background: $base-pink;
+      color: $base-white;
+    }
+    &:active {
+      color: #e08195;
+    }
   }
 }

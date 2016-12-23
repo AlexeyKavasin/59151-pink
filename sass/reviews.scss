@@ -94,10 +94,14 @@
   &__arrow-left {
     position: absolute;
     top: 0;
-    opacity: .5;
+    opacity: .4;
     cursor: pointer;
+    @include base-transition(opacity);
     &:hover {
       opacity: 1;
+    }
+    &:active {
+      opacity: .2;
     }
   }
   &__arrow-right {

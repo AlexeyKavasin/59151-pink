@@ -43,6 +43,14 @@
     border: 3px solid $base-white;
     border-radius: 50px;
     box-sizing: initial;
+    @include base-transition(all);
+    &:hover {
+      background: $base-white;
+      color: $base-pink;
+    }
+    &:active {
+      color: #f2ced5;
+    }
     @include tablet {
       max-width: 300px;
       box-sizing: border-box;
