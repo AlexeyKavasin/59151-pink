@@ -28,6 +28,10 @@
     @include tablet {
       margin: 0;
     }
+    &:hover .letters {
+      fill: $base-pink;
+      @include base-transition(fill);
+    }
   }
   &__copyright {
     width: 130px;
@@ -40,6 +44,7 @@
     color: $base-dark-blue;
     &:hover path {
       fill: $base-dark-blue;
+      @include base-transition(fill);
     }
     @include tablet {
       margin: 0;

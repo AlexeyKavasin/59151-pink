@@ -10,6 +10,9 @@
     @include desktop {
       display: block;
     }
+    & .star {
+      display: none;
+    }
   }
   & picture {
     @include desktop {

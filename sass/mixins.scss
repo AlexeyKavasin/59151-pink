@@ -16,6 +16,10 @@
   }
 }
 
+@mixin base-transition($property) {
+  transition: $property .2s ease-out;
+}
+
 @mixin mobile {
   @media (min-width: #{$mobile-width}) {
     @content;
@@ -44,10 +48,4 @@
   @media (min-width: #{$desktop-width}) {
     @content;
   }
-}
-
-@mixin opacity($opacity: 0.5) {
-  filter: alpha(opacity=$opacity*100);
-  filter: progid:DXImageTransform.Microsoft.Alpha(opacity=#{$opacity*100});
-  opacity: $opacity;
 }

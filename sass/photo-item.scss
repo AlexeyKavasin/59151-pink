@@ -45,10 +45,23 @@
         }
       }
     }
+    & .photo-item__img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
   }
   &__pic {
+    max-width: 320px;
+    margin: 0 auto;
     position: relative;
     line-height: 0;
+    @include tablet {
+      max-width: 700px;
+    }
+    @include desktop {
+      max-width: 940px;
+    }
   }
   &__label {
     display: block;
@@ -68,7 +81,7 @@
     }
   }
   &__img {
-    width: 100%;
+    max-width: 100%;
     height: auto;
   }
   &__description {
