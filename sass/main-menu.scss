@@ -10,6 +10,7 @@
     padding-top: 0;
   }
   &__items {
+    display: none;
     margin: 0;
     padding: 0;
     border-top: 1px solid $base-black;
@@ -67,6 +68,12 @@
       @include desktop {
         display: block;
       }
+    }
+  }
+  & .no-js {
+    display: block;
+    @include desktop {
+      display: flex;
     }
   }
 }
