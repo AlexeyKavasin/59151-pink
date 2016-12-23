@@ -1,3 +1,71 @@
 .pop-up {
   display: none;
+  width: 100%;
+  max-width: 320px;
+  margin: 20px auto;
+  background: $base-white;
+  text-align: center;
+  box-shadow: 1px 2px 6px -1px rgb(154, 154, 154);
+  @include tablet {
+    max-width: 460px;
+  }
+  &__header {
+    padding: 20px;
+    padding-top: 50px;
+    padding-bottom: 40px;
+    background: $base-white;
+    @include tablet {
+      padding-right: 80px;
+      padding-left: 80px;
+    }
+  }
+  &__heading {
+    margin: 0;
+    margin-bottom: 40px;
+    font-size: $base-font-size;
+    line-height: $base-line-height;
+    font-weight: $bold;
+    @include tablet {
+      font-size: 30px;
+      line-height: 40px;
+    }
+  }
+  &__text {
+    margin: 0;
+    font-size: $base-p-size;
+    @include tablet {
+      font-size: $base-font-size;
+    }
+  }
+  &__footer {
+    padding: 50px 0;
+    &--success {
+      background: $base-gray;
+    }
+    &--failure {
+      padding-top: 0;
+    }
+  }
+  &__btn {
+    display: block;
+    min-width: 280px;
+    margin: 0 auto;
+    padding: 25px 40px;
+    background: #2aab6d;
+    color: #fff;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 3px;
+    outline: none;
+    cursor: pointer;
+    &:hover {
+      background: #1c9b5e;
+    }
+    &:active {
+      color: #7dbd99;
+    }
+    &:disabled {
+      background: #e5e5e5;
+    }
+  }
 }
