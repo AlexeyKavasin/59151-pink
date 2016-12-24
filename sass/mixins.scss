@@ -9,10 +9,15 @@
   }
 }
 
-@mixin opacity($opacity: 0.5) {
-  filter: alpha(opacity=$opacity*100);
-  filter: progid:DXImageTransform.Microsoft.Alpha(opacity=#{$opacity*100});
-  opacity: $opacity;
+@mixin retina($image, $size) {
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    background-image: url($image);
+    background-size: $size;
+  }
+}
+
+@mixin base-transition($property) {
+  transition: $property .2s ease-out;
 }
 
 @mixin mobile {

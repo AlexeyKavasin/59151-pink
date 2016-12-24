@@ -28,14 +28,35 @@
     @include tablet {
       margin: 0;
     }
+    &:hover .letters {
+      fill: $base-pink;
+      @include base-transition(fill);
+    }
+    &:active .letters {
+      fill: #bec2c7;
+      @include base-transition(fill);
+    }
+    &:active path {
+      @include base-transition(fill);
+      opacity: .3;
+    }
   }
   &__copyright {
     width: 130px;
     max-width: 130px;
     margin: 0 auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
+    text-decoration: none;
+    color: $base-dark-blue;
+    @include base-transition(fill);
+    &:hover path {
+      fill: $base-dark-blue;
+    }
+    &:active path {
+      fill: #bec2c7;
+    }
     @include tablet {
       margin: 0;
     }
@@ -46,9 +67,10 @@
   }
   &__copyright-txt {
     display: block;
+    margin-right: 20px;
     font-size: $base-p-size;
   }
-  &__copyright-img {
+  &__copyright-svg {
     max-width: 28px;
   }
 }

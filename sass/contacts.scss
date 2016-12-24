@@ -1,6 +1,29 @@
 .contacts {
   padding: 40px;
   text-align: center;
+  position: relative;
+  z-index: 1;
+  &::after {
+    display: block;
+    content: '';
+    width: 100%;
+    height: 40px;
+    left: 0;
+    right: 0;
+    bottom: -39px;
+    z-index: -1;
+    position: absolute;
+    background: url('#{$img-path}/bg-triangle-white-footer.svg') no-repeat;
+    background-size: 100%;
+    @include tablet {
+      height: 70px;
+      bottom: -69px;
+    }
+    @include desktop {
+      height: 100px;
+      bottom: -99px;
+    }
+  }
   &__wrapper {
     margin: 0 auto;
     width: 100%;
@@ -59,5 +82,17 @@
     font-size: $base-h-size;
     font-weight: $light;
     color: $base-pink;
+    &--mail {
+      cursor: pointer;
+      @include base-transition(all);
+      &:hover {
+        color: $base-dark-blue;
+        text-decoration: underline;
+      }
+      &:active {
+        text-decoration: none;
+        opacity: .3;
+      }
+    }
   }
 }

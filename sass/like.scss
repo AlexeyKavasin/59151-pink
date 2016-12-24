@@ -1,6 +1,7 @@
 .like {
   padding: 20px;
   font-size: $base-p-size;
+  color: $base-pink;
   @include tablet {
     display: flex;
     flex-direction: row-reverse;
@@ -22,6 +23,7 @@
     margin-right: 20px;
     background: url('#{$img-path}/icon-heart.svg');
     background-repeat: no-repeat;
+    cursor: pointer;
     @include tablet {
       margin-right: 0;
     }

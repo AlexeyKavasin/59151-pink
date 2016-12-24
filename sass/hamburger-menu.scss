@@ -1,15 +1,22 @@
 .hamburger-menu {
-  display: block;
   padding: 25px;
   float: right;
+  @include tablet {
+    padding: 40px;
+    padding-top: 45px;
+  }
   @include desktop {
     display: none;
     float: none;
   }
   &__btn {
     display: block;
-    width: 24px;
-    height: 24px;
-    background: url('#{$img-path}/icon-menu-cross.svg');
+    max-width: 50px;
+    height: 25px;
+    cursor: pointer;
+    @include base-transition(fill);
+    &:hover path {
+      fill: $base-pink;
+    }
   }
 }

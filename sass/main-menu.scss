@@ -1,5 +1,8 @@
 .main-menu {
   padding-top: 75px;
+  @include tablet {
+    padding-top: 110px;
+  }
   & li {
     list-style: none;
   }
@@ -7,6 +10,7 @@
     padding-top: 0;
   }
   &__items {
+    display: none;
     margin: 0;
     padding: 0;
     border-top: 1px solid $base-black;
@@ -19,16 +23,57 @@
   }
   &__item-link {
     display: block;
+    position: relative;
     padding: 25px;
     border-top: 1px solid #485461;
-    border-bottom: 1px solid #000000;
+    border-bottom: 1px solid $base-black;
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
     color: $base-white;
+    @include base-transition(color);
+    &:hover {
+      color: $base-pink;
+    }
+    &:hover::after {
+      background: $base-pink;
+    }
+    &:active {
+      color: $base-white;
+      opacity: .3;
+    }
+    &:active::after {
+      background: $base-white;
+    }
     @include desktop {
+      margin-right: 25px;
+      margin-left: 25px;
+      padding-right: 0;
+      padding-left: 0;
       border: none;
       text-transform: initial;
+    }
+    &--active::after {
+      text-decoration: underline;
+      display: none;
+      width: 100%;
+      height: 2px;
+      content: '';
+      position: absolute;
+      bottom: 12px;
+      right: 0;
+      left: 0;
+      background: $base-white;
+      @include base-transition(background);
+      @include desktop {
+        display: block;
+      }
+    }
+  }
+  & .no-js {
+    display: block;
+    @include desktop {
+      display: flex;
     }
   }
 }
