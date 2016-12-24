@@ -32,13 +32,15 @@
       }
       & .photo-item__username {
         order: 1;
-        width: 50%;
+        font-size: 12px;
+      }
+      & .photo-item__time {
+        font-weight: $light;
       }
       & .photo-item__quote {
         order: 3;
         width: 100%;
-        margin-top: 20px;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
         @include tablet {
           margin-top: 10px;
           margin-bottom: 0;
@@ -66,7 +68,7 @@
   &__label {
     display: block;
     max-width: 140px;
-    padding: 10px 20px;
+    padding: 6px 22px;
     position: absolute;
     top: 0;
     right: 20px;
@@ -88,6 +90,7 @@
     max-width: 280px;
     margin: 0 auto;
     padding: 20px;
+    padding-bottom: 18px;
     font-size: $base-p-size;
     @include tablet {
       max-width: 100%;
@@ -104,6 +107,6 @@
     text-transform: uppercase;
   }
   &__quote {
-    margin-bottom: 20px;
+    margin-bottom: 0;
   }
 }

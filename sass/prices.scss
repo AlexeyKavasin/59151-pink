@@ -1,9 +1,17 @@
 .prices {
   background: $base-gray;
-  padding-top: 80px;
+  padding-top: 84px;
   padding-bottom: 100px;
   overflow: hidden;
   position: relative;
+  @include tablet {
+    padding-top: 75px;
+    padding-bottom: 74px;
+  }
+  @include desktop {
+    padding-top: 150px;
+    padding-bottom: 100px;
+  }
   &__slider {
     width: 100%;
     display: flex;
@@ -42,48 +50,66 @@
   }
   &__item-header {
     position: relative;
-    padding: 25px 0;
+    padding: 18px 0;
     line-height: $big-line-height;
     color: $base-white;
     background: $base-dark-blue;
     text-align: center;
     text-transform: uppercase;
-    @include tablet {
+    @include tablet-only {
+      padding-top: 12px;
+      padding-bottom: 7px;
       border-right: 1px solid $base-gray;
     }
     &--hit::after {
       display: block;
       content: '';
       position: absolute;
-      width: 70px;
-      height: 70px;
+      width: 75px;
+      height: 75px;
       top: 0;
-      background: url('#{$img-path}/bg-hit-tablet.svg');
+      background: url('#{$img-path}/bg-hit.svg');
       background-repeat: no-repeat;
+      @include tablet-only {
+        background: url('#{$img-path}/bg-hit-tablet.svg');
+        background-repeat: no-repeat;
+      }
     }
     &--hit::before {
       display: block;
       content: 'ХИТ';
       position: absolute;
+      font-size: $base-p-size;
       z-index: 1;
       transform: rotate(-45deg);
-      top: 5px;
-      left: 3px;
+      top: 12px;
+      left: 11px;
+      @include tablet-only {
+        top: 6px;
+        left: 6px;
+      }
     }
   }
   &__item-usd {
     font-weight: $light;
+    font-size: $base-h-size;
+    @include tablet-only {
+      font-size: $base-font-size;
+    }
   }
   &__item-feature,
   &__item-feature--tablet {
     min-height: 60px;
     position: relative;
-    padding: 18px;
-    line-height: $base-line-height;
+    padding: 18px 23px;
+    font-size: $base-p-size;
+    line-height: 22px;
     border-bottom: 2px solid $base-gray;
     text-transform: uppercase;
     background: $base-white;
-    @include tablet {
+    @include tablet-only {
+      min-height: 45px;
+      padding: 8px 16px;
       height: 45px;
       line-height: $big-line-height;
       border-right: 1px solid $base-gray;
@@ -118,6 +144,9 @@
     &--tablet {
       text-transform: initial;
       font-size: $base-p-size;
+      @include desktop {
+        font-size: 18px;
+      }
     }
     &--tablet::after {
       display: none;

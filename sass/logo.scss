@@ -1,7 +1,18 @@
 .logo {
-  padding: 25px;
+  padding: 20px;
   float: left;
   line-height: 0;
+  @include tablet {
+    padding-top: 27px;
+    padding-left: 40px;
+    padding-bottom: 40px;
+  }
+  @include desktop {
+    width: 35%;
+    float: none;
+    padding-left: 0;
+    padding-right: 0;
+  }
   & svg {
     display: none;
     &:hover path {
@@ -20,16 +31,8 @@
       display: none;
     }
   }
-  @include tablet {
-    padding-top: 27px;
-    padding-left: 40px;
-    padding-bottom: 40px;
-  }
-  @include desktop {
-    float: none;
-  }
   & img {
-    width: 85px;
+    width: 75px;
     height: auto;
     @include tablet {
       width: 148px;

@@ -1,16 +1,17 @@
 .welcome-section {
   width: 100%;
-  padding-top: 460px;
+  padding-top: 395px;
   position: relative;
   background: $base-dark-blue;
   background-image: url('#{$img-path}/bg-back-mobile@1x.jpg');
   background-size: 700px;
   @include retina('#{$img-path}/bg-back-mobile@2x.jpg', 700px);
   background-repeat: no-repeat;
-  background-position: 50% 0;
+  background-position: 50% -33%;
   @include tablet {
     background-image: url('#{$img-path}/bg-back-tablet@1x.jpg');
-    background-size: cover;
+    background-size: 1200px;
+    background-position: 50% 100%;
     @include retina('#{$img-path}/bg-back-tablet@2x.jpg', cover);
     padding-top: 0;
   }
@@ -21,10 +22,10 @@
   }
   &-index {
     @include tablet {
-      min-height: 620px;
+      min-height: 617px;
     }
     @include desktop {
-      min-height: 850px;
+      min-height: 854px;
     }
   }
   &__wrapper {
@@ -58,19 +59,18 @@
     margin-left: -130px;
     height: 285px;
     position: absolute;
-    bottom: 300px;
-    left: 50%;
+    bottom: 270px;
+    left: 40%;
     background-image: url('#{$img-path}/iphone-hand-mobile@1x.png');
     background-size: 100% auto;
     @include retina('#{$img-path}/iphone-hand-mobile@2x.png', 100% auto);
     background-repeat: no-repeat;
     @include tablet {
       width: 700px;
-      height: 544px;
+      height: 545px;
       bottom: 0;
       right: 0;
-      left: 50%;
-      margin-left: -360px;
+      margin-left: -280px;
       background-image: url('#{$img-path}/iphone-hand-tablet@1x.png');
       background-size: 100% auto;
       @include retina('#{$img-path}/iphone-hand-tablet@2x.png', 100% auto);
@@ -78,7 +78,7 @@
     @include desktop {
       width: 1050px;
       height: 645px;
-      margin-left: -525px;
+      margin-left: -335px;
       background-image: url('#{$img-path}/iphone-hand-desktop@1x.png');
       background-size: 100% auto;
       @include retina('#{$img-path}/iphone-hand-desktop@2x.png', 100% auto);
@@ -86,6 +86,8 @@
   }
   &-form,
   &-photo {
-    padding: 150px 0;
+    padding-top: 30px;
+    padding-bottom: 75px;
+    background-position: 50% 25%;
   }
 }

@@ -22,6 +22,7 @@
       }
     }
     &--controls {
+      margin-top: 35px;
       @include tablet {
         max-width: 275px;
         margin-bottom: 0;
@@ -31,7 +32,7 @@
       }
     }
     &--btns {
-      padding: 40px 0;
+      padding: 35px 0;
       border-top: 1px solid #dddfe0;
       @include tablet {
         width: 100%;
@@ -263,7 +264,7 @@
     max-width: 280px;
     margin: 0 auto;
     margin-bottom: 15px;
-    padding: 20px 80px;
+    padding: 15px 80px;
     font-weight: $bold;
     border-radius: 50px;
     background: $base-gray;

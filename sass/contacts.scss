@@ -1,16 +1,20 @@
 .contacts {
   padding: 40px;
+  padding-bottom: 10px;
   text-align: center;
   position: relative;
   z-index: 1;
+  @include tablet {
+    padding-top: 50px;
+  }
   &::after {
     display: block;
     content: '';
     width: 100%;
-    height: 60px;
+    height: 40px;
     left: 0;
     right: 0;
-    bottom: -60px;
+    bottom: -40px;
     z-index: -1;
     position: absolute;
     background: url('#{$img-path}/bg-triangle-white-footer.svg') no-repeat;
@@ -48,39 +52,65 @@
   }
   &__heading {
     margin: 0;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     font-size: $base-h-size;
     font-weight: $light;
-    line-height: $max-line-height;
+    line-height: $big-line-height;
+    @include tablet {
+      margin-bottom: 45px;
+      font-size: 40px;
+      line-height: 45px;
+    }
+    @include desktop {
+      margin-top: 20px;
+      margin-bottom: 60px;
+      font-size: 50px;
+      line-height: 55px;
+    }
   }
   &__item {
-    margin-bottom: 25px;
+    margin-bottom: 20px;
     @include tablet {
       width: 50%;
       margin-bottom: 50px
     }
     @include desktop {
       width: 33%;
-      &--phone {
+    }
+    &--phone {
+      @include desktop {
         order: 1;
       }
-      &--address {
+    }
+    &--address {
+      @include tablet {
+        margin-bottom: 10px;
+      }
+      @include desktop {
         order: 2;
       }
-      &--mail {
+    }
+    &--mail {
+      @include desktop {
         order: 3;
+        margin-bottom: 0;
       }
     }
   }
   &__item-title {
     display: block;
-    padding: 10px 0;
+    padding: 0;
+    padding-bottom: 5px;
     font-weight: $bold;
+    @include desktop {
+      padding-bottom: 20px;
+    }
   }
   &__item-text {
     display: block;
     font-size: $base-h-size;
     font-weight: $light;
+    line-height: $big-line-height;
     color: $base-pink;
     &--mail {
       cursor: pointer;

@@ -1,13 +1,13 @@
 .map {
-  min-height: 220px;
+  min-height: 200px;
   background-size: cover;
   background-repeat: no-repeat;
   background-image: url('../img/bg-map-mobile@1x.png');
   @include retina('../img/bg-map-mobile@2x.jpg', 100%);
   background-position-y: bottom;
   @include tablet {
-    min-height: 400px;
-  background-image: url('../img/bg-map-tablet@1x.jpg');
+    min-height: 380px;
+    background-image: url('../img/bg-map-tablet@1x.jpg');
     @include retina('../img/bg-map-tablet@2x.jpg', 100%);
     background-position-y: bottom;
   }
