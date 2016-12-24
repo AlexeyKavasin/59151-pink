@@ -9,7 +9,7 @@ textarea {
 label {
   display: block;
   padding-left: 20px;
-  padding-bottom: 10px;
+  padding-bottom: 5px;
   font-size: $base-p-size;
   color: $base-pink;
   text-transform: uppercase;
@@ -32,7 +32,10 @@ label {
     &:last-child {
       margin-bottom: 0;
       @include tablet {
-        margin-bottom: 60px;
+        margin-bottom: 50px;
+      }
+      @include desktop {
+        margin-bottom: 0;
       }
     }
     @include tablet {
@@ -51,29 +54,47 @@ label {
       background: $base-gray;
       @include tablet {
         background: $base-white;
+        margin-bottom: 65px;
       }
     }
     &--main {
+      padding-bottom: 45px;
       @include tablet {
         order: 1;
+        margin-bottom: 20px;
+        padding: 0;
       }
       @include desktop {
-        width: 45%;
+        width: 46%;
       }
     }
     &--app {
+      padding-bottom: 45px;
       @include tablet {
         order: 2;
+        padding-top: 55px;
+        padding-bottom: 65px;
       }
       @include desktop {
-        width: 45%;
+        margin-bottom: 70px;
+        padding-top: 60px;
+        padding-right: 70px;
+        padding-bottom: 60px;
+        padding-left: 70px;
+        width: 46%;
       }
     }
     &--contacts {
       @include tablet {
         order: 3;
+        padding-bottom: 30px;
+        margin-bottom: 65px;
       }
       @include desktop {
+        padding-top: 35px;
+        padding-right: 60px;
+        padding-bottom: 20px;
+        padding-left: 60px;
         width: 100%;
         display: flex;
         flex-direction: row;
@@ -83,9 +104,12 @@ label {
     &--actions {
       @include tablet {
         order: 4;
+        padding-top: 60px;
+        padding-bottom: 50px;
       }
       @include desktop {
         width: 100%;
+        padding-bottom: 0;
         display: flex;
         flex-wrap: wrap;
         flex-direction: row;
@@ -94,15 +118,23 @@ label {
       }
     }
     &--comment {
+      padding-top: 35px;
+      padding-bottom: 0;
       @include tablet {
         order: 5;
+        margin-bottom: 15px;
+        padding-top: 45px;
+        padding-bottom: 45px;
       }
       @include desktop {
         width: 100%;
       }
     }
     &--submit {
+      padding-top: 50px;
+      padding-bottom: 45px;
       @include tablet {
+        padding-bottom: 5px;
         order: 6;
       }
       @include desktop {
@@ -112,6 +144,7 @@ label {
   }
   &__fields-wrapper {
     margin-bottom: 20px;
+    position: relative;
     &:last-child {
       margin-bottom: 0;
     }
@@ -124,15 +157,22 @@ label {
         margin-bottom: 50px;
       }
     }
+    @include desktop {
+      margin-bottom: 55px;
+    }
     &--contact {
       @include tablet {
         display: flex;
         flex-direction: column-reverse;
         align-items: flex-start;
+        margin-bottom: 30px;
+        &:last-child {
+          margin-bottom: 0;
+        }
       }
       @include desktop {
-        align-items: flex-end;
-        width: 44%;
+        align-items: flex-start;
+        width: 46%;
       }
       & label {
         @include tablet {
@@ -142,11 +182,54 @@ label {
         }
       }
     }
+    &--tel {
+      @include desktop {
+        margin-bottom: 0;
+      }
+    }
+    &--email::after,
+    &--tel::after {
+      width: 60px;
+      height: 60px;
+      display: none;
+      content: '';
+      position: absolute;
+      top: 2px;
+      right: 2px;
+      background: #e5e5e5;
+      background-repeat: no-repeat;
+      @include tablet {
+        display: block;
+      }
+    }
+    &--email::before,
+    &--tel::before {
+      width: 20px;
+      height: 20px;
+      display: none;
+      content: '';
+      position: absolute;
+      top: 18px;
+      right: 20px;
+      z-index: 1;
+      background-image: url('#{$img-path}/icon-phone.svg');
+      background-repeat: no-repeat;
+      @include tablet {
+        display: block;
+      }
+    }
+    &--email::before {
+      height: 13px;
+      top: 25px;
+      right: 18px;
+      background-image: url('#{$img-path}/icon-mail.svg');
+      background-repeat: no-repeat;
+    }
   }
   &__textarea,
   &__text-field {
     width: 100%;
-    padding: 20px;
+    padding: 15px 20px;
     border: 2px solid #e5e5e5;
     border-radius: 3px;
     @include base-transition(border);
@@ -162,8 +245,11 @@ label {
     }
   }
   &__textarea {
-    min-height: 200px;
+    min-height: 195px;
     resize: none;
+    @include desktop {
+      min-height: 120px;
+    }
   }
   &__radio,
   &__checkbox {
@@ -175,25 +261,38 @@ label {
       border: 2px solid $base-pink;
     }
   }
-  &__radio + label,
-  &__checkbox + label {
+  &__radio-label,
+  &__checkbox-label {
     width: 280px;
     padding-bottom: 0;
-    padding-left: 60px;
-    margin-bottom: 40px;
+    padding-left: 70px;
+    margin-bottom: 60px;
     text-transform: initial;
     font-size: $base-font-size;
     color: $base-dark-blue;
     position: relative;
     cursor: pointer;
     @include base-transition(border);
-    &:last-child {
-      margin-bottom: 0;
-      @include tablet {
-        &:last-child {
-          margin-bottom: 40px
-        }
-      }
+    @include tablet {
+      width: auto;
+    }
+    @include desktop {
+      max-width: 260px;
+    }
+  }
+  &__radio-label {
+    margin-bottom: 50px;
+    @include tablet {
+      padding-left: 60px;
+    }
+  }
+  &__checkbox-label {
+    @include tablet {
+      padding-left: 60px;
+    }
+    @include desktop {
+      width: 33%;
+      padding-right: 0;
     }
   }
   &__radio + label::before,
@@ -238,6 +337,49 @@ label {
     border-bottom: 2px solid $base-pink;
     left: 12px;
     top: 6px;
+  }
+  &__radio-label {
+    &--win {
+      margin-bottom: 0;
+    }
+  }
+  &__checkbox-label {
+    &--shark {
+      @include desktop {
+        width: 34%;
+        order: 1;
+      }
+    }
+    &--chuck {
+      @include desktop {
+        order: 2;
+        width: 30%;
+      }
+    }
+    &--tower {
+      @include desktop {
+        order: 3;
+        width: 26%;
+      }
+    }
+    &--burnt {
+      @include desktop {
+        order: 4;
+        width: 34%;
+      }
+    }
+    &--souvenir {
+      @include desktop {
+        order: 5;
+        width: 30%;
+      }
+    }
+    &--hotel {
+      @include desktop {
+        order: 6;
+        width: 26%;
+      }
+    }
   }
   &__submit {
     cursor: pointer;

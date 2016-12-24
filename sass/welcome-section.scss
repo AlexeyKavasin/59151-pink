@@ -100,10 +100,31 @@
       background-position: 50% 0%;
     }
   }
-  &-photo .welcome-section__heading {
+  &-form {
+    padding-bottom: 52px;
+    @include tablet {
+      padding-bottom: 80px;
+    }
     @include desktop {
-      padding-left: 150px;
-      padding-right: 150px;
+      padding-bottom: 105px;
+    }
+    & .welcome-section__heading {
+      line-height: 29px;
+      padding-left: 40px;
+      padding-right: 40px;
+      @include tablet {
+        line-height: 60px;
+      }
+    }
+  }
+  &-photo {
+    & .welcome-section__heading {
+      padding-left: 110px;
+      padding-right: 110px;
+      @include desktop {
+        padding-left: 150px;
+        padding-right: 150px;
+      }
     }
   }
 }

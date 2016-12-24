@@ -27,6 +27,11 @@
       padding-top: 95px;
     }
   }
+  &__wrapper-form {
+    @include desktop {
+      padding-top: 70px;
+    }
+  }
   &__logo {
     width: 150px;
     margin: 0 auto;
