@@ -89,5 +89,21 @@
     padding-top: 30px;
     padding-bottom: 75px;
     background-position: 50% 25%;
+    @include tablet {
+      padding-top: 70px;
+      padding-bottom: 138px;
+    }
+    @include desktop {
+      padding-top: 170px;
+      padding-bottom: 105px;
+      background-size: 200%;
+      background-position: 50% 0%;
+    }
+  }
+  &-photo .welcome-section__heading {
+    @include desktop {
+      padding-left: 150px;
+      padding-right: 150px;
+    }
   }
 }

@@ -13,9 +13,38 @@
     text-align: center;
     @include tablet {
       width: 100%;
+      padding-top: 75px;
+      padding-right: 120px;
+      padding-left: 120px;
+      padding-bottom: 48px;
+      font-size: 18px;
+    }
+    @include desktop {
+      padding-bottom: 60px;
+      padding-right: 300px;
+      padding-left: 300px;
     }
     &--bottom {
       padding-top: 15px;
+      @include tablet {
+        padding-top: 35px;
+      }
+      @include desktop {
+        padding-top: 25px;
+        padding-bottom: 50px;
+      }
+      & .photos__content-block-txt br {
+        @include tablet {
+          display: block;
+        }
+      }
+    }
+  }
+  &__content-block-txt {
+    & br {
+      @include tablet {
+        display: none;
+      }
     }
   }
   &__wrapper {
@@ -25,12 +54,14 @@
       width: 620px;
       margin: 0;
       padding: 20px 0;
+      padding-top: 30px;
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
     }
     @include desktop {
       width: 940px;
+      padding: 0;
     }
   }
 }

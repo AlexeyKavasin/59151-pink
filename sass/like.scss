@@ -1,9 +1,13 @@
 .like {
-  padding: 8px 20px;
+  padding: 20px;
+  padding-bottom: 8px;
   padding-top: 0;
   font-size: $base-p-size;
   color: $base-pink;
   @include tablet {
+    padding-bottom: 16px;
+    padding-right: 30px;
+    padding-left: 30px;
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;

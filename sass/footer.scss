@@ -23,6 +23,9 @@
       justify-content: center;
       align-items: center;
     }
+    @include desktop {
+      padding-top: 95px;
+    }
   }
   &__logo {
     width: 150px;

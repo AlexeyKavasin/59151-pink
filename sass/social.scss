@@ -7,6 +7,9 @@
   @include tablet {
     margin: 0;
   }
+  @include desktop {
+    width: 180px;
+  }
   &__item {
     display: inline-block;
     vertical-align: bottom;
