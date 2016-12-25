@@ -35,9 +35,6 @@
         left: 0;
         text-align: center;
       }
-      @include desktop {
-        max-width: 430px;
-      }
     }
     &__subheading {
       &--mobile-hidden {

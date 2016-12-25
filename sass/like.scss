@@ -16,6 +16,7 @@
   &--full-width {
     padding: 0;
     @include tablet {
+      padding: 0;
       order: 2;
       width: 130px;
     }

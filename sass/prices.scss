@@ -126,8 +126,7 @@
       top: 50%;
       right: 20px;
       margin-top: -15px;
-      background: url('#{$img-path}/icon-no.svg');
-      background-repeat: no-repeat;
+      background: url('#{$img-path}/icon-no.svg') no-repeat;
       background-size: 100%;
       background-position: 50%;
       @include tablet {
@@ -136,8 +135,7 @@
       }
     }
     &--included::after {
-      background: url('#{$img-path}/icon-yes.svg');
-      background-repeat: no-repeat;
+      background: url('#{$img-path}/icon-yes.svg') no-repeat;
       background-size: 100%;
       background-position: 50%;
     }

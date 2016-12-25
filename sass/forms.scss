@@ -50,7 +50,7 @@ label {
       }
     }
     &--actions,
-    &--app, {
+    &--app {
       background: $base-gray;
       @include tablet {
         background: $base-white;
@@ -83,6 +83,11 @@ label {
         padding-left: 70px;
         width: 46%;
       }
+      & .form__subheading {
+        @include desktop {
+          max-width: 360px;
+        }
+      }
     }
     &--contacts {
       @include tablet {
@@ -100,6 +105,11 @@ label {
         flex-direction: row;
         justify-content: space-between;
       }
+      & .form__subheading {
+        @include desktop {
+          max-width: 280px;
+        }
+      }
     }
     &--actions {
       @include tablet {
@@ -116,6 +126,11 @@ label {
         justify-content: space-between;
         align-items: center;
       }
+      & .form__subheading {
+        @include desktop {
+          max-width: 430px;
+        }
+      }
     }
     &--comment {
       padding-top: 35px;
@@ -127,7 +142,13 @@ label {
         padding-bottom: 45px;
       }
       @include desktop {
+        margin-bottom: 60px;
         width: 100%;
+      }
+      & .form__subheading {
+        @include desktop {
+          max-width: 260px;
+        }
       }
     }
     &--submit {

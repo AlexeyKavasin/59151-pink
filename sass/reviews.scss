@@ -128,14 +128,12 @@
   }
   &__arrow-right {
     right: -20px;
-    background: url('#{$img-path}/icon-review-arrow-right.svg');
-    background-repeat: no-repeat;
+    background: url('#{$img-path}/icon-review-arrow-right.svg') no-repeat;
     background-size: contain;
   }
   &__arrow-left {
     left: 0;
-    background: url('#{$img-path}/icon-review-arrow-left.svg');
-    background-repeat: no-repeat;
+    background: url('#{$img-path}/icon-review-arrow-left.svg') no-repeat;
     background-size: contain;
   }
 }

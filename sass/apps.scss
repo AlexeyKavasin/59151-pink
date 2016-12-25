@@ -91,22 +91,19 @@
 
     &--ios {
       height: 61px;
-      background: url('#{$img-path}/logo-apple.svg');
-      background-repeat: no-repeat;
+      background: url('#{$img-path}/logo-apple.svg') no-repeat;
       background-size: 100%;
     }
 
     &--andr {
       height: 55px;
-      background: url('#{$img-path}/logo-android.svg');
-      background-repeat: no-repeat;
+      background: url('#{$img-path}/logo-android.svg') no-repeat;
       background-size: 100%;
     }
 
     &--win {
       height: 47px;
-      background: url('#{$img-path}/logo-microsoft.svg');
-      background-repeat: no-repeat;
+      background: url('#{$img-path}/logo-microsoft.svg') no-repeat;
       background-size: 100%;
     }
   }

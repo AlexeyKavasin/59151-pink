@@ -17,6 +17,8 @@
     @include tablet {
       width: 50%;
       margin-bottom: 0;
+      padding: 0;
+      border: 0;
       &:last-child {
         margin-bottom: 0;
       }
