@@ -137,7 +137,7 @@ label {
       padding-bottom: 0;
       @include tablet {
         order: 5;
-        margin-bottom: 15px;
+        margin-bottom: 60px;
         padding-top: 45px;
         padding-bottom: 45px;
       }
@@ -297,9 +297,6 @@ label {
     @include tablet {
       width: auto;
     }
-    @include desktop {
-      max-width: 260px;
-    }
   }
   &__radio-label {
     margin-bottom: 50px;
@@ -312,7 +309,7 @@ label {
       padding-left: 60px;
     }
     @include desktop {
-      width: 33%;
+      width: 33.33%;
       padding-right: 0;
     }
   }
@@ -367,38 +364,37 @@ label {
   &__checkbox-label {
     &--shark {
       @include desktop {
-        width: 34%;
         order: 1;
       }
     }
     &--chuck {
       @include desktop {
         order: 2;
-        width: 30%;
       }
     }
     &--tower {
       @include desktop {
         order: 3;
-        width: 26%;
       }
     }
     &--burnt {
       @include desktop {
         order: 4;
-        width: 34%;
       }
     }
     &--souvenir {
       @include desktop {
         order: 5;
-        width: 30%;
       }
     }
     &--hotel {
+      margin-bottom: 0;
+      @include tablet {
+        margin-bottom: 0;
+      }
       @include desktop {
+        margin-bottom: 60px;
         order: 6;
-        width: 26%;
       }
     }
   }

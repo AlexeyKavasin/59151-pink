@@ -104,6 +104,10 @@
     padding-bottom: 52px;
     @include tablet {
       padding-bottom: 80px;
+      background-image: url('#{$img-path}/bg-back-tablet@1x.jpg');
+      background-size: 1200px;
+      background-position: 50% 28%;
+      @include retina('#{$img-path}/bg-back-tablet@2x.jpg', 1200px);
     }
     @include desktop {
       padding-bottom: 105px;
@@ -118,9 +122,15 @@
     }
   }
   &-photo {
+    @include tablet {
+      background-image: url('#{$img-path}/bg-back-tablet@1x.jpg');
+      background-size: 1200px;
+      background-position: 50% 28%;
+      @include retina('#{$img-path}/bg-back-tablet@2x.jpg', 1200px);
+    }
     & .welcome-section__heading {
-      padding-left: 110px;
-      padding-right: 110px;
+      padding-left: 70px;
+      padding-right: 70px;
       @include desktop {
         padding-left: 150px;
         padding-right: 150px;

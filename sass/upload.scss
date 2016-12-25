@@ -3,12 +3,14 @@
   background: $base-gray;
   @include tablet {
     padding: 60px 40px;
+    padding-bottom: 40px;
   }
   @include desktop {
     width: 940px;
     margin: 0 auto;
     padding-right: 60px;
     padding-left: 80px;
+    padding-bottom: 55px;
   }
   & [type="radio"] {
     display: none;
