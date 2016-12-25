@@ -6,11 +6,13 @@
     align-items: center;
     @include tablet {
       display: flex;
-      padding: 40px 0;
+      padding: 35px 0;
       max-width: 620px;
     }
     @include desktop {
-    max-width: 940px;
+      max-width: 940px;
+      padding-top: 67px;
+      padding-bottom: 60px;
     }
   }
   &__wrapper-inner {
@@ -20,6 +22,14 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
+    }
+    @include desktop {
+      padding-top: 95px;
+    }
+  }
+  &__wrapper-form {
+    @include desktop {
+      padding-top: 70px;
     }
   }
   &__logo {
@@ -69,6 +79,10 @@
     display: block;
     margin-right: 20px;
     font-size: $base-p-size;
+    @include desktop {
+      margin-right: 10px;
+      font-size: $base-font-size;
+    }
   }
   &__copyright-svg {
     max-width: 28px;

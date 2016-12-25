@@ -1,6 +1,9 @@
 .contest {
-  padding-top: 40px;
+  padding-top: 45px;
   position: relative;
+  @include tablet {
+    padding-top: 90px;
+  }
   &__wrapper {
     width: 100%;
     position: relative;
@@ -17,19 +20,23 @@
     margin: 0 auto;
     text-align: center;
     padding: 0 20px;
-    padding-bottom: 40px;
+    padding-bottom: 0;
     @include tablet {
-      padding: 0 100px;
+      padding: 0 60px;
     }
     @include desktop {
-      padding: 0 220px;
+      padding: 0 90px;
     }
     &--note {
       @include tablet {
         padding: 0;
         position: absolute;
         right: 0;
-        bottom: 50px;
+        bottom: 65px;
+      }
+      @include desktop {
+        bottom: 20px;
+        padding: 0;
       }
     }
   }
@@ -40,6 +47,18 @@
     @include tablet {
       font-size: $base-font-size;
       line-height: $big-line-height;
+    }
+    &--hidden {
+      display: none;
+      @include tablet {
+        display: inline-block;
+      }
+    }
+    &--desktop-only {
+      display: none;
+      @include desktop {
+        display: inline-block;
+      }
     }
     &--required {
       text-transform: uppercase;

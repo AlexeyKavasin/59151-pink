@@ -10,38 +10,50 @@
     display: flex;
     flex-direction: column;
   }
+  @include desktop {
+    margin-bottom: 40px;
+  }
   &--full-width {
     width: 100%;
     background: $base-white;
     @include tablet {
-      max-width: 100%;
+      width: 700px;
+    }
+    @include desktop {
+      width: 1200px;
     }
     & .photo-item__description--full-width {
       background: $base-gray;
       @include tablet {
         margin: 0 auto;
         max-width: 620px;
+        padding-top: 25px;
+        padding-left: 30px;
+        padding-right: 30px;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between;
         align-items: center;
+
         @include desktop {
           max-width: 940px;
         }
       }
       & .photo-item__username {
         order: 1;
-        width: 50%;
+        font-size: 12px;
+      }
+      & .photo-item__time {
+        font-weight: $light;
       }
       & .photo-item__quote {
         order: 3;
         width: 100%;
-        margin-top: 20px;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
         @include tablet {
-          margin-top: 10px;
-          margin-bottom: 0;
+          margin: 0;
+          line-height: $base-line-height;
         }
       }
     }
@@ -60,13 +72,13 @@
       max-width: 700px;
     }
     @include desktop {
-      max-width: 940px;
+      max-width: 1200px;
     }
   }
   &__label {
     display: block;
     max-width: 140px;
-    padding: 10px 20px;
+    padding: 6px 22px;
     position: absolute;
     top: 0;
     right: 20px;
@@ -79,6 +91,10 @@
       top: 55px;
       right: 40px;
     }
+    @include desktop {
+      top: 52px;
+      right: 130px;
+    }
   }
   &__img {
     max-width: 100%;
@@ -88,10 +104,15 @@
     max-width: 280px;
     margin: 0 auto;
     padding: 20px;
+    padding-bottom: 18px;
     font-size: $base-p-size;
     @include tablet {
       max-width: 100%;
       margin: 0;
+      padding-top: 25px;
+      padding-right: 30px;
+      padding-left: 30px;
+      padding-bottom: 20px;
       flex-grow: 1;
       display: flex;
       flex-direction: column;
@@ -104,6 +125,6 @@
     text-transform: uppercase;
   }
   &__quote {
-    margin-bottom: 20px;
+    margin-bottom: 0;
   }
 }

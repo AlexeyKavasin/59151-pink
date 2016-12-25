@@ -1,11 +1,14 @@
 .social {
-  width: 180px;
+  width: 200px;
   margin: 40px auto;
   padding: 0;
   list-style: none;
   font-size: 0;
   @include tablet {
     margin: 0;
+  }
+  @include desktop {
+    width: 180px;
   }
   &__item {
     display: inline-block;
@@ -31,21 +34,18 @@
       opacity: 0.3;
     }
     &--tw {
-      background: url('#{$img-path}/icon-twitter.svg');
-      background-repeat: no-repeat;
-      background-size: 50%;
-      background-position: 50% 50%;
+      background: url('#{$img-path}/icon-twitter.svg') no-repeat;
+      background-size: 45%;
+      background-position: 55% 55%;
     }
     &--fb {
-      background: url('#{$img-path}/icon-facebook.svg');
-      background-repeat: no-repeat;
-      background-size: 25%;
+      background: url('#{$img-path}/icon-facebook.svg') no-repeat;
+      background-size: 20%;
       background-position: 50% 50%;
     }
     &--you {
-      background: url('#{$img-path}/icon-youtube.svg');
-      background-repeat: no-repeat;
-      background-size: 25%;
+      background: url('#{$img-path}/icon-youtube.svg') no-repeat;
+      background-size: 35%;
       background-position: 50% 50%;
     }
   }
