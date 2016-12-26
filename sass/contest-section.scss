@@ -52,12 +52,14 @@
       display: none;
       @include tablet {
         display: inline-block;
+        vertical-align: bottom;
       }
     }
     &--desktop-only {
       display: none;
       @include desktop {
         display: inline-block;
+        vertical-align: bottom;
       }
     }
     &--required {
