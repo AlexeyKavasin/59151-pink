@@ -1,16 +1,16 @@
 .prices {
   background: $base-gray;
-  padding-top: 95px;
+  padding-top: 96px;
   padding-bottom: 100px;
   overflow: hidden;
   position: relative;
   @include tablet {
     padding-top: 75px;
-    padding-bottom: 74px;
+    padding-bottom: 68px;
   }
   @include desktop {
     padding-top: 150px;
-    padding-bottom: 100px;
+    padding-bottom: 95px;
   }
   &__slider {
     width: 100%;
@@ -43,7 +43,7 @@
     }
   }
   &__controls {
-    bottom: 50px;
+    bottom: 48px;
     @include tablet {
       display: none;
     }
@@ -57,27 +57,31 @@
     text-align: center;
     text-transform: uppercase;
     @include tablet-only {
-      padding-top: 12px;
-      padding-bottom: 7px;
+      padding-top: 11px;
+      padding-bottom: 8px;
       border-right: 1px solid $base-gray;
+    }
+    @include desktop {
+      padding-bottom: 19px;
+      line-height: 29px;
     }
     &--hit::after {
       display: block;
-      content: '';
+      content: "";
       position: absolute;
       width: 75px;
       height: 75px;
       top: 0;
-      background: url('#{$img-path}/bg-hit.svg');
+      background: url("#{$img-path}/bg-hit.svg");
       background-repeat: no-repeat;
       @include tablet-only {
-        background: url('#{$img-path}/bg-hit-tablet.svg');
+        background: url("#{$img-path}/bg-hit-tablet.svg");
         background-repeat: no-repeat;
       }
     }
     &--hit::before {
       display: block;
-      content: 'ХИТ';
+      content: "ХИТ";
       position: absolute;
       font-size: $base-p-size;
       z-index: 1;
@@ -103,30 +107,33 @@
     position: relative;
     padding: 18px 23px;
     font-size: $base-p-size;
-    line-height: 22px;
+    line-height: 23px;
     border-bottom: 2px solid $base-gray;
     text-transform: uppercase;
     background: $base-white;
     @include tablet-only {
-      min-height: 45px;
+      min-height: 47px;
       padding: 8px 16px;
-      height: 45px;
+      height: 47px;
       line-height: $big-line-height;
       border-right: 1px solid $base-gray;
+    }
+    @include desktop {
+      min-height: 61px;
     }
   }
   &__item-feature {
     &--included::after,
     &::after {
       display: block;
-      content: '';
+      content: "";
       position: absolute;
       width: 30px;
       height: 30px;
       top: 50%;
       right: 20px;
       margin-top: -15px;
-      background: url('#{$img-path}/icon-no.svg') no-repeat;
+      background: url("#{$img-path}/icon-no.svg") no-repeat;
       background-size: 100%;
       background-position: 50%;
       @include tablet {
@@ -135,7 +142,7 @@
       }
     }
     &--included::after {
-      background: url('#{$img-path}/icon-yes.svg') no-repeat;
+      background: url("#{$img-path}/icon-yes.svg") no-repeat;
       background-size: 100%;
       background-position: 50%;
     }

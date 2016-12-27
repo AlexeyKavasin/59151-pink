@@ -1,10 +1,11 @@
 .social {
-  width: 200px;
+  // width: 200px;
   margin: 40px auto;
   padding: 0;
   list-style: none;
   font-size: 0;
   @include tablet {
+    width: 193px;
     margin: 0;
   }
   @include desktop {
@@ -13,7 +14,7 @@
   &__item {
     display: inline-block;
     vertical-align: bottom;
-    margin-right: 15px;
+    margin-right: 12px;
     font-size: 0;
     &:last-child {
       margin-right: 0;
@@ -21,8 +22,8 @@
   }
   &__link {
     display: block;
-    width: 50px;
-    height: 50px;
+    width: 51px;
+    height: 51px;
     border: 3px solid $base-gray;
     border-radius: 50%;
     &:hover {
@@ -34,17 +35,17 @@
       opacity: 0.3;
     }
     &--tw {
-      background: url('#{$img-path}/icon-twitter.svg') no-repeat;
+      background: url("#{$img-path}/icon-twitter.svg") no-repeat;
       background-size: 45%;
       background-position: 55% 55%;
     }
     &--fb {
-      background: url('#{$img-path}/icon-facebook.svg') no-repeat;
+      background: url("#{$img-path}/icon-facebook.svg") no-repeat;
       background-size: 20%;
       background-position: 50% 50%;
     }
     &--you {
-      background: url('#{$img-path}/icon-youtube.svg') no-repeat;
+      background: url("#{$img-path}/icon-youtube.svg") no-repeat;
       background-size: 35%;
       background-position: 50% 50%;
     }

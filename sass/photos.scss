@@ -25,13 +25,20 @@
       padding-left: 300px;
     }
     &--bottom {
-      padding-top: 15px;
+      padding-top: 26px;
+      padding-bottom: 28px;
       @include tablet {
-        padding-top: 35px;
+        padding-top: 36px;
+        padding-bottom: 52px;
       }
       @include desktop {
-        padding-top: 25px;
-        padding-bottom: 50px;
+        padding-top: 15px;
+        padding-bottom: 66px;
+      }
+      & .photos__content-block-txt {
+        @include desktop {
+          margin: 0;
+        }
       }
       & .photos__content-block-txt br {
         @include tablet {
@@ -53,7 +60,6 @@
     @include tablet {
       width: 620px;
       margin: 0;
-      padding: 20px 0;
       padding-top: 30px;
       display: flex;
       flex-wrap: wrap;

@@ -1,13 +1,12 @@
 .like {
   padding: 20px;
-  padding-bottom: 8px;
   padding-top: 0;
   font-size: $base-p-size;
   color: $base-pink;
   @include tablet {
-    padding-bottom: 16px;
-    padding-right: 30px;
-    padding-left: 30px;
+    padding-bottom: 23px;
+    padding-right: 28px;
+    padding-left: 28px;
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
@@ -18,7 +17,7 @@
     @include tablet {
       padding: 0;
       order: 2;
-      width: 130px;
+      width: 120px;
     }
   }
   &__icon {
@@ -27,7 +26,7 @@
     width: 13px;
     height: 13px;
     margin-right: 13px;
-    background: url('#{$img-path}/icon-heart.svg');
+    background: url("#{$img-path}/icon-heart.svg");
     background-repeat: no-repeat;
     cursor: pointer;
     @include tablet {

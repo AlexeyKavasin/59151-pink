@@ -1,6 +1,6 @@
 // Base Font
 
-$base-font: 'Open Sans';
+$base-font: "Open Sans";
 $base-font-size: 18px;
 $base-p-size: 14px;
 $base-h-size: 24px;
@@ -23,26 +23,26 @@ $regular: 400;
 $bold: 600;
 
 @font-face {
-  font-family: 'Open Sans';
-  src:  url('../fonts/opensanslight.woff2') format('woff2'),
-        url('../fonts/opensanslight.woff') format('woff');
+  font-family: "Open Sans";
+  src:  url("../fonts/opensanslight.woff2") format("woff2"),
+        url("../fonts/opensanslight.woff") format("woff");
   font-weight: $light;
 }
 @font-face {
-  font-family: 'Open Sans';
-  src:  url('../fonts/opensans.woff2') format('woff2'),
-        url('../fonts/opensans.woff') format('woff');
+  font-family: "Open Sans";
+  src:  url("../fonts/opensans.woff2") format("woff2"),
+        url("../fonts/opensans.woff") format("woff");
   font-weight: $regular;
 }
 @font-face {
-  font-family: 'Open Sans';
-  src:  url('../fonts/opensansbold.woff2') format('woff2'),
-        url('../fonts/opensansbold.woff') format('woff');
+  font-family: "Open Sans";
+  src:  url("../fonts/opensansbold.woff2") format("woff2"),
+        url("../fonts/opensansbold.woff") format("woff");
   font-weight: $bold;
 }
 
 body {
-  font-family: $base-font, 'Helvetica', Arial, sans-serif;
+  font-family: $base-font, "Helvetica", Arial, sans-serif;
   font-size: $base-font-size;
   font-weight: $regular;
   line-height: $base-line-height;

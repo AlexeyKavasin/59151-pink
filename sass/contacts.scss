@@ -5,11 +5,11 @@
   position: relative;
   z-index: 1;
   @include tablet {
-    padding-top: 50px;
+    padding-top: 49px;
   }
   &::after {
     display: block;
-    content: '';
+    content: "";
     width: 100%;
     height: 40px;
     left: 0;
@@ -17,7 +17,7 @@
     bottom: -40px;
     z-index: -1;
     position: absolute;
-    background: url('#{$img-path}/bg-triangle-white-footer.svg') no-repeat;
+    background: url("#{$img-path}/bg-triangle-white-footer.svg") no-repeat;
     background-size: 100% 100%;
     @include tablet {
       height: 70px;
@@ -42,11 +42,10 @@
     @include tablet {
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-around;
+      justify-content: space-between;
       align-items: center;
     }
     @include desktop {
-      justify-content: center;
       align-items: flex-start;
     }
   }
@@ -55,15 +54,15 @@
     margin-bottom: 30px;
     font-size: $base-h-size;
     font-weight: $light;
-    line-height: $big-line-height;
+    line-height: $max-line-height;
     @include tablet {
-      margin-bottom: 45px;
+      margin-bottom: 46px;
       font-size: 40px;
       line-height: 45px;
     }
     @include desktop {
       margin-top: 20px;
-      margin-bottom: 60px;
+      margin-bottom: 62px;
       font-size: 50px;
       line-height: 55px;
     }
@@ -71,28 +70,45 @@
   &__item {
     margin-bottom: 20px;
     @include tablet {
-      width: 50%;
-      margin-bottom: 50px
-    }
-    @include desktop {
-      width: 33%;
+      margin-bottom: 46px;
+      line-height: 23px;
     }
     &--phone {
+      margin-bottom: 19px;
+      @include tablet {
+        width: 300px;
+      }
       @include desktop {
+        width: 240px;
+        margin-left: 30px;
         order: 1;
       }
     }
     &--address {
       @include tablet {
         margin-bottom: 10px;
+        width: 100%;
       }
       @include desktop {
         order: 2;
+        width: 240px;
+      }
+      & br {
+        display: none;
+        @include tablet {
+          display: block;
+        }
       }
     }
     &--mail {
+      margin-bottom: 24px;
+      @include tablet {
+        width: 300px;
+      }
       @include desktop {
+        width: 240px;
         order: 3;
+        margin-right: 30px;
         margin-bottom: 0;
       }
     }
@@ -100,10 +116,13 @@
   &__item-title {
     display: block;
     padding: 0;
-    padding-bottom: 5px;
-    font-weight: $bold;
+    padding-bottom: 2px;
+    font-weight: 800;
+    @include tablet {
+      padding-bottom: 5px;
+    }
     @include desktop {
-      padding-bottom: 20px;
+      padding-bottom: 24px;
     }
   }
   &__item-text {
@@ -112,6 +131,7 @@
     font-weight: $light;
     line-height: $big-line-height;
     color: $base-pink;
+    text-decoration: none;
     &--mail {
       cursor: pointer;
       @include base-transition(all);

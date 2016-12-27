@@ -12,7 +12,7 @@
       padding-bottom: 70px;
     }
     &::after {
-      content: '';
+      content: "";
       display: block;
       width: 100%;
       height: 40px;
@@ -21,11 +21,11 @@
       right: 0;
       bottom: -40px;
       z-index: -1;
-      background: url('#{$img-path}/bg-triangle-white.svg') no-repeat;
+      background: url("#{$img-path}/bg-triangle-white.svg") no-repeat;
       background-size: 100% 100%;
       @include tablet {
-        height: 70px;
-        bottom: -70px;
+        height: 80px;
+        bottom: -80px;
       }
       @include desktop {
         height: 100px;
@@ -35,8 +35,8 @@
   }
   &__heading {
     margin: 0 auto;
-    padding-bottom: 25px;
-    font-size: $base-h-size;
+    padding-bottom: 26px;
+    font-size: 23px;
     line-height: $big-line-height;
     text-align: center;
     &:last-child {
@@ -60,7 +60,7 @@
     }
   }
   &__items {
-    padding: 30px;
+    padding: 20px;
     padding-top: 80px;
     padding-bottom: 56px;
     text-align: center;
@@ -70,13 +70,13 @@
     @include tablet {
       min-height: 490px;
       padding-top: 85px;
-      padding-bottom: 45px;
+      padding-bottom: 10px;
     }
     @include desktop {
       padding-top: 365px;
       padding-right: 130px;
       padding-left: 130px;
-      padding-bottom: 25px;
+      padding-bottom: 5px;
     }
     &-wrapper {
       margin: 0 auto;
@@ -96,24 +96,24 @@
       }
       &::after {
         display: block;
-        margin-left: -80px;
-        content: '';
+        margin-left: -78px;
+        content: "";
         position: absolute;
-        width: 160px;
-        height: 320px;
-        bottom: -98px;
+        width: 158px;
+        height: 318px;
+        bottom: -96px;
         left: 50%;
         z-index: 2;
-        background-image: url('#{$img-path}/iphone-screen-mobile@1x.png');
+        background-image: url("#{$img-path}/iphone-screen-mobile@1x.png");
         background-repeat: no-repeat;
         background-size: 100%;
-        @include retina('#{$img-path}/iphone-screen-mobile@2x.png', 100%);
+        @include retina("#{$img-path}/iphone-screen-mobile@2x.png", 100%);
         @include tablet {
-          width: 270px;
+          width: 269px;
           height: 482px;
           margin: 0;
           left: 0;
-          bottom: -45px;
+          bottom: -10px;
         }
         @include desktop {
           display: none;
@@ -127,15 +127,15 @@
       display: none;
       width: 289px;
       height: 476px;
-      content: '';
+      content: "";
       position: absolute;
       left: 50%;
       margin-left: -150px;
-      bottom: 95px;
+      bottom: 112px;
       background-repeat: no-repeat;
-      background-image: url('#{$img-path}/iphone-screen-1-desktop@1x.png');
+      background-image: url("#{$img-path}/iphone-screen-1-desktop@1x.png");
       background-size: 100%;
-      @include retina('#{$img-path}/iphone-screen-1-desktop@2x.png', 100%);
+      @include retina("#{$img-path}/iphone-screen-1-desktop@2x.png", 100%);
       z-index: 2;
     }
     @include tablet {
@@ -150,18 +150,19 @@
         display: block;
       }
     }
-    &:nth-child(2)::before {
-      background-image: url('#{$img-path}/iphone-screen-2-desktop@1x.png');
-      @include retina('#{$img-path}/iphone-screen-2-desktop@2x.png', 100%);
-      margin-left: -142px;
+    &--mood {
+      & .benefits__item-heading {
+        @include desktop {
+          padding-right: 12px;
+        }
+      }
+      & .benefits__item-text {
+        @include desktop {
+          padding-right: 5px;
+        }
+      }
     }
-    &:nth-child(3)::before {
-      background-image: url('#{$img-path}/iphone-screen-3-desktop@1x.png');
-      @include retina('#{$img-path}/iphone-screen-3-desktop@2x.png', 100%);
-      margin-left: -135px;
-      bottom: 85px;
-    }
-    &:last-child {
+    &--friends {
       margin-bottom: 0;
       padding-bottom: 260px;
       @include tablet {
@@ -170,20 +171,46 @@
       @include desktop {
         margin-bottom: 40px;
       }
+      & .benefits__item-heading {
+        @include desktop {
+          padding-left: 12px;
+        }
+      }
+      & .benefits__item-text {
+        @include desktop {
+          padding-left: 5px;
+        }
+      }
+    }
+    &--friends::before {
+      background-image: url("#{$img-path}/iphone-screen-3-desktop@1x.png");
+      @include retina("#{$img-path}/iphone-screen-3-desktop@2x.png", 100%);
+      margin-left: -135px;
+      bottom: 85px;
+      @include desktop {
+        bottom: 102px;
+      }
+    }
+    &--world::before {
+      background-image: url("#{$img-path}/iphone-screen-2-desktop@1x.png");
+      @include retina("#{$img-path}/iphone-screen-2-desktop@2x.png", 100%);
+      margin-left: -142px;
     }
   }
   &__item-heading {
     margin: 0;
-    margin-bottom: 10px;
+    margin-bottom: 11px;
     font-size: $base-font-size;
-    line-height: $big-line-height;
+    line-height: 29px;
     font-weight: $bold;
     color: $base-black;
     @include tablet {
       text-align: left;
+      line-height: 32px;
+      margin-bottom: 9px;
     }
     @include desktop {
-      margin-bottom: 25px;
+      margin-bottom: 23px;
       font-size: 30px;
       font-weight: $bold;
       line-height: $big-line-height;
@@ -236,12 +263,12 @@
         width: 240px;
         height: 278px;
         position: absolute;
-        content: '';
+        content: "";
         top: 0;
         left: 0;
         background-repeat: no-repeat;
         background-size: 100%;
-        background-image: url('#{$img-path}/icon-timer.svg');
+        background-image: url("#{$img-path}/icon-timer.svg");
         @include tablet {
           display: block;
         }
@@ -257,7 +284,7 @@
         left: 63px;
         width: 110px;
         height: 90px;
-        content: '24';
+        content: "24";
         font-size: 97px;
         line-height: 97px;
         font-weight: $bold;
@@ -279,14 +306,14 @@
       }
     }
     &-heading {
-      margin-top: 37px;
+      margin-top: 39px;
       margin-bottom: 0;
       font-size: 30px;
       line-height: 36px;
       font-weight: $bold;
       @include desktop {
         margin-top: 90px;
-        margin-bottom: 20px;
+        margin-bottom: 23px;
       }
       & br {
         @include desktop {
@@ -295,7 +322,8 @@
       }
     }
     &-text {
-      margin-bottom: 5px;
+      margin-top: 10px;
+      margin-bottom: 8px;
       font-size: $base-p-size;
       @include desktop {
         margin-bottom: 35px;

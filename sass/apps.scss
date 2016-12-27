@@ -9,7 +9,7 @@
     padding: 0;
     position: absolute;
     width: 300px;
-    top: 95px;
+    top: 92px;
     left: 0;
     background: transparent;
   }
@@ -28,7 +28,8 @@
     text-align: center;
     @include tablet {
       display: block;
-      padding-bottom: 30px;
+      padding-bottom: 32px;
+      line-height: 47px;
     }
     @include desktop {
       max-width: 235px;
@@ -41,7 +42,7 @@
     display: block;
     max-width: 280px;
     margin: 0 auto;
-    padding: 15px 35px;
+    padding: 14px 35px;
     font-weight: $bold;
     line-height: $base-line-height;
     text-align: center;
@@ -61,27 +62,30 @@
     @include tablet {
       max-width: 300px;
       box-sizing: border-box;
+      line-height: 23px;
     }
     @include desktop {
-      padding: 12px 30px;
-      font-size: 20px;
+      padding: 13px 28px;
+      font-size: 21px;
     }
   }
   &__items {
-    max-width: 210px;
+    max-width: 206px;
     margin: 25px auto;
+    margin-top: 27px;
+    margin-bottom: 24px;
     padding: 0;
     display: flex;
     justify-content: space-between;
     align-items: baseline;
     list-style: none;
     @include tablet {
-      margin-top: 40px;
+      margin-top: 42px;
       margin-bottom: 35px;
     }
     @include desktop {
-      margin-top: 60px;
-      margin-bottom: 60px;
+      margin-top: 63px;
+      margin-bottom: 57px;
     }
   }
   &__item-link {
@@ -90,31 +94,38 @@
     height: 50px;
 
     &--ios {
-      height: 61px;
-      background: url('#{$img-path}/logo-apple.svg') no-repeat;
+      width: 47px;
+      height: 58px;
+      background: url("#{$img-path}/logo-apple.svg") no-repeat;
       background-size: 100%;
     }
 
     &--andr {
-      height: 55px;
-      background: url('#{$img-path}/logo-android.svg') no-repeat;
+      width: 43px;
+      height: 48px;
+      background: url("#{$img-path}/logo-android.svg") no-repeat;
       background-size: 100%;
     }
 
     &--win {
-      height: 47px;
-      background: url('#{$img-path}/logo-microsoft.svg') no-repeat;
+      width: 44px;
+      height: 41px;
+      background: url("#{$img-path}/logo-microsoft.svg") no-repeat;
       background-size: 100%;
     }
   }
   &__text {
     display: block;
     margin: 0 auto;
-    font-size: $base-p-size;
+    font-size: 13px;
     text-align: center;
     @include tablet {
       font-size: 18px;
       font-weight: $light;
+    }
+    @include desktop {
+      letter-spacing: -0.3px;
+
     }
   }
 }

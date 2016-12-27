@@ -1,6 +1,6 @@
-input[type='text'],
+input[type="text"],
 textarea {
-  font-family: $base-font, 'Helvetica', Arial, sans-serif;
+  font-family: $base-font, "Helvetica", Arial, sans-serif;
   line-height: $big-line-height;
   color: $base-dark-blue;
   outline: none;
@@ -58,77 +58,131 @@ label {
       }
     }
     &--main {
-      padding-bottom: 45px;
+      padding-bottom: 42px;
       @include tablet {
         order: 1;
         margin-bottom: 20px;
         padding: 0;
       }
       @include desktop {
-        width: 46%;
+        width: 435px;
+        padding-top: 6px;
+      }
+      & label {
+        padding-bottom: 10px;
+        padding-left: 22px;
+        line-height: 20px;
+        @include tablet {
+          padding-bottom: 0;
+          padding-left: 0;
+        }
       }
     }
     &--app {
-      padding-bottom: 45px;
+      padding-bottom: 50px;
       @include tablet {
         order: 2;
-        padding-top: 55px;
-        padding-bottom: 65px;
+        padding-top: 60px;
+        padding-bottom: 62px;
       }
       @include desktop {
-        margin-bottom: 70px;
-        padding-top: 60px;
+        margin-bottom: 65px;
+        padding-top: 63px;
         padding-right: 70px;
-        padding-bottom: 60px;
+        padding-bottom: 63px;
         padding-left: 70px;
-        width: 46%;
+        width: 435px;
+      }
+      & label {
+        margin-bottom: 51px;
+        @include desktop {
+          margin-bottom: 50px;
+        }
+        &.form__radio-label--win {
+          margin-bottom: 0;
+        }
       }
       & .form__subheading {
+        margin-bottom: 40px;
+        @include tablet {
+          width: 370px;
+          margin-left: -185px;
+        }
         @include desktop {
-          max-width: 360px;
+          width: 360px;
+          margin-left: -180px;
         }
       }
     }
     &--contacts {
+      padding-top: 38px;
+      padding-bottom: 41px;
       @include tablet {
         order: 3;
+        padding-top: 45px;
         padding-bottom: 30px;
         margin-bottom: 65px;
       }
       @include desktop {
-        padding-top: 35px;
+        padding-top: 42px;
         padding-right: 60px;
-        padding-bottom: 20px;
+        padding-bottom: 16px;
         padding-left: 60px;
         width: 100%;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
       }
+      & label {
+        padding-left: 22px;
+        padding-bottom: 10px;
+        line-height: 20px;
+        @include tablet {
+          padding: 0;
+          padding-left: 16px;
+          padding-top: 16px;
+        }
+      }
       & .form__subheading {
         @include desktop {
-          max-width: 280px;
+          width: 280px;
+          margin-left: -140px;
         }
       }
     }
     &--actions {
+      padding-bottom: 49px;
       @include tablet {
         order: 4;
         padding-top: 60px;
-        padding-bottom: 50px;
+        padding-bottom: 55px;
       }
       @include desktop {
         width: 100%;
-        padding-bottom: 0;
+        padding-bottom: 4px;
+        padding-right: 50px;
         display: flex;
         flex-wrap: wrap;
         flex-direction: row;
-        justify-content: space-between;
         align-items: center;
       }
+      & label {
+        margin-bottom: 58px;
+        &.form__checkbox-label--hotel {
+          margin-bottom: 0;
+          @include desktop {
+            margin-bottom: 58px;
+          }
+        }
+      }
       & .form__subheading {
+        @include tablet {
+          width: 420px;
+          margin-left: -210px;
+        }
         @include desktop {
-          max-width: 430px;
+          width: 430px;
+          margin-left: -215px;
         }
       }
     }
@@ -137,23 +191,19 @@ label {
       padding-bottom: 0;
       @include tablet {
         order: 5;
-        margin-bottom: 60px;
+        margin-bottom: 68px;
         padding-top: 45px;
         padding-bottom: 45px;
       }
       @include desktop {
-        margin-bottom: 60px;
+        padding-bottom: 35px;
+        margin-bottom: 70px;
         width: 100%;
-      }
-      & .form__subheading {
-        @include desktop {
-          max-width: 260px;
-        }
       }
     }
     &--submit {
-      padding-top: 50px;
-      padding-bottom: 45px;
+      padding-top: 45px;
+      padding-bottom: 38px;
       @include tablet {
         padding-bottom: 5px;
         order: 6;
@@ -175,11 +225,11 @@ label {
       align-items: center;
       margin-bottom: 50px;
       &:last-child {
-        margin-bottom: 50px;
+        margin-bottom: 45px;
       }
     }
     @include desktop {
-      margin-bottom: 55px;
+      margin-bottom: 52px;
     }
     &--contact {
       @include tablet {
@@ -193,14 +243,7 @@ label {
       }
       @include desktop {
         align-items: flex-start;
-        width: 46%;
-      }
-      & label {
-        @include tablet {
-          padding: 0;
-          padding-top: 10px;
-          padding-left: 20px;
-        }
+        width: 375px;
       }
     }
     &--tel {
@@ -213,7 +256,7 @@ label {
       width: 60px;
       height: 60px;
       display: none;
-      content: '';
+      content: "";
       position: absolute;
       top: 2px;
       right: 2px;
@@ -228,12 +271,12 @@ label {
       width: 20px;
       height: 20px;
       display: none;
-      content: '';
+      content: "";
       position: absolute;
-      top: 18px;
-      right: 20px;
+      top: 22px;
+      right: 24px;
       z-index: 1;
-      background-image: url('#{$img-path}/icon-phone.svg');
+      background-image: url("#{$img-path}/icon-phone.svg");
       background-repeat: no-repeat;
       @include tablet {
         display: block;
@@ -243,7 +286,7 @@ label {
       height: 13px;
       top: 25px;
       right: 18px;
-      background-image: url('#{$img-path}/icon-mail.svg');
+      background-image: url("#{$img-path}/icon-mail.svg");
       background-repeat: no-repeat;
     }
   }
@@ -266,10 +309,13 @@ label {
     }
   }
   &__textarea {
-    min-height: 195px;
+    min-height: 200px;
     resize: none;
+    @include tablet {
+      min-height: 195px;
+    }
     @include desktop {
-      min-height: 120px;
+      min-height: 125px;
     }
   }
   &__radio,
@@ -301,12 +347,15 @@ label {
   &__radio-label {
     margin-bottom: 50px;
     @include tablet {
-      padding-left: 60px;
+      padding-left: 58px;
+    }
+    @include desktop {
+      padding-left: 62px;
     }
   }
   &__checkbox-label {
     @include tablet {
-      padding-left: 60px;
+      padding-left: 58px;
     }
     @include desktop {
       width: 33.33%;
@@ -318,7 +367,7 @@ label {
     display: block;
     width: 36px;
     height: 36px;
-    content: '';
+    content: "";
     position: absolute;
     top: 50%;
     left: 0;
@@ -335,7 +384,7 @@ label {
   &__radio:checked + label::after {
     width: 16px;
     height: 16px;
-    content: '';
+    content: "";
     display: block;
     position: absolute;
     background: $base-pink;
@@ -347,7 +396,7 @@ label {
     width: 16px;
     height: 8px;
     transform: rotate(-45deg);
-    content: '';
+    content: "";
     display: block;
     position: absolute;
     background: transparent;
@@ -356,45 +405,41 @@ label {
     left: 12px;
     top: 6px;
   }
-  &__radio-label {
-    &--win {
-      margin-bottom: 0;
-    }
-  }
   &__checkbox-label {
     &--shark {
       @include desktop {
         order: 1;
+        width: 310px;
       }
     }
     &--chuck {
       @include desktop {
         order: 2;
+        width: 305px;
       }
     }
     &--tower {
       @include desktop {
         order: 3;
+        width: 210px;
       }
     }
     &--burnt {
       @include desktop {
         order: 4;
+        width: 310px;
       }
     }
     &--souvenir {
       @include desktop {
         order: 5;
+        width: 305px;
       }
     }
     &--hotel {
-      margin-bottom: 0;
-      @include tablet {
-        margin-bottom: 0;
-      }
       @include desktop {
-        margin-bottom: 60px;
         order: 6;
+        width: 210px;
       }
     }
   }

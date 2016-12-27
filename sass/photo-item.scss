@@ -11,7 +11,7 @@
     flex-direction: column;
   }
   @include desktop {
-    margin-bottom: 40px;
+    margin-bottom: 44px;
   }
   &--full-width {
     width: 100%;
@@ -21,28 +21,32 @@
     }
     @include desktop {
       width: 1200px;
+      margin-bottom: 40px;
     }
     & .photo-item__description--full-width {
       background: $base-gray;
+      padding-bottom: 20px;
       @include tablet {
         margin: 0 auto;
-        max-width: 620px;
-        padding-top: 25px;
-        padding-left: 30px;
-        padding-right: 30px;
+        width: 620px;
+        padding-top: 24px;
+        padding-bottom: 24px;
+        padding-left: 28px;
+        padding-right: 28px;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between;
         align-items: center;
-
         @include desktop {
-          max-width: 940px;
+          width: 940px;
+          padding-top: 23px;
+          padding-bottom: 23px;
         }
       }
       & .photo-item__username {
         order: 1;
-        font-size: 12px;
+        font-size: 13px;
       }
       & .photo-item__time {
         font-weight: $light;
@@ -78,7 +82,7 @@
   &__label {
     display: block;
     max-width: 140px;
-    padding: 6px 22px;
+    padding: 6px 21px;
     position: absolute;
     top: 0;
     right: 20px;
@@ -103,16 +107,16 @@
   &__description {
     max-width: 280px;
     margin: 0 auto;
-    padding: 20px;
-    padding-bottom: 18px;
+    padding: 18px;
+    padding-bottom: 9px;
     font-size: $base-p-size;
     @include tablet {
       max-width: 100%;
       margin: 0;
-      padding-top: 25px;
-      padding-right: 30px;
-      padding-left: 30px;
-      padding-bottom: 20px;
+      padding-top: 24px;
+      padding-right: 28px;
+      padding-left: 28px;
+      padding-bottom: 12px;
       flex-grow: 1;
       display: flex;
       flex-direction: column;
@@ -122,9 +126,22 @@
     font-weight: $bold;
   }
   &__time {
+    font-size: 13px;
+    font-weight: $light;
     text-transform: uppercase;
   }
   &__quote {
     margin-bottom: 0;
+  }
+  &--last {
+    margin-bottom: 0;
+    & .photo-item__description {
+      padding-top: 20px;
+      padding-bottom: 10px;
+      @include tablet {
+        padding-top: 24px;
+        padding-bottom: 36px;
+      }
+    }
   }
 }

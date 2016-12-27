@@ -3,16 +3,17 @@
   background: $base-gray;
   @include tablet {
     padding: 60px 40px;
-    padding-bottom: 40px;
+    padding-bottom: 38px;
   }
   @include desktop {
     width: 940px;
     margin: 0 auto;
+    padding-top: 55px;
     padding-right: 60px;
     padding-left: 80px;
     padding-bottom: 55px;
   }
-  & [type='radio'] {
+  & [type="radio"] {
     display: none;
   }
   &-form__range {

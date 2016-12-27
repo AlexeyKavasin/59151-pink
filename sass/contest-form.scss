@@ -1,14 +1,14 @@
 .contest-form {
   margin: 0;
     @include tablet {
-      padding-top: 70px;
+      padding-top: 72px;
       display: flex;
       flex-direction: column;
       justify-content: center;
       margin-bottom: 0;
     }
     @include desktop {
-      padding-top: 80px;
+      padding-top: 76px;
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: space-between;
@@ -26,13 +26,12 @@
       color: $base-pink;
       text-transform: uppercase;
       @include tablet {
-        max-width: 420px;
+        width: 420px;
         padding: 0 20px;
         background: $base-white;
         position: absolute;
         top: -10px;
-        right: 0;
-        left: 0;
+        left: 50%;
         text-align: center;
       }
     }
@@ -41,20 +40,23 @@
         display: none;
         @include tablet {
           display: block;
-          max-width: 260px;
+          width: 260px;
+          margin-left: -130px;
         }
       }
     }
     &__comment-subheading {
-      margin-bottom: 20px;
+      line-height: 22px;
+      margin-bottom: 15px;
       @include tablet {
-        max-width: 260px;
+        width: 260px;
+        margin-left: -130px;
         margin-bottom: 40px;
       }
     }
     &__submit {
       display: block;
-      min-width: 280px;
+      width: 280px;
       margin: 0 auto;
       padding: 20px 40px;
       background: #2aab6d;
@@ -63,9 +65,8 @@
       border-radius: 3px;
       outline: none;
       @include tablet {
+        width: 300px;
         margin: 0;
-        padding-right: 60px;
-        padding-left: 60px;
       }
       &:hover {
         background: #1c9b5e;
