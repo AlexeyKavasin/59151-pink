@@ -2,18 +2,16 @@
   &__wrapper {
     display: none;
     margin: 0 auto;
-    justify-content: space-between;
     align-items: center;
     @include tablet {
       display: flex;
-      padding: 35px 0;
-      padding-top: 38px;
+      padding: 39px 0;
       width: 620px;
     }
     @include desktop {
       width: 940px;
       padding-top: 70px;
-      padding-bottom: 75px;
+      padding-bottom: 70px;
     }
   }
   &__wrapper-inner {
@@ -25,12 +23,13 @@
       align-items: center;
     }
     @include desktop {
-      padding-top: 95px;
-    }
-  }
-  &__wrapper-form {
-    @include desktop {
       padding-top: 70px;
+      padding-bottom: 70px;
+    }
+    &.footer__wrapper--form {
+      @include less-tablet {
+        padding: 52px 0;
+      }
     }
   }
   &__logo {
@@ -38,8 +37,12 @@
     height: 40px;
     margin: 0 auto;
     @include tablet {
-      align-self: flex-start;
       margin: 0;
+      margin-right: 75px;
+      align-self: stretch;
+    }
+    @include desktop {
+      margin-right: 238px;
     }
     &:hover .letters {
       fill: $base-pink;
@@ -53,6 +56,12 @@
       @include base-transition(fill);
       opacity: .3;
     }
+    & .logo-decoration {
+      display: none;
+      @include desktop {
+        display: block;
+      }
+    }
   }
   &__copyright {
     width: 128px;
@@ -62,19 +71,20 @@
     align-items: center;
     text-decoration: none;
     color: $base-dark-blue;
-    @include base-transition(fill);
     &:hover path {
       fill: $base-dark-blue;
+      @include base-transition(fill);
     }
     &:active path {
       fill: #bec2c7;
+      @include base-transition(fill);
     }
     @include tablet {
       margin: 0;
       align-self: stretch;
     }
     @include desktop {
-      width: 150px;
+      width: 152px;
     }
   }
   &__copyright-txt {

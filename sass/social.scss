@@ -1,15 +1,15 @@
 .social {
-  // width: 200px;
   margin: 40px auto;
   padding: 0;
   list-style: none;
   font-size: 0;
   @include tablet {
-    width: 193px;
+    width: 177px;
     margin: 0;
+    margin-right: 93px;
   }
   @include desktop {
-    width: 180px;
+    margin-right: 226px;
   }
   &__item {
     display: inline-block;
