@@ -189,7 +189,7 @@
   }
   &__range-wrapper {
     width: 240px;
-    margin: 34px 0;
+    margin: 30px 0;
     position: absolute;
     left: 18px;
     order: 4;
@@ -207,26 +207,26 @@
     }
     &--crop {
       @include tablet {
-        top: 15px;
+        top: 12px;
       }
       @include desktop {
-        top: 20px;
+        top: 18px;
       }
     }
     &--fill {
       @include tablet {
-        top: 15px;
+        top: 12px;
       }
       @include desktop {
-        top: 20px;
+        top: 18px;
       }
     }
     &--contrast {
       @include tablet {
-        top: 15px;
+        top: 12px;
       }
       @include desktop {
-        top: 20px;
+        top: 18px;
       }
     }
   }
@@ -234,6 +234,9 @@
     width: 100%;
     -webkit-appearance: none;
     margin: 0;
+    padding: 0;
+    min-height: 16px;
+    background: transparent;
     &:focus {
       outline: none;
     }

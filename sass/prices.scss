@@ -15,24 +15,27 @@
   &__slider {
     width: 100%;
     display: flex;
-    justify-content: center;
+    margin-left: -260px;
     align-items: flex-end;
     @include base-transition(all);
     @include tablet {
-      max-width: 620px;
+      width: 620px;
+      justify-content: center;
       margin: 0 auto;
+    }
+    @include desktop {
+      width: 940px;
     }
     & .slider__item {
       display: block;
       flex-shrink: 0;
-      width: 100%;
-      max-width: 280px;
+      width: 280px;
       border-right: 1px solid $base-gray;
       @include tablet {
-        max-width: 155px;
+        width: 155px;
       }
       @include desktop {
-        max-width: 235px;
+        width: 235px;
       }
       &:first-child {
         display: none;
@@ -59,7 +62,6 @@
     @include tablet-only {
       padding-top: 11px;
       padding-bottom: 8px;
-      border-right: 1px solid $base-gray;
     }
     @include desktop {
       padding-bottom: 19px;

@@ -36,26 +36,26 @@
   }
   &__wrapper {
     margin: 0 auto;
-    max-width: 280px;
+    width: 280px;
     @include tablet {
-      max-width: 620px;
+      width: 620px;
       @include desktop {
         position: relative;
-        max-width: 940px;
+        width: 940px;
       }
     }
   }
   &__item {
     position: relative;
     @include tablet {
-      max-width: 620px;
+      width: 620px;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
     }
     @include desktop {
-      max-width: 700px;
+      width: 700px;
     }
     &::before {
       display: none;
@@ -74,6 +74,7 @@
     }
   }
   &__text {
+    width: 100%;
     @include tablet {
       order: 1;
       font-size: $base-font-size;
