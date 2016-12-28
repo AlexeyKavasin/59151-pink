@@ -5,6 +5,7 @@
   background: $base-dark-blue;
   background-image: url("#{$img-path}/bg-back-mobile@1x.jpg");
   background-size: 700px;
+  overflow: hidden;
   @include retina("#{$img-path}/bg-back-mobile@2x.jpg", 700px);
   background-repeat: no-repeat;
   background-position: 50% -33%;
